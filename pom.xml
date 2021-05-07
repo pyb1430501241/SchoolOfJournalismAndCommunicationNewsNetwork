@@ -6,8 +6,12 @@
 
     <groupId>com.pdsu</groupId>
     <artifactId>sojacnn</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
     <description>School of Journalism and Communication News Network</description>
+    <modules>
+        <module>newsFeature</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
