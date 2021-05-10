@@ -7,6 +7,9 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.io.Serializable;
 import java.sql.Blob;
@@ -37,6 +40,9 @@ public class NewsTheme implements Serializable, Cloneable {
     @ApiModelProperty(value = "主题内容，传入byte")
     private byte [] data;
 
+    @ApiModelProperty(value ="封面地址，可不传")
+    private String coverPath;
+
     @ApiModelProperty(value = "创建时间")
     private Date createTime;
 
@@ -45,7 +51,7 @@ public class NewsTheme implements Serializable, Cloneable {
 
     @ApiModelProperty(value = "逻辑删除，0是未删除，1已删除")
     @TableLogic
-    private Integer isDelete;
+    private transient Integer isDelete;
 
     @ApiModelProperty(value = "类型，比category高，是主类型")
     private Integer contypeId;

@@ -1,12 +1,12 @@
 package com.pdsu.sojacnn.controller;
 
-import com.mysql.cj.exceptions.ExceptionInterceptorChain;
-import com.mysql.cj.jdbc.Blob;
 import com.pdsu.sojacnn.bean.NewsTheme;
 import com.pdsu.sojacnn.bean.Result;
+import com.pdsu.sojacnn.factory.NewsThemeFactory;
 import com.pdsu.sojacnn.service.NewsFeatureService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,6 +25,9 @@ public class NewsFeatureController {
     @Autowired
     private NewsFeatureService newsFeatureService;
 
+    @Autowired
+    private NewsThemeFactory newsThemeFactory;
+
     @ApiOperation(value = "根据ID, 查询新闻类型", response = Result.class)
     @GetMapping("/findContype/{id}")
     public Result findContypeById(@PathVariable Integer id) {
@@ -33,16 +36,17 @@ public class NewsFeatureController {
 
     @PostMapping("/insertNewsTheme")
     @ApiOperation(value = "插入新闻主体", response = Result.class)
-    public Result insertNewsTheme(String title, String data, Integer contypeId, Integer categoryId) {
-        NewsTheme newsTheme = new NewsTheme();
-        newsTheme.setCategoryId(categoryId);
-        newsTheme.setContypeId(contypeId);
-        newsTheme.setTitle(title);
-        newsTheme.setData(data.getBytes());
+    public Result insertNewsTheme(String title, String data, Integer contypeId, Integer categoryId) throws Exception {
+        NewsTheme newsTheme = newsThemeFactory.create(title, data, contypeId, categoryId);
         newsTheme.setCreateTime(new Date());
         newsTheme.setUpdateTime(new Date());
-        System.out.println(newsTheme);
         return newsFeatureService.insertNewsTheme(newsTheme);
+    }
+
+    @GetMapping("/{id}")
+    @ApiOperation(value = "根据ID, 查询新闻主体", response = Result.class)
+    public Result findNewsThemeById(@ApiParam(name = "id", value = "新闻ID", required = true) @PathVariable Long id) {
+        return newsFeatureService.findNewsThemeById(id);
     }
 
 }

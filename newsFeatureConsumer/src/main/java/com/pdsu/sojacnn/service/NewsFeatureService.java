@@ -27,4 +27,7 @@ public interface NewsFeatureService {
     @PostMapping("/newsTheme/insert")
     public Result insertNewsTheme(@RequestBody NewsTheme newsTheme);
 
+    @GetMapping("/newsTheme/findNewsThemeById")
+    public Result findNewsThemeById(@RequestParam("id") Long id);
+
 }

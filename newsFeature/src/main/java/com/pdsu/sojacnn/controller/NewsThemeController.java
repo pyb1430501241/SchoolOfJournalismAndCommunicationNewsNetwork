@@ -24,10 +24,15 @@ public class NewsThemeController {
 
     @PostMapping("/insert")
     public Result insertNewsTheme(@RequestBody NewsTheme newsTheme) {
-        System.out.println(newsTheme);
         newsThemeService.save(newsTheme);
         return Result.ok();
     }
+
+    @GetMapping("/findNewsThemeById")
+    public Result findNewsThemeById(@RequestParam("id") Long id) {
+        return Result.ok().data("item", newsThemeService.getById(id));
+    }
+
 
 }
 

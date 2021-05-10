@@ -35,6 +35,11 @@ public class NewsFeatureFallbackFactory implements FallbackFactory<NewsFeatureSe
         public Result insertNewsTheme(NewsTheme newsTheme) {
             return RESULT;
         }
+
+        @Override
+        public Result findNewsThemeById(Long id) {
+            return RESULT;
+        }
     }
 
 }
