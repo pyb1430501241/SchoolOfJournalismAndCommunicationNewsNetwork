@@ -51,11 +51,14 @@ zuul:
   sensitive-headers:
   add-proxy-headers: false
   add-host-header: true
-#  prefix: /api
+  prefix: /api
   routes:
     newsFeatureConsumer:
-      path: /**
+      path: /newsFeature/**
       service-id: newsFeatureConsumer
+    backgroundSystemConsumer:
+      path: /background/**
+      service-id: backgroundSystemConsumer
 #  ignored-patterns: /swagger-ui/**
 
 info:

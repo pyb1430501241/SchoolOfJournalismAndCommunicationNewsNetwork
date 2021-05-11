@@ -18,7 +18,6 @@ import java.util.Date;
  * @author 半梦
  * @create 2021-05-08 15:42
  */
-@RequestMapping("/newsFeature")
 @RestController
 @Api(description = "游客新闻管理服务")
 @SuppressWarnings("deprecation")
@@ -40,8 +39,8 @@ public class NewsFeatureController {
     @ApiOperation(value = "插入新闻主体", response = Result.class)
     public Result insertNewsTheme(String title, String data, Integer contypeId, Integer categoryId) throws Exception {
         NewsTheme newsTheme = newsThemeFactory.create(title, data, contypeId, categoryId);
-        newsTheme.setCreateTime(new Date());
-        newsTheme.setUpdateTime(new Date());
+        newsTheme.setCreateTime(DateUtils.nowDate());
+        newsTheme.setUpdateTime(DateUtils.nowDate());
         return newsFeatureService.insertNewsTheme(newsTheme);
     }
 
