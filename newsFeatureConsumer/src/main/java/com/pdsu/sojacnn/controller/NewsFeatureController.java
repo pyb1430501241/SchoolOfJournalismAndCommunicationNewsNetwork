@@ -3,6 +3,8 @@ package com.pdsu.sojacnn.controller;
 import com.pdsu.sojacnn.bean.NewsContype;
 import com.pdsu.sojacnn.bean.NewsTheme;
 import com.pdsu.sojacnn.bean.Result;
+import com.pdsu.sojacnn.factory.AbstractFactory;
+import com.pdsu.sojacnn.factory.NewsContypeFactory;
 import com.pdsu.sojacnn.factory.NewsThemeFactory;
 import com.pdsu.sojacnn.service.NewsFeatureService;
 import com.pdsu.sojacnn.utils.DateUtils;
@@ -28,6 +30,9 @@ public class NewsFeatureController {
 
     @Autowired
     private NewsThemeFactory newsThemeFactory;
+
+    @Autowired
+    private NewsContypeFactory newsContypeFactory;
 
     @ApiOperation(value = "根据ID, 查询新闻类型", response = Result.class)
     @GetMapping("/findContype/{id}")
@@ -68,8 +73,8 @@ public class NewsFeatureController {
 
     @GetMapping("/{id}")
     @ApiOperation(value = "插入新闻类型", response = Result.class)
-    public Result insertContypeById(String contypeName) {
-        NewsContype newsContype = new NewsContype();
+    public Result insertContypeById(String contypeName) throws NoSuchMethodException {
+        NewsContype newsContype = newsContypeFactory.create();
         newsContype.setContypeName(contypeName);
         return newsFeatureService.insertContype(newsContype);
     }
