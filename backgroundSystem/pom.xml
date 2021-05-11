@@ -10,9 +10,9 @@
     <packaging>jar</packaging>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>newsFeature</artifactId>
+    <artifactId>backgroundSystem</artifactId>
 
-    <description>The facade of the News Network of the School of Journalism and Communication</description>
+    <description>Background Management of News Network of School of Journalism and Communication</description>
 
     <dependencies>
         <dependency>
@@ -163,6 +163,7 @@
         </dependency>
     </dependencies>
 
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
@@ -172,35 +173,13 @@
     </properties>
 
     <build>
-        <finalName>${project.artifactId}</finalName>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
+        <finalName>backgroundSystem</finalName>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <delimiters>
-                        <delimit>$</delimit>
-                    </delimiters>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
+
 </project>

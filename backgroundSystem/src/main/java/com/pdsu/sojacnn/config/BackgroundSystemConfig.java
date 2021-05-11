@@ -11,10 +11,10 @@ import javax.sql.DataSource;
 
 /**
  * @author 半梦
- * @create 2021-05-07 17:49
+ * @create 2021-05-11 20:59
  */
 @Configuration
-public class NewsFeatureConfig {
+public class BackgroundSystemConfig {
 
     @Bean
     public DataSource hikariDataSource(@Qualifier("hikariConfig") HikariConfig config) {
@@ -26,15 +26,5 @@ public class NewsFeatureConfig {
     public HikariConfig hikariConfig() {
         return new HikariConfig();
     }
-
-//    @Bean
-//    public ApiInfo webApiInfo() {
-//        return new ApiInfoBuilder()
-//                .title("网站-新闻网")
-//                .description("本文档描述了新闻生产者微服务接口定义")
-//                .version("1.0.0")
-//                .contact(new Contact("半梦Oo", "https://github.com/pyb1430501241", "1430501241@qq.com"))
-//                .build();
-//    }
 
 }

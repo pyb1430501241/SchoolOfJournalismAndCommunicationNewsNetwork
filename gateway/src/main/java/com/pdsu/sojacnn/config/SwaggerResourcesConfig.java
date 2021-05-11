@@ -32,7 +32,8 @@ public class SwaggerResourcesConfig implements SwaggerResourcesProvider {
         List<SwaggerResource> resources = new ArrayList<>();
         List<Route> routes = routeLocator.getRoutes();
         //在这里遍历的时候，可以排除掉敏感微服务的路由
-        routes.forEach(route ->  resources.add(swaggerResource(route.getId(), route.getFullPath()
+        routes.forEach(route ->  resources.add(swaggerResource(route.getId(),
+                route.getFullPath().substring(route.getFullPath().lastIndexOf("/"))
                 .replace("**", "v2/api-docs"),"2.0")));
         return resources;
     }

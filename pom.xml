@@ -10,12 +10,14 @@
     <version>1.0.0</version>
     <description>School of Journalism and Communication News Network</description>
     <modules>
-        <module>newsFeature</module>
         <module>commonConfiguration</module>
+        <module>commonContext</module>
         <module>eureka</module>
-        <module>commonUtils</module>
         <module>gateway</module>
+        <module>newsFeature</module>
         <module>newsFeatureConsumer</module>
+        <module>backgroundSystem</module>
+        <module>backgroundSystemConsumer</module>
     </modules>
 
     <properties>
