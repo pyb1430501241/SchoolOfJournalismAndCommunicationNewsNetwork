@@ -1,9 +1,11 @@
 package com.pdsu.sojacnn.controller;
 
+import com.pdsu.sojacnn.bean.NewsContype;
 import com.pdsu.sojacnn.bean.NewsTheme;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.factory.NewsThemeFactory;
 import com.pdsu.sojacnn.service.NewsFeatureService;
+import com.pdsu.sojacnn.utils.DateUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -48,5 +50,30 @@ public class NewsFeatureController {
     public Result findNewsThemeById(@ApiParam(name = "id", value = "新闻ID", required = true) @PathVariable Long id) {
         return newsFeatureService.findNewsThemeById(id);
     }
+
+    @GetMapping("/{id}")
+    @ApiOperation(value = "根据ID, 更新新闻主体", response = Result.class)
+    public Result updateNewsThemeById(@PathVariable Long id, String title, String data, Integer contypeId, Integer categoryId) throws NoSuchMethodException {
+        NewsTheme newsTheme = newsThemeFactory.create(title, data, contypeId, categoryId);
+        newsTheme.setId(id);
+        newsTheme.setCreateTime(DateUtils.nowDate());
+        newsTheme.setUpdateTime(DateUtils.nowDate());
+        return newsFeatureService.updateNewsThemeById(newsTheme);
+    }
+
+    @GetMapping("/{id}")
+    @ApiOperation(value = "根据ID, 删除新闻主体", response = Result.class)
+    public Result deleteNewsThemeById(@PathVariable Long id) {
+        return newsFeatureService.deleteNewsThemeById(id);
+    }
+
+    @GetMapping("/{id}")
+    @ApiOperation(value = "插入新闻类型", response = Result.class)
+    public Result insertContypeById(String contypeName) {
+        NewsContype newsContype = new NewsContype();
+        newsContype.setContypeName(contypeName);
+        return newsFeatureService.insertContype(newsContype);
+    }
+
 
 }

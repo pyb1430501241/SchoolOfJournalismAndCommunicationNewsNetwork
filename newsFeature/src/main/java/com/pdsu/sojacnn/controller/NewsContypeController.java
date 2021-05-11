@@ -1,6 +1,7 @@
 package com.pdsu.sojacnn.controller;
 
 
+import com.pdsu.sojacnn.bean.NewsContype;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.service.NewsContypeService;
 import io.swagger.annotations.Api;
@@ -31,5 +32,11 @@ public class NewsContypeController {
         return Result.ok().data("item", newsContypeService.getById(id));
     }
 
+    @GetMapping("/insertContypeById")
+    @ApiOperation(value = "插入新闻类型", response = Result.class)
+    public Result insertContype(@RequestBody NewsContype newsContype) {
+        newsContypeService.save(newsContype);
+        return Result.ok();
+    }
 }
 

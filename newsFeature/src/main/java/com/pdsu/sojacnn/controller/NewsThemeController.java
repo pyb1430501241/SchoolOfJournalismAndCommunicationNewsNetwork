@@ -33,6 +33,17 @@ public class NewsThemeController {
         return Result.ok().data("item", newsThemeService.getById(id));
     }
 
+    @GetMapping("/updateNewsThemeById")
+    public Result updateNewsThemeById(@RequestBody NewsTheme newsTheme) {
+        newsThemeService.updateById(newsTheme);
+        return Result.ok();
+    }
+
+    @GetMapping("/deleteNewsThemeById")
+    public Result deleteNewsThemeById(@RequestParam("id") Long id) {
+        newsThemeService.removeById(id);
+        return Result.ok();
+    }
 
 }
 

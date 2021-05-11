@@ -1,5 +1,6 @@
 package com.pdsu.sojacnn.service;
 
+import com.pdsu.sojacnn.bean.NewsContype;
 import com.pdsu.sojacnn.bean.NewsTheme;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.service.impl.NewsFeatureFallbackFactory;
@@ -30,4 +31,12 @@ public interface NewsFeatureService {
     @GetMapping("/newsTheme/findNewsThemeById")
     public Result findNewsThemeById(@RequestParam("id") Long id);
 
+    @GetMapping("/newsTheme/updateNewsThemeById")
+    Result updateNewsThemeById(@RequestBody NewsTheme newsTheme);
+
+    @GetMapping("/newsTheme/deleteNewsThemeById")
+    Result deleteNewsThemeById(@RequestParam Long id);
+
+    @GetMapping("/contype/insertContypeById")
+    Result insertContype(@RequestBody NewsContype newsContype);
 }
