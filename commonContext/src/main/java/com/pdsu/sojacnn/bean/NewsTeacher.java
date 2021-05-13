@@ -2,6 +2,7 @@ package com.pdsu.sojacnn.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -36,6 +37,10 @@ public class NewsTeacher implements Serializable {
 
     @ApiModelProperty(value = "老师电话")
     private Integer phoneNumber;
+
+    @ApiModelProperty(value = "逻辑删除")
+    @TableLogic
+    private Boolean isDelete;
 
 
 }

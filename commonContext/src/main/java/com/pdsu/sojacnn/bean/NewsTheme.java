@@ -3,6 +3,7 @@ package com.pdsu.sojacnn.bean;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -26,6 +27,7 @@ import java.util.Date;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value="NewsTheme对象", description="新闻主体")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class NewsTheme implements Serializable, Cloneable {
 
     private static final long serialVersionUID = 1L;

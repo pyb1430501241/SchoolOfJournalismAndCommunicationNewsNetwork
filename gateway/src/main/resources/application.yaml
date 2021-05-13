@@ -59,7 +59,6 @@ zuul:
     backgroundSystemConsumer:
       path: /background/**
       service-id: backgroundSystemConsumer
-#  ignored-patterns: /swagger-ui/**
 
 info:
   app.name: Sojacnn_路由网关_01
