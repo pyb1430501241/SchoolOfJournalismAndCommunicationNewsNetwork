@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <description>School of Journalism and Communication News Network</description>
+
     <modules>
         <module>commonConfiguration</module>
         <module>commonContext</module>
@@ -368,16 +369,6 @@
                 <groupId>io.github.openfeign</groupId>
                 <artifactId>feign-okhttp</artifactId>
                 <version>11.0</version>
-            </dependency>
-            <dependency>
-                <groupId>com.spring4all</groupId>
-                <artifactId>swagger-spring-boot-starter</artifactId>
-                <version>1.9.1.RELEASE</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>swagger-bootstrap-ui</artifactId>
-                <version>1.9.6</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -3,6 +3,7 @@ package com.pdsu.sojacnn.bean;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -26,6 +27,7 @@ import java.io.Serializable;
 @ApiModel(value="NewsContype对象", description="新闻一级类型")
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class NewsContype implements Serializable {
 
     private static final long serialVersionUID = 1L;

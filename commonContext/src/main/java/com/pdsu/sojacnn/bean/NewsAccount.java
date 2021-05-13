@@ -2,6 +2,8 @@ package com.pdsu.sojacnn.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -25,6 +27,7 @@ import java.util.Date;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value="NewsAccount对象", description="")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class NewsAccount implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -43,6 +46,7 @@ public class NewsAccount implements Serializable {
     private String userName;
 
     @ApiModelProperty(value = "逻辑删除")
+    @TableLogic
     private Boolean isDelete;
 
     @ApiModelProperty(value = "创建时间")

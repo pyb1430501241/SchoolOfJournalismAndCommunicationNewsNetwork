@@ -1,6 +1,7 @@
 package com.pdsu.sojacnn.controller;
 
 
+import com.pdsu.sojacnn.bean.NewsContype;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.service.NewsContypeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,8 @@ public class NewsContypeController {
 
     @GetMapping("/findContypeById")
     public Result findContypeById(@RequestParam("id") Integer id) {
-        return Result.ok().data("item", newsContypeService.getById(id));
+        NewsContype contype = newsContypeService.getById(id);
+        return contype == null ? Result.notFound() :Result.ok().data("item", contype);
     }
 
 }

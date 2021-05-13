@@ -1,5 +1,6 @@
 package com.pdsu.sojacnn.bean;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -11,6 +12,7 @@ import java.util.Map;
  * @create 2021-05-07 19:11
  */
 @Data
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Result implements Serializable {
 
     private Integer code;
