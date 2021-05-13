@@ -36,17 +36,8 @@ public class NewsFeatureController {
 
     @ApiOperation(value = "根据ID, 查询新闻类型", response = Result.class)
     @GetMapping("/findContype/{id}")
-    public Result findContypeById(@PathVariable Integer id) {
+    public Result findContypeById(@ApiParam(name = "id", value = "类型ID", required = true) @PathVariable Integer id) {
         return newsFeatureService.findContypeById(id);
-    }
-
-    @PostMapping("/insertNewsTheme")
-    @ApiOperation(value = "插入新闻主体", response = Result.class)
-    public Result insertNewsTheme(String title, String data, Integer contypeId, Integer categoryId) throws Exception {
-        NewsTheme newsTheme = newsThemeFactory.create(title, data, contypeId, categoryId);
-        newsTheme.setCreateTime(DateUtils.nowDate());
-        newsTheme.setUpdateTime(DateUtils.nowDate());
-        return newsFeatureService.insertNewsTheme(newsTheme);
     }
 
     @GetMapping("/{id}")
@@ -56,28 +47,8 @@ public class NewsFeatureController {
     }
 
     @GetMapping("/{id}")
-    @ApiOperation(value = "根据ID, 更新新闻主体", response = Result.class)
-    public Result updateNewsThemeById(@PathVariable Long id, String title, String data, Integer contypeId, Integer categoryId) throws NoSuchMethodException {
-        NewsTheme newsTheme = newsThemeFactory.create(title, data, contypeId, categoryId);
-        newsTheme.setId(id);
-        newsTheme.setCreateTime(DateUtils.nowDate());
-        newsTheme.setUpdateTime(DateUtils.nowDate());
-        return newsFeatureService.updateNewsThemeById(newsTheme);
+    @ApiOperation(value = "根据ID, 查询新闻类别", response = Result.class)
+    public Result findCategoryById(@ApiParam(name = "id", value = "类别ID", required = true) @PathVariable Integer id) {
+        return newsFeatureService.findCategoryById(id);
     }
-
-    @GetMapping("/{id}")
-    @ApiOperation(value = "根据ID, 删除新闻主体", response = Result.class)
-    public Result deleteNewsThemeById(@PathVariable Long id) {
-        return newsFeatureService.deleteNewsThemeById(id);
-    }
-
-    @GetMapping("/{id}")
-    @ApiOperation(value = "插入新闻类型", response = Result.class)
-    public Result insertContypeById(String contypeName) throws NoSuchMethodException {
-        NewsContype newsContype = newsContypeFactory.create();
-        newsContype.setContypeName(contypeName);
-        return newsFeatureService.insertContype(newsContype);
-    }
-
-
 }

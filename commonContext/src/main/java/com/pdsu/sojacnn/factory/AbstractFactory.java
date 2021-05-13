@@ -83,7 +83,7 @@ public abstract class AbstractFactory<T> {
     }
 
     private void doField(@NonNull T t, @NonNull String key, @NonNull Object value) throws NoSuchFieldException, IllegalAccessException {
-        Field field = t.getClass().getDeclaredField(key);
+        Field field = targetClass.getDeclaredField(key);
         field.setAccessible(true);
         field.set(t, value);
     }

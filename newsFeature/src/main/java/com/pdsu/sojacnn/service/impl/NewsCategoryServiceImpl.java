@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  *  服务实现类
  * </p>
  *
- * @author 半梦n
+ * @author 半梦
  * @since 2021-05-07
  */
 @Service("newsCategoryService")

@@ -1,5 +1,6 @@
 package com.pdsu.sojacnn.service;
 
+import com.pdsu.sojacnn.bean.NewsCategory;
 import com.pdsu.sojacnn.bean.NewsContype;
 import com.pdsu.sojacnn.bean.NewsTheme;
 import com.pdsu.sojacnn.bean.Result;
@@ -35,8 +36,26 @@ public interface NewsFeatureService {
     Result updateNewsThemeById(@RequestBody NewsTheme newsTheme);
 
     @GetMapping("/newsTheme/deleteNewsThemeById")
-    Result deleteNewsThemeById(@RequestParam Long id);
+    Result deleteNewsThemeById(@RequestParam("id") Long id);
 
-    @GetMapping("/contype/insertContypeById")
+    @PostMapping("/contype/insertContypeById")
     Result insertContype(@RequestBody NewsContype newsContype);
+
+    @GetMapping("/contype/deleteContypeById")
+    Result deleteContypeById(@RequestParam("id") Integer id);
+
+    @GetMapping("/contype/updateContypeById")
+    Result updateContypeById(@RequestBody NewsContype newsContype);
+
+    @GetMapping("/category/findCategoryById")
+    Result findCategoryById(@RequestParam("id") Integer id);
+
+    @PostMapping("/category/insertNewsCategory")
+    Result insertNewsCategory(@RequestBody NewsCategory newsCategory);
+
+    @GetMapping("/category/deleteCategoryById")
+    Result deleteNewsCategoryById(@RequestParam("id") Integer id);
+
+    @GetMapping("/category/updateCategoryById")
+    Result updateNewsCategory(@RequestBody NewsCategory newsCategory);
 }
