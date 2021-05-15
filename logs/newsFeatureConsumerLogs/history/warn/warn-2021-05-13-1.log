@@ -1,0 +1,241 @@
+2021-05-13 17:39:33 WARN [restartedMain][ConfigServicePropertySourceLocator.java:161] - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/newsFeatureConsumer/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-05-13 17:39:35 WARN [restartedMain][OptionalLiveReloadServer.java:61] - Unable to start LiveReload server
+2021-05-13 17:39:36 WARN [restartedMain][AbstractApplicationContext.java:559] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/F:/Java%20Pack/repMaven/io/springfox/springfox-spring-web/3.0.0/springfox-spring-web-3.0.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/F:/Java%20Pack/repMaven/io/springfox/springfox-spring-webmvc/3.0.0/springfox-spring-webmvc-3.0.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'newsFeatureController' method 
+com.pdsu.sojacnn.controller.NewsFeatureController#findCategoryById(Integer)
+to {GET /{id}}: There is already 'newsFeatureController' bean method
+com.pdsu.sojacnn.controller.NewsFeatureController#findNewsThemeById(Long) mapped.
+2021-05-13 19:25:46 WARN [restartedMain][ConfigServicePropertySourceLocator.java:161] - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/newsFeatureConsumer/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-05-13 19:25:48 WARN [restartedMain][OptionalLiveReloadServer.java:61] - Unable to start LiveReload server
+2021-05-13 19:25:49 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 19:25:49 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 19:25:53 WARN [restartedMain][BlockingLoadBalancerClientAutoConfiguration.java:86] - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-05-13 19:59:01 WARN [restartedMain][ConfigServicePropertySourceLocator.java:161] - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/newsFeatureConsumer/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-05-13 19:59:04 WARN [restartedMain][OptionalLiveReloadServer.java:61] - Unable to start LiveReload server
+2021-05-13 19:59:06 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 19:59:06 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 19:59:11 WARN [restartedMain][BlockingLoadBalancerClientAutoConfiguration.java:86] - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-05-13 19:59:18 WARN [restartedMain][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 19:59:18 WARN [restartedMain][DiscoveryClient.java:303] - Using default backup registry implementation which does not do anything.
+2021-05-13 20:12:50 WARN [Thread-1][DiscoveryClient.java:1351] - Saw local status change event StatusChangeEvent [timestamp=1620907970886, current=DOWN, previous=UP]
+2021-05-13 20:12:51 WARN [Thread-1][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 20:13:01 WARN [restartedMain][ConfigServicePropertySourceLocator.java:161] - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/newsFeatureConsumer/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-05-13 20:13:03 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 20:13:07 WARN [restartedMain][BlockingLoadBalancerClientAutoConfiguration.java:86] - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-05-13 20:13:46 WARN [SpringContextShutdownHook][DiscoveryClient.java:1351] - Saw local status change event StatusChangeEvent [timestamp=1620908026535, current=DOWN, previous=UP]
+2021-05-13 20:13:46 WARN [DiscoveryClient-InstanceInfoReplicator-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: org.apache.http.NoHttpResponseException: localhost:7001 failed to respond
+2021-05-13 20:13:46 WARN [DiscoveryClient-InstanceInfoReplicator-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: org.apache.http.NoHttpResponseException: localhost:7001 failed to respond
+2021-05-13 20:13:46 WARN [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:875] - DiscoveryClient_NEWSFEATURECONSUMER/Sojacnn_NewsFeature_消费者_01 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.25.jar:1.9.25]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2021-05-13 20:13:46 WARN [DiscoveryClient-InstanceInfoReplicator-0][InstanceInfoReplicator.java:125] - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.25.jar:1.9.25]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2021-05-13 20:13:54 WARN [SpringContextShutdownHook][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:14:26 WARN [restartedMain][ConfigServicePropertySourceLocator.java:161] - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/newsFeatureConsumer/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-05-13 20:14:29 WARN [restartedMain][OptionalLiveReloadServer.java:61] - Unable to start LiveReload server
+2021-05-13 20:14:29 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 20:14:29 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 20:14:34 WARN [restartedMain][BlockingLoadBalancerClientAutoConfiguration.java:86] - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-05-13 20:44:20 WARN [restartedMain][ConfigServicePropertySourceLocator.java:161] - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/newsFeatureConsumer/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-05-13 20:44:24 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 20:44:24 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 20:44:28 WARN [restartedMain][BlockingLoadBalancerClientAutoConfiguration.java:86] - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-05-13 20:44:33 WARN [restartedMain][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:44:33 WARN [restartedMain][DiscoveryClient.java:303] - Using default backup registry implementation which does not do anything.
+2021-05-13 20:44:37 WARN [DiscoveryClient-InstanceInfoReplicator-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:44:37 WARN [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:875] - DiscoveryClient_NEWSFEATURECONSUMER/Sojacnn_NewsFeature_消费者_01 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.25.jar:1.9.25]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2021-05-13 20:44:37 WARN [DiscoveryClient-InstanceInfoReplicator-0][InstanceInfoReplicator.java:125] - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.25.jar:1.9.25]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2021-05-13 20:45:07 WARN [DiscoveryClient-CacheRefreshExecutor-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:45:07 WARN [DiscoveryClient-HeartbeatExecutor-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:45:11 WARN [DiscoveryClient-InstanceInfoReplicator-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:45:11 WARN [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:875] - DiscoveryClient_NEWSFEATURECONSUMER/Sojacnn_NewsFeature_消费者_01 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.25.jar:1.9.25]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2021-05-13 20:45:11 WARN [DiscoveryClient-InstanceInfoReplicator-0][InstanceInfoReplicator.java:125] - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.25.jar:1.9.25]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2021-05-13 20:45:41 WARN [DiscoveryClient-HeartbeatExecutor-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:45:41 WARN [DiscoveryClient-CacheRefreshExecutor-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:45:55 WARN [restartedMain][ConfigServicePropertySourceLocator.java:161] - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/newsFeatureConsumer/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-05-13 20:45:58 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 20:45:58 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 20:46:03 WARN [restartedMain][BlockingLoadBalancerClientAutoConfiguration.java:86] - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-05-13 20:46:08 WARN [restartedMain][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:46:08 WARN [restartedMain][DiscoveryClient.java:303] - Using default backup registry implementation which does not do anything.
+2021-05-13 20:46:13 WARN [DiscoveryClient-InstanceInfoReplicator-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:46:13 WARN [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:875] - DiscoveryClient_NEWSFEATURECONSUMER/Sojacnn_NewsFeature_消费者_01 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.25.jar:1.9.25]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2021-05-13 20:46:13 WARN [DiscoveryClient-InstanceInfoReplicator-0][InstanceInfoReplicator.java:125] - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.25.jar:1.9.25]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2021-05-13 20:51:09 WARN [SpringContextShutdownHook][DiscoveryClient.java:1351] - Saw local status change event StatusChangeEvent [timestamp=1620910269588, current=DOWN, previous=UP]
+2021-05-13 20:51:10 WARN [SpringContextShutdownHook][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 20:51:13 WARN [DiscoveryClient-HeartbeatExecutor-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:51:13 WARN [DiscoveryClient-CacheRefreshExecutor-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:51:13 WARN [DiscoveryClient-1][TimedSupervisorTask.java:90] - task supervisor shutting down, can't accept the task
+2021-05-13 20:51:13 WARN [DiscoveryClient-0][TimedSupervisorTask.java:90] - task supervisor shutting down, can't accept the task
+2021-05-13 20:51:13 WARN [DiscoveryClient-InstanceInfoReplicator-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:51:17 WARN [DiscoveryClient-CacheRefreshExecutor-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:51:17 WARN [DiscoveryClient-HeartbeatExecutor-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:51:17 WARN [SpringContextShutdownHook][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 20:59:04 WARN [restartedMain][ConfigServicePropertySourceLocator.java:161] - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/newsFeatureConsumer/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-05-13 20:59:08 WARN [restartedMain][OptionalLiveReloadServer.java:61] - Unable to start LiveReload server
+2021-05-13 20:59:08 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 20:59:09 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 20:59:14 WARN [restartedMain][BlockingLoadBalancerClientAutoConfiguration.java:86] - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-05-13 21:02:33 WARN [SpringContextShutdownHook][DiscoveryClient.java:1351] - Saw local status change event StatusChangeEvent [timestamp=1620910953910, current=DOWN, previous=UP]
+2021-05-13 21:02:34 WARN [SpringContextShutdownHook][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 21:02:38 WARN [DiscoveryClient-InstanceInfoReplicator-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 21:02:41 WARN [SpringContextShutdownHook][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 21:02:42 WARN [DiscoveryClient-InstanceInfoReplicator-0][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 21:02:42 WARN [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:875] - DiscoveryClient_NEWSFEATURECONSUMER/Sojacnn_NewsFeature_消费者_01 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.25.jar:1.9.25]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2021-05-13 21:02:42 WARN [DiscoveryClient-InstanceInfoReplicator-0][InstanceInfoReplicator.java:125] - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:873) ~[eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.25.jar:1.9.25]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101) [eureka-client-1.9.25.jar:1.9.25]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java) [?:?]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+2021-05-13 21:02:45 WARN [SpringContextShutdownHook][RetryableEurekaHttpClient.java:130] - Request execution failed with message: java.net.ConnectException: Connection refused: connect
+2021-05-13 21:03:31 WARN [restartedMain][ConfigServicePropertySourceLocator.java:161] - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/newsFeatureConsumer/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-05-13 21:03:34 WARN [restartedMain][OptionalLiveReloadServer.java:61] - Unable to start LiveReload server
+2021-05-13 21:03:36 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 21:03:36 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-13 21:03:41 WARN [restartedMain][BlockingLoadBalancerClientAutoConfiguration.java:86] - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.

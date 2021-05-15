@@ -1,0 +1,8 @@
+2021-05-15 18:57:01 WARN [restartedMain][ConfigServicePropertySourceLocator.java:161] - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/backgroundSystem/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2021-05-15 18:57:04 WARN [restartedMain][EndpointId.java:155] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-05-15 18:57:04 WARN [restartedMain][EndpointId.java:155] - Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2021-05-15 18:57:08 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-15 18:57:19 WARN [restartedMain][URLConfigurationSource.java:121] - No URLs will be polled as dynamic configuration sources.
+2021-05-15 18:57:24 WARN [restartedMain][OptionalLiveReloadServer.java:61] - Unable to start LiveReload server
+2021-05-15 18:57:26 WARN [restartedMain][BlockingLoadBalancerClientAutoConfiguration.java:86] - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-05-15 18:57:34 WARN [RMI TCP Connection(8)-192.168.12.1][ConfigServicePropertySourceLocator.java:161] - Could not locate PropertySource: None of labels [] found

@@ -32,19 +32,19 @@ public interface NewsFeatureService {
     @GetMapping("/newsTheme/findNewsThemeById")
     public Result findNewsThemeById(@RequestParam("id") Long id);
 
-    @GetMapping("/newsTheme/updateNewsThemeById")
+    @PostMapping("/newsTheme/updateNewsThemeById")
     Result updateNewsThemeById(@RequestBody NewsTheme newsTheme);
 
-    @GetMapping("/newsTheme/deleteNewsThemeById")
+    @PostMapping("/newsTheme/deleteNewsThemeById")
     Result deleteNewsThemeById(@RequestParam("id") Long id);
 
     @PostMapping("/contype/insertContypeById")
     Result insertContype(@RequestBody NewsContype newsContype);
 
-    @GetMapping("/contype/deleteContypeById")
+    @PostMapping("/contype/deleteContypeById")
     Result deleteContypeById(@RequestParam("id") Integer id);
 
-    @GetMapping("/contype/updateContypeById")
+    @PostMapping("/contype/updateContypeById")
     Result updateContypeById(@RequestBody NewsContype newsContype);
 
     @GetMapping("/category/findCategoryById")
@@ -53,9 +53,9 @@ public interface NewsFeatureService {
     @PostMapping("/category/insertNewsCategory")
     Result insertNewsCategory(@RequestBody NewsCategory newsCategory);
 
-    @GetMapping("/category/deleteCategoryById")
+    @PostMapping("/category/deleteCategoryById")
     Result deleteNewsCategoryById(@RequestParam("id") Integer id);
 
-    @GetMapping("/category/updateCategoryById")
+    @PostMapping("/category/updateCategoryById")
     Result updateNewsCategory(@RequestBody NewsCategory newsCategory);
 }

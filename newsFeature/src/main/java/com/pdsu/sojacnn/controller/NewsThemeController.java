@@ -31,16 +31,17 @@ public class NewsThemeController {
 
     @GetMapping("/findNewsThemeById")
     public Result findNewsThemeById(@RequestParam("id") Long id) {
-        return Result.ok().data("item", newsThemeService.getById(id));
+        NewsTheme newsTheme = newsThemeService.getById(id);
+        return newsTheme == null ? Result.notFound() :Result.ok().data("item", newsTheme);
     }
 
-    @GetMapping("/updateNewsThemeById")
+    @PostMapping("/updateNewsThemeById")
     public Result updateNewsThemeById(@RequestBody NewsTheme newsTheme) {
         newsThemeService.updateById(newsTheme);
         return Result.ok();
     }
 
-    @GetMapping("/deleteNewsThemeById")
+    @PostMapping("/deleteNewsThemeById")
     public Result deleteNewsThemeById(@RequestParam("id") Long id) {
         newsThemeService.removeById(id);
         return Result.ok();

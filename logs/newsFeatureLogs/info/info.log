@@ -1,0 +1,41 @@
+2021-05-15 18:57:34 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-15 18:57:36 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-15 18:57:36 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4d5abf53
+2021-05-15 18:57:37 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-15 18:57:37 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-15 18:57:39 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-15 18:57:44 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-15 18:57:44 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-15 18:57:44 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-15 18:57:44 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-15 18:57:44 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-15 18:57:44 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 18:57:45 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-15 18:57:45 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-15 18:57:45 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-15 18:57:45 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-15 18:57:45 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-15 18:57:45 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-15 18:57:45 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-15 18:57:45 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-15 18:57:45 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-15 18:57:45 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-15 18:57:45 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1621076265834 with initial instances count: 2
+2021-05-15 18:57:45 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1621076265838, current=UP, previous=STARTING]
+2021-05-15 18:57:45 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-15 18:57:45 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-15 18:57:47 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 25.169 seconds (JVM running for 29.186)
+2021-05-15 19:02:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 19:07:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 19:12:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 19:17:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 19:22:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 19:27:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 19:32:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 19:37:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 19:42:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 19:47:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 19:52:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 19:57:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 20:02:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 20:07:45 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration

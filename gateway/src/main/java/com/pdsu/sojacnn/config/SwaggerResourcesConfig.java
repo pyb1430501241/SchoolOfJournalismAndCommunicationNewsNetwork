@@ -1,6 +1,5 @@
 package com.pdsu.sojacnn.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;
@@ -39,8 +38,8 @@ public class SwaggerResourcesConfig implements SwaggerResourcesProvider {
         //在这里遍历的时候，可以排除掉敏感微服务的路由
         return routeLocator.getRoutes().stream()
                 .filter(s -> !applicationName.equals(s.getId()))
-                .map(r -> swaggerResource(r.getId(),
-                        r.getFullPath().replace("**", "v2/api-docs") + "?group=" + r.getId(), "1.0.0"))
+                .map(r -> swaggerResource(r.getId(), r.getFullPath().
+                        replace("**", "v2/api-docs") + "?group=" + r.getId(), "1.0.0"))
                 .collect(Collectors.toList());
     }
 

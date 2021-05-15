@@ -37,6 +37,7 @@ public abstract class DateUtils {
     }
 
     /**
+     *
      * @param dateString yyyy-MM-dd HH:mm:ss
      * @return
      *  <p>当日期不符合规范时，返回<code>null</code></p>

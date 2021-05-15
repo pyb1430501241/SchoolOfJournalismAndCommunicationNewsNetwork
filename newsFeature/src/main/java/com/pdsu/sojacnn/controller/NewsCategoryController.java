@@ -24,10 +24,11 @@ public class NewsCategoryController {
 
     @GetMapping("/findCategoryById")
     public Result findCategoryById(@RequestParam("id") Integer id) {
-        return Result.ok().data("item",newsCategoryService.getById(id));
+        NewsCategory newsCategory = newsCategoryService.getById(id);
+        return newsCategory == null ? Result.notFound() :Result.ok().data("item", newsCategory);
     }
 
-    @GetMapping("/deleteCategoryById")
+    @PostMapping("/deleteCategoryById")
     public Result deleteCategoryById(@RequestParam("id") Integer id) {
         newsCategoryService.removeById(id);
         return Result.ok();
@@ -39,7 +40,7 @@ public class NewsCategoryController {
         return Result.ok();
     }
 
-    @GetMapping("/updateCategoryById")
+    @PostMapping("/updateCategoryById")
     public Result updateCategoryById(@RequestBody NewsCategory newsCategory) {
         newsCategoryService.updateById(newsCategory);
         return Result.ok();

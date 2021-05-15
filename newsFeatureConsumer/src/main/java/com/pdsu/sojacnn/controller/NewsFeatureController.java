@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * @author 半梦
+ * @author wl
  * @create 2021-05-08 15:42
  */
 @RestController
@@ -38,13 +39,13 @@ public class NewsFeatureController {
         return newsFeatureService.findContypeById(id);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/findNewsThemeById/{id}")
     @ApiOperation(value = "根据ID, 查询新闻主体", response = Result.class)
     public Result findNewsThemeById(@ApiParam(name = "id", value = "新闻ID", required = true) @PathVariable Long id) {
         return newsFeatureService.findNewsThemeById(id);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/findCategoryById/{id}")
     @ApiOperation(value = "根据ID, 查询新闻类别", response = Result.class)
     public Result findCategoryById(@ApiParam(name = "id", value = "类别ID", required = true) @PathVariable Integer id) {
         return newsFeatureService.findCategoryById(id);

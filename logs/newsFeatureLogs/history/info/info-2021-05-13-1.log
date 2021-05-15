@@ -1,0 +1,596 @@
+2021-05-13 17:37:50 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-13 17:37:53 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 17:37:53 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@456ee73b
+2021-05-13 17:37:53 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-13 17:39:07 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-13 17:39:11 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 17:39:11 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7ee0d729
+2021-05-13 17:39:12 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-13 19:25:50 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-13 19:25:53 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 19:25:53 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@72d0e7bc
+2021-05-13 19:25:53 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-13 19:25:53 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-13 19:25:55 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 19:26:01 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-13 19:26:01 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-13 19:26:01 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-13 19:26:02 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-13 19:26:02 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1620905162960 with initial instances count: 1
+2021-05-13 19:26:02 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1620905162965, current=UP, previous=STARTING]
+2021-05-13 19:26:02 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:26:03 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-13 19:26:04 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 21.345 seconds (JVM running for 24.683)
+2021-05-13 19:34:14 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-13 19:34:16 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 19:34:16 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@35d985
+2021-05-13 19:34:16 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-13 19:34:16 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-13 19:34:18 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 19:34:23 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-13 19:34:23 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-13 19:34:23 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-13 19:34:23 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-13 19:34:23 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-13 19:34:24 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 19:34:24 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:34:24 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:34:24 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:34:24 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:34:24 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:34:24 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:34:24 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:34:28 INFO [restartedMain][DiscoveryClient.java:442] - Initial registry fetch from primary servers failed
+2021-05-13 19:34:28 INFO [restartedMain][DiscoveryClient.java:447] - Initial registry fetch from backup servers failed
+2021-05-13 19:34:28 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-13 19:34:28 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-13 19:34:28 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1620905668779 with initial instances count: 0
+2021-05-13 19:34:28 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1620905668785, current=UP, previous=STARTING]
+2021-05-13 19:34:28 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:34:30 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 23.178 seconds (JVM running for 25.349)
+2021-05-13 19:34:58 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:34:58 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:34:58 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:34:58 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:34:58 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:34:58 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:34:58 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:35:02 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:35:32 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:35:32 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:35:32 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:35:32 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:35:32 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:35:32 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:35:32 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:35:36 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:36:06 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:36:06 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:36:06 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:36:06 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:36:06 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:36:06 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:36:06 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:36:10 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:36:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:36:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:36:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:36:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:36:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:36:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:36:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:36:44 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:37:14 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:37:14 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:37:14 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:37:14 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:37:14 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:37:14 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:37:14 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:37:18 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:37:48 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:37:48 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:37:48 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:37:48 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:37:48 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:37:48 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:37:48 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:37:53 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:38:23 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:38:23 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:38:23 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:38:23 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:38:23 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:38:23 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:38:23 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:38:27 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:38:57 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:38:57 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:38:57 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:38:57 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:38:57 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:38:57 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:38:57 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:39:01 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:39:24 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 19:39:31 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:39:31 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:39:31 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:39:31 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:39:31 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:39:31 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:39:31 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:39:35 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:40:05 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:40:05 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:40:05 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:40:05 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:40:05 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:40:05 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:40:05 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:40:09 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:40:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:40:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:40:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:40:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:40:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:40:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:40:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:40:43 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:41:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:41:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:41:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:41:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:41:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:41:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:41:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:41:17 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:41:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:41:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:41:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:41:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:41:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:41:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:41:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:41:51 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:42:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:42:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:42:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:42:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:42:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:42:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:42:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:42:25 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:42:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:42:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:42:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:42:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:42:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:42:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:42:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:42:59 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:43:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:43:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:43:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:43:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:43:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:43:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:43:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:43:33 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:44:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:44:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:44:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:44:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:44:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:44:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:44:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:44:07 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:44:24 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 19:44:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:44:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:44:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:44:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:44:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:44:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:44:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:44:41 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:45:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:45:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:45:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:45:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:45:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:45:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:45:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:45:15 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:45:45 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:45:45 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:45:45 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:45:45 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:45:45 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:45:45 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:45:45 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:45:49 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:46:19 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:46:19 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:46:19 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:46:19 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:46:19 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:46:19 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:46:19 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:46:23 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:46:53 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:46:53 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:46:53 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:46:53 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:46:53 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:46:53 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:46:53 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:46:57 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:47:27 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:47:27 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:47:27 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:47:27 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:47:27 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:47:27 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:47:27 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:47:31 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:48:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:48:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:48:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:48:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:48:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:48:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:48:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:48:05 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:48:35 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:48:35 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:48:35 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:48:35 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:48:35 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:48:35 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:48:35 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:48:39 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:49:09 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:49:09 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:49:09 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:49:09 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:49:09 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:49:09 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:49:09 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:49:13 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:49:24 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 19:49:43 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:49:43 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:49:43 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:49:43 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:49:43 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:49:43 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:49:43 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:49:47 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:50:17 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:50:17 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:50:17 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:50:17 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:50:17 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:50:17 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:50:17 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:50:21 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:50:51 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:50:51 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:50:51 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:50:51 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:50:51 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:50:51 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:50:51 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:50:55 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:51:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:51:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:51:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:51:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:51:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:51:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:51:39 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:51:43 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:52:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:52:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:52:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:52:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:52:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:52:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:52:13 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:52:17 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:52:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:52:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:52:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:52:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:52:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:52:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:52:47 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:52:51 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:53:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:53:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:53:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:53:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:53:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:53:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:53:21 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:53:25 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:53:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:53:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:53:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:53:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:53:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:53:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:53:55 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:53:59 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:54:24 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 19:54:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:54:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:54:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:54:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:54:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:54:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:54:29 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:54:33 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:55:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:55:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:55:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:55:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:55:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:55:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:55:03 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:55:07 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:55:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:55:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:55:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:55:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:55:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:55:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:55:37 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:55:41 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:56:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:56:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:56:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:56:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:56:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:56:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:56:11 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:56:15 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:56:46 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:56:46 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:56:46 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:56:46 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:56:46 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:56:46 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:56:46 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:56:50 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:57:20 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 19:57:20 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 19:57:20 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 19:57:20 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 19:57:20 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 19:57:20 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 19:57:20 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 19:57:24 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:57:36 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 19:57:38 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - DatebookHikariCP - Shutdown initiated...
+2021-05-13 19:57:38 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - DatebookHikariCP - Shutdown completed.
+2021-05-13 19:57:39 INFO [SpringContextShutdownHook][DiscoveryClient.java:932] - Shutting down DiscoveryClient ...
+2021-05-13 19:57:40 INFO [SpringContextShutdownHook][DiscoveryClient.java:968] - Unregistering ...
+2021-05-13 19:57:44 INFO [SpringContextShutdownHook][DiscoveryClient.java:957] - Completed shut down of DiscoveryClient
+2021-05-13 19:59:16 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-13 19:59:25 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 19:59:25 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@457df67c
+2021-05-13 19:59:26 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-13 19:59:30 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-13 19:59:32 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 20:00:14 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-13 20:00:14 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-13 20:00:14 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-13 20:00:14 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-13 20:00:14 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-13 20:00:15 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 20:00:17 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 20:00:17 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 20:00:17 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 20:00:17 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 20:00:17 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 20:00:17 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 20:00:17 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 20:00:17 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-13 20:00:17 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-13 20:00:17 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-13 20:00:17 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1620907217759 with initial instances count: 3
+2021-05-13 20:00:17 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1620907217766, current=UP, previous=STARTING]
+2021-05-13 20:00:17 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 20:00:17 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-13 20:00:21 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 74.18 seconds (JVM running for 77.977)
+2021-05-13 20:05:17 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 20:10:17 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 20:12:50 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 20:12:50 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-13 20:12:52 INFO [Thread-1][HikariDataSource.java:350] - DatebookHikariCP - Shutdown initiated...
+2021-05-13 20:12:52 INFO [Thread-1][HikariDataSource.java:352] - DatebookHikariCP - Shutdown completed.
+2021-05-13 20:12:52 INFO [Thread-1][DiscoveryClient.java:932] - Shutting down DiscoveryClient ...
+2021-05-13 20:12:55 INFO [Thread-1][DiscoveryClient.java:968] - Unregistering ...
+2021-05-13 20:12:55 INFO [Thread-1][DiscoveryClient.java:970] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - deregister  status: 200
+2021-05-13 20:12:55 INFO [Thread-1][DiscoveryClient.java:957] - Completed shut down of DiscoveryClient
+2021-05-13 20:13:02 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-13 20:13:03 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 20:13:03 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@2094e54f
+2021-05-13 20:13:03 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-13 20:13:03 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-13 20:13:04 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-13 20:13:09 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-13 20:13:09 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1620907989595 with initial instances count: 1
+2021-05-13 20:13:09 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1620907989598, current=UP, previous=STARTING]
+2021-05-13 20:13:09 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 20:13:09 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-13 20:13:11 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 16.074 seconds (JVM running for 847.797)
+2021-05-13 20:13:46 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 20:13:47 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - DatebookHikariCP - Shutdown initiated...
+2021-05-13 20:13:47 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - DatebookHikariCP - Shutdown completed.
+2021-05-13 20:13:47 INFO [SpringContextShutdownHook][DiscoveryClient.java:932] - Shutting down DiscoveryClient ...
+2021-05-13 20:13:50 INFO [SpringContextShutdownHook][DiscoveryClient.java:968] - Unregistering ...
+2021-05-13 20:13:54 INFO [SpringContextShutdownHook][DiscoveryClient.java:957] - Completed shut down of DiscoveryClient
+2021-05-13 20:14:16 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-13 20:14:20 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 20:14:20 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4ee46c
+2021-05-13 20:14:21 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-13 20:14:21 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-13 20:14:22 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 20:14:29 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-13 20:14:29 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-13 20:14:29 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-13 20:14:29 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-13 20:14:29 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-13 20:14:29 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 20:14:30 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 20:14:30 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 20:14:30 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 20:14:30 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 20:14:30 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 20:14:30 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 20:14:30 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 20:14:30 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-13 20:14:30 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-13 20:14:30 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-13 20:14:30 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1620908070455 with initial instances count: 2
+2021-05-13 20:14:30 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1620908070460, current=UP, previous=STARTING]
+2021-05-13 20:14:30 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 20:14:30 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-13 20:14:32 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 24.763 seconds (JVM running for 27.549)
+2021-05-13 20:19:30 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 20:46:37 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-13 20:46:39 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 20:46:39 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@287ba759
+2021-05-13 20:46:40 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-13 20:46:40 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-13 20:46:42 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 20:46:47 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-13 20:46:47 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-13 20:46:47 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-13 20:46:47 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-13 20:46:47 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-13 20:46:47 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 20:46:48 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 20:46:48 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 20:46:48 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 20:46:48 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 20:46:48 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 20:46:48 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 20:46:48 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 20:46:48 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-13 20:46:48 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-13 20:46:48 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-13 20:46:48 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1620910008432 with initial instances count: 0
+2021-05-13 20:46:48 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1620910008437, current=UP, previous=STARTING]
+2021-05-13 20:46:48 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 20:46:48 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-13 20:46:50 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 19.074 seconds (JVM running for 21.722)
+2021-05-13 20:47:18 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 20:47:18 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 20:47:18 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 20:47:18 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 20:47:18 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 20:47:18 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: false
+2021-05-13 20:47:18 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 20:47:18 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1102] - The response status is 200
+2021-05-13 20:51:08 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 20:51:09 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - DatebookHikariCP - Shutdown initiated...
+2021-05-13 20:51:09 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - DatebookHikariCP - Shutdown completed.
+2021-05-13 20:51:09 INFO [SpringContextShutdownHook][DiscoveryClient.java:932] - Shutting down DiscoveryClient ...
+2021-05-13 20:51:12 INFO [SpringContextShutdownHook][DiscoveryClient.java:968] - Unregistering ...
+2021-05-13 20:51:20 INFO [SpringContextShutdownHook][DiscoveryClient.java:957] - Completed shut down of DiscoveryClient
+2021-05-13 20:59:10 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-13 20:59:13 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 20:59:13 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7fcee6d3
+2021-05-13 20:59:13 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-13 20:59:14 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-13 20:59:16 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 20:59:21 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-13 20:59:22 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-13 20:59:22 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-13 20:59:22 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-13 20:59:22 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-13 20:59:22 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 20:59:22 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 20:59:22 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 20:59:22 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 20:59:22 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 20:59:22 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 20:59:22 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 20:59:22 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 20:59:23 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-13 20:59:23 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-13 20:59:23 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-13 20:59:23 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1620910763050 with initial instances count: 1
+2021-05-13 20:59:23 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1620910763055, current=UP, previous=STARTING]
+2021-05-13 20:59:23 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 20:59:23 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-13 20:59:24 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 23.353 seconds (JVM running for 27.584)
+2021-05-13 21:02:32 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 21:02:33 INFO [SpringContextShutdownHook][HikariDataSource.java:350] - DatebookHikariCP - Shutdown initiated...
+2021-05-13 21:02:33 INFO [SpringContextShutdownHook][HikariDataSource.java:352] - DatebookHikariCP - Shutdown completed.
+2021-05-13 21:02:33 INFO [SpringContextShutdownHook][DiscoveryClient.java:932] - Shutting down DiscoveryClient ...
+2021-05-13 21:02:36 INFO [SpringContextShutdownHook][DiscoveryClient.java:968] - Unregistering ...
+2021-05-13 21:02:40 INFO [SpringContextShutdownHook][DiscoveryClient.java:957] - Completed shut down of DiscoveryClient
+2021-05-13 21:03:37 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-13 21:03:41 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 21:03:41 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@16ac7cf0
+2021-05-13 21:03:41 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-13 21:03:41 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-13 21:03:43 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-13 21:03:49 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-13 21:03:49 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-13 21:03:49 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-13 21:03:49 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-13 21:03:49 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-13 21:03:49 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 21:03:50 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-13 21:03:50 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-13 21:03:50 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-13 21:03:50 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-13 21:03:50 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-13 21:03:50 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-13 21:03:50 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-13 21:03:50 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-13 21:03:50 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-13 21:03:50 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-13 21:03:50 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1620911030518 with initial instances count: 1
+2021-05-13 21:03:50 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1620911030522, current=UP, previous=STARTING]
+2021-05-13 21:03:50 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-13 21:03:50 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-13 21:03:52 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 23.76 seconds (JVM running for 27.101)
+2021-05-13 21:08:50 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 21:13:50 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 21:18:50 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 21:23:50 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-13 21:28:50 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration

@@ -1,5 +1,7 @@
 package com.pdsu.sojacnn.service.impl;
 
+import com.pdsu.sojacnn.bean.NewsCategory;
+import com.pdsu.sojacnn.bean.NewsContype;
 import com.pdsu.sojacnn.bean.NewsTheme;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.service.NewsFeatureService;
@@ -47,6 +49,41 @@ public class NewsFeatureFallbackFactory implements FallbackFactory<NewsFeatureSe
 
         @Override
         public Result deleteNewsThemeById(Long id) {
+            return RESULT;
+        }
+
+        @Override
+        public Result insertContype(NewsContype newsContype) {
+            return RESULT;
+        }
+
+        @Override
+        public Result deleteContypeById(Integer id) {
+            return RESULT;
+        }
+
+        @Override
+        public Result updateContypeById(NewsContype newsContype) {
+            return RESULT;
+        }
+
+        @Override
+        public Result findCategoryById(Integer id) {
+            return RESULT;
+        }
+
+        @Override
+        public Result insertNewsCategory(NewsCategory newsCategory) {
+            return RESULT;
+        }
+
+        @Override
+        public Result deleteNewsCategoryById(Integer id) {
+            return RESULT;
+        }
+
+        @Override
+        public Result updateNewsCategory(NewsCategory newsCategory) {
             return RESULT;
         }
     }

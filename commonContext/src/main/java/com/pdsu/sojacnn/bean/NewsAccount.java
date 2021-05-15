@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.pdsu.sojacnn.utils.DateUtils;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -51,6 +52,5 @@ public class NewsAccount implements Serializable {
 
     @ApiModelProperty(value = "创建时间")
     private Date createTime;
-
 
 }
