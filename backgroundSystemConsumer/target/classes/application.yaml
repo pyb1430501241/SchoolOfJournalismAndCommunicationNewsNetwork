@@ -1,0 +1,61 @@
+server:
+  port: 8889
+  servlet:
+    context-path: /
+  max-http-header-size: 128KB
+spring:
+  #  profiles: dev
+  application:
+    # 自己在 eureka 里的唯一标识
+    name: backgroundSystemConsumer
+#  redis:
+#    host: localhost
+#    password: pyb***20000112
+#    port: 6379
+#    jedis:
+#      pool:
+#        max-active: 60
+#        max-wait: 60
+#        max-idle: 10
+eureka:
+  client:
+    service-url:
+      # Eureka 管理, 如为集群模式, 则应注册到所有 eureka
+      defaultZone: http://localhost:7001/eureka/
+      # 注册自己进 Eureka
+    register-with-eureka: true
+  instance:
+    # 自己的唯一名称
+    instance-id: Sojacnn_background_system_消费者_01
+    prefer-ip-address: true
+# 负载均衡
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+  hystrix:
+    # 开启 hystrix 降级机制
+    # 降级即为服务端宕机时, 一个备用的响应返回
+    enabled: true
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 40000 #熔断响应时间
+#ribbon超时配置 读取和等待时间都设置2秒
+ribbon:
+  #熔断读取时间
+  ReadTimeout: 2000
+  #连接等待时间
+  ConnectTimeout: 2000
+
+logging:
+  config: classpath:log4j2/log4j2.xml
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        host: localhost/api/background
