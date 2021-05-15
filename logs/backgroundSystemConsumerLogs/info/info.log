@@ -63,3 +63,167 @@
 2021-05-15 20:02:25 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
 2021-05-15 20:07:25 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
 2021-05-15 20:12:25 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:01:48 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-15 21:01:53 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-15 21:01:53 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-15 21:02:02 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-15 21:02:03 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-15 21:02:03 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-15 21:02:03 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-15 21:02:03 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-15 21:02:04 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:02:06 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-15 21:02:06 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-15 21:02:06 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-15 21:02:06 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-15 21:02:06 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-15 21:02:06 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-15 21:02:06 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-15 21:02:10 INFO [restartedMain][DiscoveryClient.java:442] - Initial registry fetch from primary servers failed
+2021-05-15 21:02:10 INFO [restartedMain][DiscoveryClient.java:447] - Initial registry fetch from backup servers failed
+2021-05-15 21:02:10 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-15 21:02:10 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-15 21:02:10 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1621083730945 with initial instances count: 0
+2021-05-15 21:02:10 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1621083730951, current=UP, previous=STARTING]
+2021-05-15 21:02:10 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01: registering service...
+2021-05-15 21:02:12 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01 - registration status: 204
+2021-05-15 21:02:14 INFO [restartedMain][StartupInfoLogger.java:61] - Started BackgroundSystemConsumerRun in 34.715 seconds (JVM running for 37.661)
+2021-05-15 21:02:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-15 21:02:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-15 21:02:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-15 21:02:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-15 21:02:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-15 21:02:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-15 21:02:40 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-15 21:02:41 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1102] - The response status is 200
+2021-05-15 21:04:33 INFO [hystrix-NEWSFEATURE-1][ChainedDynamicProperty.java:115] - Flipping property: NEWSFEATURE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-05-15 21:04:33 INFO [hystrix-NEWSFEATURE-1][ShutdownEnabledTimer.java:58] - Shutdown hook installed for: NFLoadBalancer-PingTimer-NEWSFEATURE
+2021-05-15 21:04:33 INFO [hystrix-NEWSFEATURE-1][BaseLoadBalancer.java:197] - Client: NEWSFEATURE instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=NEWSFEATURE,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2021-05-15 21:04:33 INFO [hystrix-NEWSFEATURE-1][DynamicServerListLoadBalancer.java:222] - Using serverListUpdater PollingServerListUpdater
+2021-05-15 21:04:33 INFO [hystrix-NEWSFEATURE-1][ChainedDynamicProperty.java:115] - Flipping property: NEWSFEATURE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-05-15 21:04:33 INFO [hystrix-NEWSFEATURE-1][DynamicServerListLoadBalancer.java:150] - DynamicServerListLoadBalancer for client NEWSFEATURE initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=NEWSFEATURE,current list of Servers=[192.168.79.1:8001],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.79.1:8001;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@7da4ce9d
+2021-05-15 21:04:34 INFO [PollingServerListUpdater-0][ChainedDynamicProperty.java:115] - Flipping property: NEWSFEATURE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-05-15 21:07:06 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:12:06 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:17:06 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:22:06 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:27:06 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:30:02 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01: registering service...
+2021-05-15 21:30:08 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01 - registration status: 204
+2021-05-15 21:30:19 INFO [Thread-6][ShutdownEnabledTimer.java:67] - Shutdown hook removed for: NFLoadBalancer-PingTimer-NEWSFEATURE
+2021-05-15 21:30:21 INFO [Thread-6][DiscoveryClient.java:932] - Shutting down DiscoveryClient ...
+2021-05-15 21:30:24 INFO [Thread-6][DiscoveryClient.java:968] - Unregistering ...
+2021-05-15 21:30:29 INFO [Thread-6][DiscoveryClient.java:970] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01 - deregister  status: 200
+2021-05-15 21:30:30 INFO [Thread-6][DiscoveryClient.java:957] - Completed shut down of DiscoveryClient
+2021-05-15 21:31:31 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-15 21:32:05 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-15 21:32:13 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-15 21:32:13 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-15 21:32:13 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-15 21:32:13 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-15 21:32:13 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-15 21:32:14 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:32:14 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-15 21:32:14 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-15 21:32:14 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-15 21:32:14 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-15 21:32:14 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-15 21:32:14 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-15 21:32:14 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-15 21:32:14 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-15 21:32:14 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-15 21:32:14 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-15 21:32:14 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1621085534893 with initial instances count: 3
+2021-05-15 21:32:14 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1621085534896, current=UP, previous=STARTING]
+2021-05-15 21:32:14 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01: registering service...
+2021-05-15 21:32:14 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01 - registration status: 204
+2021-05-15 21:32:21 INFO [restartedMain][StartupInfoLogger.java:61] - Started BackgroundSystemConsumerRun in 85.018 seconds (JVM running for 1844.977)
+2021-05-15 21:33:52 INFO [hystrix-NEWSFEATURE-1][ChainedDynamicProperty.java:115] - Flipping property: NEWSFEATURE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-05-15 21:33:52 INFO [hystrix-NEWSFEATURE-1][ShutdownEnabledTimer.java:58] - Shutdown hook installed for: NFLoadBalancer-PingTimer-NEWSFEATURE
+2021-05-15 21:33:52 INFO [hystrix-NEWSFEATURE-1][BaseLoadBalancer.java:197] - Client: NEWSFEATURE instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=NEWSFEATURE,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2021-05-15 21:33:53 INFO [hystrix-NEWSFEATURE-1][DynamicServerListLoadBalancer.java:222] - Using serverListUpdater PollingServerListUpdater
+2021-05-15 21:33:53 INFO [hystrix-NEWSFEATURE-1][ChainedDynamicProperty.java:115] - Flipping property: NEWSFEATURE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-05-15 21:33:53 INFO [hystrix-NEWSFEATURE-1][DynamicServerListLoadBalancer.java:150] - DynamicServerListLoadBalancer for client NEWSFEATURE initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=NEWSFEATURE,current list of Servers=[192.168.79.1:8001],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.79.1:8001;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@149b380
+2021-05-15 21:33:54 INFO [PollingServerListUpdater-1][ChainedDynamicProperty.java:115] - Flipping property: NEWSFEATURE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-05-15 21:37:14 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:42:14 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:47:14 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:52:14 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:56:52 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01: registering service...
+2021-05-15 21:56:52 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01 - registration status: 204
+2021-05-15 21:56:55 INFO [Thread-15][ShutdownEnabledTimer.java:67] - Shutdown hook removed for: NFLoadBalancer-PingTimer-NEWSFEATURE
+2021-05-15 21:56:55 INFO [Thread-15][DiscoveryClient.java:932] - Shutting down DiscoveryClient ...
+2021-05-15 21:56:58 INFO [Thread-15][DiscoveryClient.java:968] - Unregistering ...
+2021-05-15 21:56:58 INFO [Thread-15][DiscoveryClient.java:970] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01 - deregister  status: 200
+2021-05-15 21:56:59 INFO [Thread-15][DiscoveryClient.java:957] - Completed shut down of DiscoveryClient
+2021-05-15 21:57:26 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-15 21:57:33 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-15 21:57:38 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-15 21:57:38 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-15 21:57:38 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-15 21:57:38 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-15 21:57:38 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-15 21:57:39 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 21:57:39 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-15 21:57:39 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-15 21:57:39 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-15 21:57:39 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-15 21:57:39 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-15 21:57:39 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-15 21:57:39 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-15 21:57:39 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-15 21:57:39 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-15 21:57:39 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-15 21:57:39 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1621087059370 with initial instances count: 2
+2021-05-15 21:57:39 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1621087059372, current=UP, previous=STARTING]
+2021-05-15 21:57:39 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01: registering service...
+2021-05-15 21:57:39 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01 - registration status: 204
+2021-05-15 21:57:43 INFO [restartedMain][StartupInfoLogger.java:61] - Started BackgroundSystemConsumerRun in 25.104 seconds (JVM running for 3366.804)
+2021-05-15 22:02:39 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 22:05:11 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-15 22:05:16 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-15 22:05:16 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-15 22:05:24 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-15 22:05:24 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-15 22:05:24 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-15 22:05:24 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-15 22:05:24 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-15 22:05:24 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-15 22:05:27 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-15 22:05:27 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-15 22:05:27 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-15 22:05:27 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-15 22:05:27 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-15 22:05:27 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-15 22:05:27 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-15 22:05:31 INFO [restartedMain][DiscoveryClient.java:442] - Initial registry fetch from primary servers failed
+2021-05-15 22:05:31 INFO [restartedMain][DiscoveryClient.java:447] - Initial registry fetch from backup servers failed
+2021-05-15 22:05:31 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-15 22:05:31 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-15 22:05:31 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1621087531594 with initial instances count: 0
+2021-05-15 22:05:31 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1621087531600, current=UP, previous=STARTING]
+2021-05-15 22:05:31 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01: registering service...
+2021-05-15 22:05:33 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_BACKGROUNDSYSTEMCONSUMER/Sojacnn_background_system_消费者_01 - registration status: 204
+2021-05-15 22:05:34 INFO [restartedMain][StartupInfoLogger.java:61] - Started BackgroundSystemConsumerRun in 32.403 seconds (JVM running for 35.022)
+2021-05-15 22:06:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-15 22:06:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-15 22:06:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-15 22:06:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1007] - Application is null : false
+2021-05-15 22:06:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-15 22:06:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-15 22:06:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-15 22:06:01 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1102] - The response status is 200
+2021-05-15 22:07:22 INFO [hystrix-NEWSFEATURE-1][ChainedDynamicProperty.java:115] - Flipping property: NEWSFEATURE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-05-15 22:07:22 INFO [hystrix-NEWSFEATURE-1][ShutdownEnabledTimer.java:58] - Shutdown hook installed for: NFLoadBalancer-PingTimer-NEWSFEATURE
+2021-05-15 22:07:22 INFO [hystrix-NEWSFEATURE-1][BaseLoadBalancer.java:197] - Client: NEWSFEATURE instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=NEWSFEATURE,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2021-05-15 22:07:22 INFO [hystrix-NEWSFEATURE-1][DynamicServerListLoadBalancer.java:222] - Using serverListUpdater PollingServerListUpdater
+2021-05-15 22:07:22 INFO [hystrix-NEWSFEATURE-1][ChainedDynamicProperty.java:115] - Flipping property: NEWSFEATURE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-05-15 22:07:22 INFO [hystrix-NEWSFEATURE-1][DynamicServerListLoadBalancer.java:150] - DynamicServerListLoadBalancer for client NEWSFEATURE initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=NEWSFEATURE,current list of Servers=[192.168.79.1:8001],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.79.1:8001;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@569c4f22
+2021-05-15 22:07:23 INFO [PollingServerListUpdater-0][ChainedDynamicProperty.java:115] - Flipping property: NEWSFEATURE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-05-15 22:10:27 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration

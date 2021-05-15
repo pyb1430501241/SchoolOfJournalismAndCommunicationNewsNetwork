@@ -39,13 +39,13 @@ public class NewsFeatureController {
         return newsFeatureService.findContypeById(id);
     }
 
-    @GetMapping("/findNewsThemeById/{id}")
+    @GetMapping("/findNewsTheme/{id}")
     @ApiOperation(value = "根据ID, 查询新闻主体", response = Result.class)
     public Result findNewsThemeById(@ApiParam(name = "id", value = "新闻ID", required = true) @PathVariable Long id) {
         return newsFeatureService.findNewsThemeById(id);
     }
 
-    @GetMapping("/findCategoryById/{id}")
+    @GetMapping("/findCategory/{id}")
     @ApiOperation(value = "根据ID, 查询新闻类别", response = Result.class)
     public Result findCategoryById(@ApiParam(name = "id", value = "类别ID", required = true) @PathVariable Integer id) {
         return newsFeatureService.findCategoryById(id);

@@ -46,7 +46,7 @@ public class BackgroundSystemController {
         return backgroundService.findNewsRoles();
     }
 
-    @PostMapping("/insertNewsTheme")
+    @PostMapping("/saveNewsTheme")
     @ApiOperation(value = "插入新闻主体", response = Result.class)
     public Result insertNewsTheme(String title, String data, Integer contypeId, Integer categoryId) throws Exception {
         NewsTheme newsTheme = newsThemeFactory.create(title, data, contypeId, categoryId);
@@ -55,7 +55,7 @@ public class BackgroundSystemController {
         return newsFeatureService.insertNewsTheme(newsTheme);
     }
 
-    @PostMapping("/updateNewsThemeById/{id}")
+    @PostMapping("/updateNewsTheme/{id}")
     @ApiOperation(value = "根据ID, 更新新闻主体", response = Result.class)
     public Result updateNewsThemeById(@PathVariable Long id, String title, String data, Integer contypeId, Integer categoryId) throws NoSuchMethodException {
         NewsTheme newsTheme = newsThemeFactory.create(title, data, contypeId, categoryId);
@@ -65,13 +65,13 @@ public class BackgroundSystemController {
         return newsFeatureService.updateNewsThemeById(newsTheme);
     }
 
-    @PostMapping("/deleteNewsThemeById/{id}")
+    @PostMapping("/deleteNewsTheme/{id}")
     @ApiOperation(value = "根据ID, 删除新闻主体", response = Result.class)
     public Result deleteNewsThemeById(@PathVariable Long id) {
         return newsFeatureService.deleteNewsThemeById(id);
     }
 
-    @PostMapping("/insertNewsContype")
+    @PostMapping("/saveNewsContype")
     @ApiOperation(value = "插入新闻类型", response = Result.class)
     public Result insertNewsContype(@RequestParam("contypeName") String contypeName) throws NoSuchMethodException {
         NewsContype newsContype = newsContypeFactory.create();
@@ -79,13 +79,13 @@ public class BackgroundSystemController {
         return newsFeatureService.insertContype(newsContype);
     }
 
-    @PostMapping("/deleteContypeById/{id}")
+    @PostMapping("/deleteContype/{id}")
     @ApiOperation(value = "删除新闻类型", response = Result.class)
     public Result deleteContypeById(@PathVariable("id") Integer id) throws NoSuchMethodException {
         return newsFeatureService.deleteContypeById(id);
     }
 
-    @PostMapping("/updateContypeById/{id}")
+    @PostMapping("/updateContype/{id}")
     @ApiOperation(value = "更新新闻类型", response = Result.class)
     public Result updateContypeById(@PathVariable("id") Integer id, @RequestParam("contypeName") String contypeName) throws NoSuchMethodException {
         NewsContype newsContype = newsContypeFactory.create();
@@ -94,7 +94,7 @@ public class BackgroundSystemController {
         return newsFeatureService.updateContypeById(newsContype);
     }
 
-    @PostMapping("/insertNewsCategory")
+    @PostMapping("/saveNewsCategory")
     @ApiOperation(value = "插入新闻类别", response = Result.class)
     public Result insertNewsCategory(@RequestParam("ContypeId") Integer ContypeId, @RequestParam("contypeName") String contypeName) throws NoSuchMethodException {
         NewsCategory newsCategory = newsCategoryFactory.create();
@@ -111,10 +111,8 @@ public class BackgroundSystemController {
 
     @PostMapping("/updateNewsCategory")
     @ApiOperation(value = "更新新闻类别", response = Result.class)
-    public Result updateNewsCategory(@RequestParam("ContypeId") Integer ContypeId, @RequestParam("contypeName") String contypeName) throws NoSuchMethodException {
-        NewsCategory newsCategory = newsCategoryFactory.create();
-        newsCategory.setCategoryName(contypeName);
-        newsCategory.setContypeId(ContypeId);
+    public Result updateNewsCategory(@RequestParam("id") Integer id, @RequestParam("ContypeId") Integer ContypeId, @RequestParam("categoryName") String categoryName) throws NoSuchMethodException {
+        NewsCategory newsCategory = newsCategoryFactory.create(id,categoryName,ContypeId);
         return newsFeatureService.updateNewsCategory(newsCategory);
     }
 
