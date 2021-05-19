@@ -86,6 +86,11 @@ public class NewsFeatureFallbackFactory implements FallbackFactory<NewsFeatureSe
         public Result updateNewsCategory(NewsCategory newsCategory) {
             return RESULT;
         }
+
+        @Override
+        public Result findNewsThemesByTypeIdAndCategoryId(Integer typeId, Integer categoryId, Integer p) {
+            return RESULT;
+        }
     }
 
 }

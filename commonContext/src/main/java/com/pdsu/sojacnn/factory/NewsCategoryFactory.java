@@ -5,6 +5,7 @@ import com.pdsu.sojacnn.bean.NewsContype;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.lang.NonNull;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -28,7 +29,7 @@ public class NewsCategoryFactory extends AbstractFactory<NewsCategory>{
         super(NewsCategory.class);
     }
 
-    public NewsCategory create(@NonNull Integer id, @NonNull String categoryName, @NonNull Integer contypeId) throws NoSuchMethodException {
+    public NewsCategory create(@Nullable Integer id, @NonNull String categoryName, @NonNull Integer contypeId) throws NoSuchMethodException {
         Map<String, Object> map = new HashMap<>();
         map.put(FIELD_NAME_ID, id);
         map.put(FIELD_NAME_CATEGORYNAME, categoryName);

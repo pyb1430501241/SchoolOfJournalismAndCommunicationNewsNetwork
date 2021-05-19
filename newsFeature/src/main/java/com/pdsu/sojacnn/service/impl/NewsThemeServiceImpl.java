@@ -1,5 +1,7 @@
 package com.pdsu.sojacnn.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.pdsu.sojacnn.bean.NewsTheme;
 import com.pdsu.sojacnn.mapper.NewsThemeMapper;
 import com.pdsu.sojacnn.service.NewsThemeService;
@@ -16,5 +18,13 @@ import org.springframework.stereotype.Service;
  */
 @Service("newsThemeService")
 public class NewsThemeServiceImpl extends ServiceImpl<NewsThemeMapper, NewsTheme> implements NewsThemeService {
+
+    @Override
+    public void findNewsThemesByTypeIdAndCategoryId(Page<NewsTheme> page, Integer typeId, Integer categoryId) {
+        QueryWrapper<NewsTheme> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("contype_id", typeId);
+        queryWrapper.eq("category_id", categoryId);
+        baseMapper.selectPage(page, queryWrapper);
+    }
 
 }

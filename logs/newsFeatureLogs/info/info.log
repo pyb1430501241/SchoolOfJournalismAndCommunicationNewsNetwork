@@ -169,3 +169,248 @@
 2021-05-15 22:05:57 INFO [DiscoveryClient-HeartbeatExecutor-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
 2021-05-15 22:05:57 INFO [DiscoveryClient-CacheRefreshExecutor-0][DiscoveryClient.java:1102] - The response status is 200
 2021-05-15 22:10:22 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 17:58:51 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-19 17:58:56 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 17:58:56 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@77f7e6c8
+2021-05-19 17:58:56 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-19 18:00:02 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-19 18:00:05 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 18:00:05 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4cb055cc
+2021-05-19 18:00:05 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-19 18:05:39 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-19 18:05:42 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 18:05:42 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@42f94bd1
+2021-05-19 18:05:43 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-19 18:05:43 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-19 18:05:45 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 18:05:47 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-19 18:05:47 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-19 18:05:47 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-19 18:05:47 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-19 18:05:47 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-19 18:05:47 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:05:48 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-19 18:05:48 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-19 18:05:48 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-19 18:05:48 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-19 18:05:48 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-19 18:05:48 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-19 18:05:48 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-19 18:05:48 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-19 18:05:48 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-19 18:05:48 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-19 18:05:48 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1621418748316 with initial instances count: 2
+2021-05-19 18:05:48 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1621418748330, current=UP, previous=STARTING]
+2021-05-19 18:05:48 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-19 18:05:48 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-19 18:05:49 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 12.456 seconds (JVM running for 14.142)
+2021-05-19 18:10:48 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:15:48 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:20:48 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:25:48 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:30:48 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:35:48 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:40:48 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:45:48 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:49:24 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-19 18:49:24 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-19 18:49:25 INFO [Thread-1][HikariDataSource.java:350] - DatebookHikariCP - Shutdown initiated...
+2021-05-19 18:49:25 INFO [Thread-1][HikariDataSource.java:352] - DatebookHikariCP - Shutdown completed.
+2021-05-19 18:49:25 INFO [Thread-1][DiscoveryClient.java:932] - Shutting down DiscoveryClient ...
+2021-05-19 18:49:28 INFO [Thread-1][DiscoveryClient.java:968] - Unregistering ...
+2021-05-19 18:49:28 INFO [Thread-1][DiscoveryClient.java:970] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - deregister  status: 200
+2021-05-19 18:49:28 INFO [Thread-1][DiscoveryClient.java:957] - Completed shut down of DiscoveryClient
+2021-05-19 18:49:33 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-19 18:49:35 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 18:49:35 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4f64c79
+2021-05-19 18:49:35 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-19 18:49:35 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-19 18:49:36 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-19 18:49:39 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-19 18:49:39 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1621421379456 with initial instances count: 2
+2021-05-19 18:49:39 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1621421379461, current=UP, previous=STARTING]
+2021-05-19 18:49:39 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-19 18:49:39 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-19 18:49:40 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 11.339 seconds (JVM running for 2644.763)
+2021-05-19 18:54:39 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:55:23 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-19 18:55:23 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-19 18:55:24 INFO [Thread-9][HikariDataSource.java:350] - DatebookHikariCP - Shutdown initiated...
+2021-05-19 18:55:24 INFO [Thread-9][HikariDataSource.java:352] - DatebookHikariCP - Shutdown completed.
+2021-05-19 18:55:24 INFO [Thread-9][DiscoveryClient.java:932] - Shutting down DiscoveryClient ...
+2021-05-19 18:55:27 INFO [Thread-9][DiscoveryClient.java:968] - Unregistering ...
+2021-05-19 18:55:27 INFO [Thread-9][DiscoveryClient.java:970] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - deregister  status: 200
+2021-05-19 18:55:27 INFO [Thread-9][DiscoveryClient.java:957] - Completed shut down of DiscoveryClient
+2021-05-19 18:55:31 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-19 18:55:32 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 18:55:32 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@67eadbab
+2021-05-19 18:55:32 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-19 18:55:32 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-19 18:55:33 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-19 18:55:35 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-19 18:55:35 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1621421735770 with initial instances count: 2
+2021-05-19 18:55:35 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1621421735773, current=UP, previous=STARTING]
+2021-05-19 18:55:35 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-19 18:55:35 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-19 18:55:36 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 9.038 seconds (JVM running for 3000.973)
+2021-05-19 18:56:17 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-19 18:56:17 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-19 18:56:18 INFO [Thread-17][HikariDataSource.java:350] - DatebookHikariCP - Shutdown initiated...
+2021-05-19 18:56:18 INFO [Thread-17][HikariDataSource.java:352] - DatebookHikariCP - Shutdown completed.
+2021-05-19 18:56:18 INFO [Thread-17][DiscoveryClient.java:932] - Shutting down DiscoveryClient ...
+2021-05-19 18:56:21 INFO [Thread-17][DiscoveryClient.java:968] - Unregistering ...
+2021-05-19 18:56:21 INFO [Thread-17][DiscoveryClient.java:970] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - deregister  status: 200
+2021-05-19 18:56:21 INFO [Thread-17][DiscoveryClient.java:957] - Completed shut down of DiscoveryClient
+2021-05-19 18:56:24 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-19 18:56:25 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 18:56:25 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7f0a236d
+2021-05-19 18:56:26 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-19 18:56:26 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-19 18:56:26 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-19 18:56:29 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-19 18:56:29 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1621421789266 with initial instances count: 5
+2021-05-19 18:56:29 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1621421789269, current=UP, previous=STARTING]
+2021-05-19 18:56:29 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-19 18:56:29 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-19 18:56:29 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 8.298 seconds (JVM running for 3054.493)
+2021-05-19 19:01:29 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 19:06:29 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 19:11:29 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 19:16:29 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 19:21:29 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 19:26:29 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 19:31:29 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 19:36:29 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 19:41:29 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 19:43:18 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-19 19:43:22 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 19:43:22 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@5897de9e
+2021-05-19 19:43:23 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-19 19:43:23 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-19 19:43:24 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 19:43:27 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-19 19:43:27 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-19 19:43:27 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-19 19:43:27 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-19 19:43:27 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-19 19:43:28 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 19:43:28 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-19 19:43:28 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-19 19:43:28 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-19 19:43:28 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-19 19:43:28 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-19 19:43:28 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-19 19:43:28 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-19 19:43:28 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-19 19:43:28 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-19 19:43:28 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-19 19:43:28 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1621424608922 with initial instances count: 3
+2021-05-19 19:43:28 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1621424608938, current=UP, previous=STARTING]
+2021-05-19 19:43:28 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-19 19:43:28 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-19 19:43:30 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 15.651 seconds (JVM running for 18.381)
+2021-05-19 19:48:28 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 19:53:28 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 19:58:28 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 20:02:04 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-19 20:02:07 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 20:02:07 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4d48301
+2021-05-19 20:02:07 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-19 20:02:07 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-19 20:02:09 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 20:02:11 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-19 20:02:11 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-19 20:02:11 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-19 20:02:11 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-19 20:02:11 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-19 20:02:11 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 20:02:12 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-19 20:02:12 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-19 20:02:12 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-19 20:02:12 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-19 20:02:12 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-19 20:02:12 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-19 20:02:12 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-19 20:02:12 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-19 20:02:12 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-19 20:02:12 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-19 20:02:12 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1621425732236 with initial instances count: 2
+2021-05-19 20:02:12 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1621425732243, current=UP, previous=STARTING]
+2021-05-19 20:02:12 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-19 20:02:12 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-19 20:02:12 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 14.419 seconds (JVM running for 16.674)
+2021-05-19 20:04:49 INFO [restartedMain][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2021-05-19 20:04:53 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 20:04:53 INFO [restartedMain][DynamicPropertyFactory.java:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@275e18ab
+2021-05-19 20:04:54 INFO [restartedMain][HikariDataSource.java:80] - DatebookHikariCP - Starting...
+2021-05-19 20:04:54 INFO [restartedMain][HikariDataSource.java:82] - DatebookHikariCP - Start completed.
+2021-05-19 20:04:56 INFO [restartedMain][URLConfigurationSource.java:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-05-19 20:04:58 INFO [restartedMain][DiscoveryClient.java:371] - Initializing Eureka in region us-east-1
+2021-05-19 20:04:58 INFO [restartedMain][DiscoveryJerseyProvider.java:70] - Using JSON encoding codec LegacyJacksonJson
+2021-05-19 20:04:58 INFO [restartedMain][DiscoveryJerseyProvider.java:71] - Using JSON decoding codec LegacyJacksonJson
+2021-05-19 20:04:58 INFO [restartedMain][DiscoveryJerseyProvider.java:80] - Using XML encoding codec XStreamXml
+2021-05-19 20:04:58 INFO [restartedMain][DiscoveryJerseyProvider.java:81] - Using XML decoding codec XStreamXml
+2021-05-19 20:04:58 INFO [restartedMain][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 20:04:59 INFO [restartedMain][DiscoveryClient.java:1004] - Disable delta property : false
+2021-05-19 20:04:59 INFO [restartedMain][DiscoveryClient.java:1005] - Single vip registry refresh property : null
+2021-05-19 20:04:59 INFO [restartedMain][DiscoveryClient.java:1006] - Force full registry fetch : false
+2021-05-19 20:04:59 INFO [restartedMain][DiscoveryClient.java:1007] - Application is null : false
+2021-05-19 20:04:59 INFO [restartedMain][DiscoveryClient.java:1008] - Registered Applications size is zero : true
+2021-05-19 20:04:59 INFO [restartedMain][DiscoveryClient.java:1010] - Application version is -1: true
+2021-05-19 20:04:59 INFO [restartedMain][DiscoveryClient.java:1093] - Getting all instance registry info from the eureka server
+2021-05-19 20:04:59 INFO [restartedMain][DiscoveryClient.java:1102] - The response status is 200
+2021-05-19 20:04:59 INFO [restartedMain][DiscoveryClient.java:1317] - Starting heartbeat executor: renew interval is: 30
+2021-05-19 20:04:59 INFO [restartedMain][InstanceInfoReplicator.java:60] - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-05-19 20:04:59 INFO [restartedMain][DiscoveryClient.java:491] - Discovery Client initialized at timestamp 1621425899222 with initial instances count: 5
+2021-05-19 20:04:59 INFO [restartedMain][DiscoveryClient.java:1353] - Saw local status change event StatusChangeEvent [timestamp=1621425899226, current=UP, previous=STARTING]
+2021-05-19 20:04:59 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:870] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01: registering service...
+2021-05-19 20:04:59 INFO [DiscoveryClient-InstanceInfoReplicator-0][DiscoveryClient.java:879] - DiscoveryClient_NEWSFEATURE/Sojacnn_NewsFeature_生产者_01 - registration status: 204
+2021-05-19 20:04:59 INFO [restartedMain][StartupInfoLogger.java:61] - Started NewsFeatureRun in 15.347 seconds (JVM running for 17.228)
+2021-05-19 20:09:59 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 20:14:59 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration
+2021-05-19 20:19:59 INFO [AsyncResolver-bootstrap-executor-0][ConfigClusterResolver.java:43] - Resolving eureka endpoints via configuration

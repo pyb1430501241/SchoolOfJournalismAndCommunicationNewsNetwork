@@ -22,7 +22,7 @@ public class BackgroundServiceFallbackFactory implements FallbackFactory<Backgro
         private static final Result RESULT = Result.fail();
 
         @Override
-        public Result findNewsRoles() {
+        public Result findNewsRoles(Integer p) {
             return RESULT;
         }
     }

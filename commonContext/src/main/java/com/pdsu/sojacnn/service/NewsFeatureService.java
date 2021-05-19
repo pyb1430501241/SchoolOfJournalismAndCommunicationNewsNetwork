@@ -33,29 +33,34 @@ public interface NewsFeatureService {
     public Result findNewsThemeById(@RequestParam("id") Long id);
 
     @PostMapping("/newsTheme/updateNewsThemeById")
-    Result updateNewsThemeById(@RequestBody NewsTheme newsTheme);
+    public Result updateNewsThemeById(@RequestBody NewsTheme newsTheme);
 
     @PostMapping("/newsTheme/deleteNewsThemeById")
-    Result deleteNewsThemeById(@RequestParam("id") Long id);
+    public Result deleteNewsThemeById(@RequestParam("id") Long id);
 
     @PostMapping("/contype/insertContypeById")
-    Result insertContype(@RequestBody NewsContype newsContype);
+    public Result insertContype(@RequestBody NewsContype newsContype);
 
     @PostMapping("/contype/deleteContypeById")
-    Result deleteContypeById(@RequestParam("id") Integer id);
+    public Result deleteContypeById(@RequestParam("id") Integer id);
 
     @PostMapping("/contype/updateContypeById")
-    Result updateContypeById(@RequestBody NewsContype newsContype);
+    public Result updateContypeById(@RequestBody NewsContype newsContype);
 
     @GetMapping("/category/findCategoryById")
-    Result findCategoryById(@RequestParam("id") Integer id);
+    public Result findCategoryById(@RequestParam("id") Integer id);
 
     @PostMapping("/category/insertNewsCategory")
-    Result insertNewsCategory(@RequestBody NewsCategory newsCategory);
+    public Result insertNewsCategory(@RequestBody NewsCategory newsCategory);
 
     @PostMapping("/category/deleteCategoryById")
-    Result deleteNewsCategoryById(@RequestParam("id") Integer id);
+    public Result deleteNewsCategoryById(@RequestParam("id") Integer id);
 
     @PostMapping("/category/updateCategoryById")
-    Result updateNewsCategory(@RequestBody NewsCategory newsCategory);
+    public Result updateNewsCategory(@RequestBody NewsCategory newsCategory);
+
+    @GetMapping("/newsTheme/findByTypeIdAndCategoryId")
+    public Result findNewsThemesByTypeIdAndCategoryId(@RequestParam("contypeId") Integer typeId
+            , @RequestParam("categoryId") Integer categoryId, @RequestParam("p") Integer p);
+
 }

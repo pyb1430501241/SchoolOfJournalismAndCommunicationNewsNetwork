@@ -1,12 +1,16 @@
 package com.pdsu.sojacnn.controller;
 
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.pdsu.sojacnn.bean.NewsRole;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.service.NewsRoleService;
+import com.pdsu.sojacnn.utils.PageUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -19,14 +23,16 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/newsRole")
-public class NewsRoleController {
+public class NewsRoleController implements AbstractController {
 
     @Autowired
     private NewsRoleService newsRoleService;
 
     @GetMapping("/findAll")
-    public Result findAll() {
-        return Result.ok().data("items", newsRoleService.list());
+    public Result findAll(@RequestParam(value = "p") Integer p) throws Exception {
+        Page<NewsRole> page = new Page<>(p, 8);
+        newsRoleService.page(page);
+        return PageUtils.defaultPage(Result.ok(), page);
     }
 
 }
