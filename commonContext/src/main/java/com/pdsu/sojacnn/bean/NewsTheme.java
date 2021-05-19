@@ -1,6 +1,7 @@
 package com.pdsu.sojacnn.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -45,18 +46,15 @@ public class NewsTheme implements Serializable, Cloneable {
     @ApiModelProperty(value = "主题内容，传入byte")
     private byte [] data;
 
+    @TableField(exist = false)
+    private String dataString;
+
     @ApiModelProperty(value ="封面地址，可不传")
     private String coverPath;
 
-
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value = "创建时间")
     private Date createTime;
 
-
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value = "修改时间")
     private Date updateTime;
 

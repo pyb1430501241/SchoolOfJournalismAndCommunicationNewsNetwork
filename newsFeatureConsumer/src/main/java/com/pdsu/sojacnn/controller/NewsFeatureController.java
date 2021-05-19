@@ -1,13 +1,7 @@
 package com.pdsu.sojacnn.controller;
 
-import com.pdsu.sojacnn.bean.NewsContype;
-import com.pdsu.sojacnn.bean.NewsTheme;
 import com.pdsu.sojacnn.bean.Result;
-import com.pdsu.sojacnn.factory.AbstractFactory;
-import com.pdsu.sojacnn.factory.NewsContypeFactory;
-import com.pdsu.sojacnn.factory.NewsThemeFactory;
 import com.pdsu.sojacnn.service.NewsFeatureService;
-import com.pdsu.sojacnn.utils.DateUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -22,32 +16,42 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Api(description = "游客新闻管理服务")
 @SuppressWarnings("deprecation")
-public class NewsFeatureController {
+public class NewsFeatureController implements AbstractController {
 
     @Autowired
     private NewsFeatureService newsFeatureService;
 
-    @Autowired
-    private NewsThemeFactory newsThemeFactory;
-
-    @Autowired
-    private NewsContypeFactory newsContypeFactory;
+    /**
+     * 默认的类别ID，即其他
+     */
+    private static final Integer DEFAULT_CATEGORY_ID = 1;
 
     @ApiOperation(value = "根据ID, 查询新闻类型", response = Result.class)
     @GetMapping("/findContype/{id}")
-    public Result findContypeById(@ApiParam(name = "id", value = "类型ID", required = true) @PathVariable Integer id) {
+    public Result findContypeById(@ApiParam(name = "id", value = "类型ID", required = true) @PathVariable Integer id) throws Exception {
         return newsFeatureService.findContypeById(id);
     }
 
     @GetMapping("/findNewsTheme/{id}")
     @ApiOperation(value = "根据ID, 查询新闻主体", response = Result.class)
-    public Result findNewsThemeById(@ApiParam(name = "id", value = "新闻ID", required = true) @PathVariable Long id) {
+    public Result findNewsThemeById(@ApiParam(name = "id", value = "新闻ID", required = true) @PathVariable Long id) throws Exception {
         return newsFeatureService.findNewsThemeById(id);
+    }
+
+    @GetMapping("/newsByTypeAndCategory")
+    @ApiOperation(value = "根据类型类别查询一类新闻", response = Result.class)
+    public Result findNewsThemesByTypeIdAndCategoryId(@RequestParam("contypeId") Integer typeId, @RequestParam(required = false) Integer categoryId
+            , @RequestParam(value = "p", defaultValue = "1") Integer p) throws Exception {
+        if(categoryId == null) {
+            categoryId = DEFAULT_CATEGORY_ID;
+        }
+        return newsFeatureService.findNewsThemesByTypeIdAndCategoryId(typeId, categoryId, p);
     }
 
     @GetMapping("/findCategory/{id}")
     @ApiOperation(value = "根据ID, 查询新闻类别", response = Result.class)
-    public Result findCategoryById(@ApiParam(name = "id", value = "类别ID", required = true) @PathVariable Integer id) {
+    public Result findCategoryById(@ApiParam(name = "id", value = "类别ID", required = true) @PathVariable Integer id) throws Exception {
         return newsFeatureService.findCategoryById(id);
     }
+
 }

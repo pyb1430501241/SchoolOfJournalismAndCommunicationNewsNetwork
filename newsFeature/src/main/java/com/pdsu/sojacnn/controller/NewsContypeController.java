@@ -19,31 +19,31 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/contype")
-public class NewsContypeController {
+public class NewsContypeController implements AbstractController {
 
     @Autowired
     private NewsContypeService newsContypeService;
 
     @GetMapping("/findContypeById")
-    public Result findContypeById(@RequestParam("id") Integer id) {
+    public Result findContypeById(@RequestParam("id") Integer id) throws Exception {
         NewsContype contype = newsContypeService.getById(id);
-        return contype == null ? Result.notFound() :Result.ok().data("item", contype);
+        return contype == null ? Result.notFound() :Result.ok().data(DEFAULT_MESSAGE_NAME, contype);
     }
 
     @PostMapping("/insertContypeById")
-    public Result insertContype(@RequestBody NewsContype newsContype) {
+    public Result insertContype(@RequestBody NewsContype newsContype) throws Exception {
         newsContypeService.save(newsContype);
         return Result.ok();
     }
 
     @PostMapping("/deleteContypeById")
-    public Result deleteContypeById(@RequestParam("id") Integer id) {
+    public Result deleteContypeById(@RequestParam("id") Integer id) throws Exception {
         newsContypeService.removeById(id);
         return Result.ok();
     }
 
     @PostMapping("/updateContypeById")
-    public Result updateContype(@RequestBody NewsContype newsContype) {
+    public Result updateContype(@RequestBody NewsContype newsContype) throws Exception {
         newsContypeService.updateById(newsContype);
         return Result.ok();
     }
