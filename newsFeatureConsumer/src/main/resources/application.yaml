@@ -8,6 +8,9 @@ spring:
   application:
     # 自己在 eureka 里的唯一标识
     name: newsFeatureConsumer
+  jackson:
+    date-format: yyyy-MM-dd HH:MM:ss
+    time-zone: GMT+8
 #  redis:
 #    host: localhost
 #    password: pyb***20000112
