@@ -27,12 +27,6 @@ public class NewsFeatureController {
     @Autowired
     private NewsFeatureService newsFeatureService;
 
-    @Autowired
-    private NewsThemeFactory newsThemeFactory;
-
-    @Autowired
-    private NewsContypeFactory newsContypeFactory;
-
     @ApiOperation(value = "根据ID, 查询新闻类型", response = Result.class)
     @GetMapping("/findContype/{id}")
     public Result findContypeById(@ApiParam(name = "id", value = "类型ID", required = true) @PathVariable Integer id) {

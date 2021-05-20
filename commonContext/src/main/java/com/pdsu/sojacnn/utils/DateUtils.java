@@ -12,11 +12,20 @@ import java.util.Date;
  * @author 半梦
  * @create 2021-05-10 18:59
  */
+@SuppressWarnings("all")
 public abstract class DateUtils {
 
     private static final String DATE_FORMAT_PATTERN = "yyyy-MM-dd HH:mm:ss";
 
     private static final DateFormat DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_PATTERN);
+
+    public static final long NEWS_TIME_MINUTE = 60;
+
+    public static final long NEWS_TIME_HOUR = NEWS_TIME_MINUTE * 60;
+
+    public static final long NEWS_TIME_DAY = NEWS_TIME_HOUR * 24;
+
+    public static final long NEWS_TIME_WEEK = NEWS_TIME_DAY * 7;
 
     @NonNull
     public static Date nowDate() {

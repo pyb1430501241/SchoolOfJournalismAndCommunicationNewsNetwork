@@ -32,8 +32,6 @@ public class NewsRole implements Serializable {
     private Integer id;
 
     @ApiModelProperty(value = "角色名")
-    @TableField("roleName")
-    private String rolename;
-
+    private String roleName;
 
 }
