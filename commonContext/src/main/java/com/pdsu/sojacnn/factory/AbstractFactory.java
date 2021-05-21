@@ -74,7 +74,7 @@ public abstract class AbstractFactory<T> {
         }
     }
 
-    private void fieldBean(@NonNull T t, @NonNull Map<String, Object> args) {
+    private void fieldBean(@NonNull final T t, @NonNull Map<String, Object> args) {
         args.forEach((k, v) -> {
             try {
                 doField(t, k, v);
@@ -89,6 +89,5 @@ public abstract class AbstractFactory<T> {
         field.setAccessible(true);
         field.set(t, value);
     }
-
 
 }
