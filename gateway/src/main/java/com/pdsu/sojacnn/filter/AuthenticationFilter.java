@@ -35,6 +35,7 @@ public class AuthenticationFilter extends ZuulFilter {
 
     private static final String ACCOUNT_SESSION_FLAG = AbstractController.ACCOUNT_SESSION_FLAG;
 
+
     @Override
     public String filterType() {
         return BEFORE_REQUEST;
