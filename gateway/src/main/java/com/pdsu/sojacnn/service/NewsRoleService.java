@@ -13,4 +13,8 @@ import com.pdsu.sojacnn.bean.NewsRole;
  */
 public interface NewsRoleService extends IService<NewsRole> {
 
+    String ID = "id";
+
+    String ROLE_NAME = "role_name";
+
 }

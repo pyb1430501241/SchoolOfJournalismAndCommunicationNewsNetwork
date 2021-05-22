@@ -11,6 +11,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.extern.log4j.Log4j2;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -29,7 +30,8 @@ import java.util.Date;
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value="NewsAccount对象", description="")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class NewsAccount implements Serializable {
+@Log4j2
+public class NewsAccount implements Serializable, Cloneable {
 
     private static final long serialVersionUID = 1L;
 
@@ -48,9 +50,20 @@ public class NewsAccount implements Serializable {
 
     @ApiModelProperty(value = "逻辑删除")
     @TableLogic
-    private Boolean isDelete;
+    private transient Integer isDelete;
 
     @ApiModelProperty(value = "创建时间")
     private Date createTime;
+
+    public NewsAccount copy() {
+        try {
+            return (NewsAccount) clone();
+        } catch (CloneNotSupportedException e) {
+            if(log.isDebugEnabled()) {
+                log.debug("bean copy error", e);
+            }
+            return null;
+        }
+    }
 
 }

@@ -2,6 +2,8 @@ server:
   # 本端口可以修改为自己想要的端口
   port: 7001
   servlet:
+    encoding:
+      charset: UTF-8
     # 该配置代表该服务的访问路径
     # 如当前配置下, 此服务的访问地址即为：localhost:7001/
     context-path: /

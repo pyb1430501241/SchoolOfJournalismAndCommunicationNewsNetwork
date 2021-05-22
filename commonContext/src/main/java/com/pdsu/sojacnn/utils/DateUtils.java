@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+ * 时间格式化工具
  * @author 半梦
  * @create 2021-05-10 18:59
  */
@@ -17,7 +18,7 @@ public abstract class DateUtils {
 
     private static final String DATE_FORMAT_PATTERN = "yyyy-MM-dd HH:mm:ss";
 
-    private static final DateFormat DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_PATTERN);
+    protected static final DateFormat DATE_FORMAT = new SimpleDateFormat(DATE_FORMAT_PATTERN);
 
     public static final long NEWS_TIME_MINUTE = 60;
 

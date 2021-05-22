@@ -33,11 +33,13 @@ public class SwaggerResourcesConfig implements SwaggerResourcesProvider {
     @Override
     public List<SwaggerResource> get() {
         //在这里遍历的时候，可以排除掉敏感微服务的路由
-        return routeLocator.getRoutes().stream()
+        List<SwaggerResource> collect = routeLocator.getRoutes().stream()
                 .filter(s -> !applicationName.equals(s.getId()))
                 .map(r -> swaggerResource(r.getId(), r.getFullPath().
                         replace("**", "v2/api-docs") + "?group=" + r.getId(), "1.0.0"))
                 .collect(Collectors.toList());
+        collect.add(swaggerResource(applicationName, "/v2/api-docs" + "?group=" + applicationName, "1.0.0"));
+        return collect;
     }
 
     private SwaggerResource swaggerResource(String name, String location, String version) {

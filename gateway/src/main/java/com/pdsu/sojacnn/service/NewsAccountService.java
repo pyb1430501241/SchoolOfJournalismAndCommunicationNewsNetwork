@@ -13,4 +13,14 @@ import com.pdsu.sojacnn.bean.NewsAccount;
  */
 public interface NewsAccountService extends IService<NewsAccount> {
 
+    String ID = "id";
+
+    String ACCOUNT = "account";
+
+    String PASSWORD = "password";
+
+    String USERNAME = "user_name";
+
+    String CREATE_TIME = "create_time";
+
 }

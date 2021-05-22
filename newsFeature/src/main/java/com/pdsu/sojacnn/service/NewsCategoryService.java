@@ -13,4 +13,11 @@ import com.pdsu.sojacnn.bean.NewsCategory;
  */
 public interface NewsCategoryService extends IService<NewsCategory> {
 
+    String ID = "id";
+
+    String CATEGORY_NAME = "category_name";
+
+    String TYPE_ID = "contype_id";
+
+
 }

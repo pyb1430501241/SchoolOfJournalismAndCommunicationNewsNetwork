@@ -13,4 +13,8 @@ import com.pdsu.sojacnn.bean.NewsContype;
  */
 public interface NewsContypeService extends IService<NewsContype> {
 
+    String ID = "id";
+
+    String TYPE_NAME = "contype_name";
+
 }

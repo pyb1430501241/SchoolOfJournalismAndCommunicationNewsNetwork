@@ -3,8 +3,9 @@ server:
   port: 8002
   servlet:
     context-path: /
+    encoding:
+      charset: UTF-8
   max-http-header-size: 128KB
-
 spring:
   application:
     # 同一微服务里所有的同类提供者必须同名, 所对应的微服务名称为此值全大写

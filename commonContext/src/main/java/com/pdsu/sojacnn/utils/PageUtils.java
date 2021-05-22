@@ -1,11 +1,13 @@
 package com.pdsu.sojacnn.utils;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.controller.AbstractController;
 import org.springframework.lang.NonNull;
 
 /**
+ * 分页工具
  * @author 半梦
  * @create 2021-05-19 20:09
  */

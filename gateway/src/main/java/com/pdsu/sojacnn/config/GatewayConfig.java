@@ -92,11 +92,6 @@ public class GatewayConfig {
     }
 
     @Bean
-    public Docket createRestApi(ApiInfo apiInfo) {
-        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo);
-    }
-
-    @Bean
     public ApiInfo webApiInfo() {
         return new ApiInfoBuilder()
                 .title("网站-新闻网")
@@ -161,7 +156,7 @@ public class GatewayConfig {
         shiroFilterFactoryBean.setFilters(filterMap);
 
         Map<String, String> filterChainDefinitionMap = new HashMap<>();
-        filterChainDefinitionMap.put("/user/logout", "logout");
+        filterChainDefinitionMap.put("/logout", "logout");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
     }

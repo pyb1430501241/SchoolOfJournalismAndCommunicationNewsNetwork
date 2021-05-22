@@ -1,19 +1,19 @@
 package com.pdsu.sojacnn.controller;
 
-import com.pdsu.sojacnn.bean.NewsCategory;
-import com.pdsu.sojacnn.bean.NewsContype;
-import com.pdsu.sojacnn.bean.NewsTheme;
-import com.pdsu.sojacnn.bean.Result;
+import com.pdsu.sojacnn.bean.*;
 import com.pdsu.sojacnn.factory.NewsCategoryFactory;
 import com.pdsu.sojacnn.factory.NewsContypeFactory;
 import com.pdsu.sojacnn.factory.NewsThemeFactory;
 import com.pdsu.sojacnn.service.BackgroundService;
 import com.pdsu.sojacnn.service.NewsFeatureService;
 import com.pdsu.sojacnn.utils.DateUtils;
+import com.pdsu.sojacnn.utils.JsonUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author 半梦
@@ -42,7 +42,7 @@ public class BackgroundSystemController implements AbstractController {
 
     @GetMapping("/findRoles")
     @ApiOperation(value = "查询所有的角色", response = Result.class)
-    public Result findNewsRoles(@RequestParam(value = "p", defaultValue = "1")Integer p) throws Exception {
+    public Result findNewsRoles(@RequestParam(value = "p", defaultValue = "1")Integer p, HttpServletRequest request) throws Exception {
         return backgroundService.findNewsRoles(p);
     }
 

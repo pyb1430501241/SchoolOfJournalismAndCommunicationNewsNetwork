@@ -34,6 +34,10 @@ public class Result implements Serializable {
         return field(createResult(), ResultCode.FAIL);
     }
 
+    public static Result insufficientPermissions() {
+        return field(createResult(), ResultCode.PERMISSION);
+    }
+
     public static Result notFound() {
         return field(createResult(), ResultCode.NOTFOUND);
     }

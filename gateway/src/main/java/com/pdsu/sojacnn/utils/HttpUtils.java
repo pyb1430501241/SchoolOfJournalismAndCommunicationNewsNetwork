@@ -77,6 +77,11 @@ public abstract class HttpUtils {
         return request.getHeader(AUTHORIZATION);
     }
 
+    @Nullable
+    public static String getRemember(@NonNull HttpServletRequest request) {
+        return request.getHeader(REMEMBER_COOKIE_NAME);
+    }
+
     @NonNull
     public static String getSessionHeader() {
         return AUTHORIZATION;
@@ -95,4 +100,5 @@ public abstract class HttpUtils {
     public static long getSessionTimeout() {
         return DateUtils.NEWS_TIME_WEEK * 1000;
     }
+
 }

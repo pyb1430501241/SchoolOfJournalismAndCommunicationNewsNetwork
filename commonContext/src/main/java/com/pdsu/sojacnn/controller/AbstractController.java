@@ -6,6 +6,12 @@ package com.pdsu.sojacnn.controller;
  */
 public interface AbstractController {
 
+    String DEFAULT_ERROR_PROMPT = "未定义类型错误";
+
+    String NOT_LOGIN = "未登录";
+
+    String ACCOUNT_SESSION_FLAG = "account";
+
     /**
      * 用在返回单个对象
      */

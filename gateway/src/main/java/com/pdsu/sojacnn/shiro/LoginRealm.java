@@ -10,8 +10,10 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
+import org.jetbrains.annotations.Contract;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
+import org.springframework.lang.Nullable;
 
 /**
  * @author 半梦
@@ -25,28 +27,36 @@ public class LoginRealm extends AuthorizingRealm {
 
     /**
      * 登录认证
+     * 这里的 UserName 实际为
+     * NewsAccount#getAccount()
      */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(
             AuthenticationToken token) throws AuthenticationException {
-        UsernamePasswordToken uptoken = (UsernamePasswordToken) token;
-        String userName = uptoken.getUsername();
+        UsernamePasswordToken upToken = (UsernamePasswordToken) token;
+        String account = upToken.getUsername();
 
         // 获取登录账号的详细信息
-        NewsAccount user = getNewsAccount(userName);
+        NewsAccount newsAccount = getNewsAccount(account);
 
         // 查看其账号状态
-        determineAccountStatus(user);
+        determineAccountStatus(newsAccount);
 
-        Object credentials = user.getPassword();
+        // 因需要修改该对象信息, 且因为有缓存,
+        // 故对其进行复制使用
+        NewsAccount useAccount = newsAccount.copy();
+
+        Object credentials = useAccount.getPassword();
         String realmName = getName();
-        ByteSource credentialsSalt = ByteSource.Util.bytes(userName);
-        return new SimpleAuthenticationInfo(user, credentials, credentialsSalt, realmName);
+        ByteSource credentialsSalt = ByteSource.Util.bytes(account);
+
+        return new SimpleAuthenticationInfo(useAccount, credentials, credentialsSalt, realmName);
     }
 
-    private NewsAccount getNewsAccount(@NonNull String userName) {
+    @Nullable
+    private NewsAccount getNewsAccount(@NonNull String account) {
         QueryWrapper<NewsAccount> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("user_name", userName);
+        queryWrapper.eq(NewsAccountService.ACCOUNT, account);
         try {
             return newsAccountService.getOne(queryWrapper, true);
         } catch (Exception e) {
@@ -54,6 +64,10 @@ public class LoginRealm extends AuthorizingRealm {
         }
     }
 
+    /**
+     * 如果没有对应用户, 直接抛出登录异常
+     */
+    @Contract("null -> fail")
     private void determineAccountStatus(NewsAccount account) {
         if(account == null) {
             throw new AccountAbnormalException();

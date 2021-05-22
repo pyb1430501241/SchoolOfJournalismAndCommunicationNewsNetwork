@@ -13,4 +13,12 @@ import com.pdsu.sojacnn.bean.NewsTeacher;
  */
 public interface NewsTeacherService extends IService<NewsTeacher> {
 
+    String ID = "id";
+
+    String NAME = "name";
+
+    String INTRODUCTION = "introduction";
+
+    String PHONE_NUMBER = "phone_number";
+
 }

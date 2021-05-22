@@ -65,20 +65,22 @@
  <!--然后定义logger，只有定义了logger并引入的appender，appender才会生效-->
     <Loggers>
          <!--过滤掉一些无用的DEBUG信息-->
-        <logger name="org.springframework" level="WARN"/>
-        <logger name="com.alibaba" level="WARN"/>
-        <logger name="org.apache" level="WARN"/>
-        <logger name="org.mybatis" level="WARN"/>
-        <logger name="org.apache.shiro" level="WARN"/>
-        <logger name="net.sf.ehcache" level="WARN"/>
-        <logger name="com.mchange.v2" level="WARN"/>
-        <logger name="org.quartz" level="WARN"/>
-        <logger name="org.hibernate.validator" level="WARN"/>
-        <logger name="org.jboss.logging" level="WARN"/>
-        <logger name="org.springframework.boot" level="WARN"/>
-        <logger name="org.springframework.data" level="WARN"/>
-        <logger name=" com.netflix" level="WARN"/>
-        <Root level="info">
+        <logger name="org.springframework" level="error"/>
+        <logger name="com.alibaba" level="error"/>
+        <logger name="org.apache" level="error"/>
+        <logger name="org.mybatis" level="error"/>
+        <logger name="org.apache.shiro" level="error"/>
+        <logger name="net.sf.ehcache" level="error"/>
+        <logger name="com.mchange.v2" level="error"/>
+        <logger name="org.quartz" level="error"/>
+        <logger name="org.hibernate.validator" level="error"/>
+        <logger name="org.jboss.logging" level="error"/>
+        <logger name="org.springframework.boot" level="error"/>
+        <logger name="org.springframework.data" level="error"/>
+        <logger name=" com.netflix" level="error"/>
+        <logger name=" com.zaxxer" level="error"/>
+        <logger name=" com.baomidou" level="error"/>
+        <Root level="debug">
             <AppenderRef ref="Console" />
             <AppenderRef ref="InfoFile" />
             <AppenderRef ref="WarnFile" />

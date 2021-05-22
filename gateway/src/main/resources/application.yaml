@@ -2,7 +2,8 @@ server:
   port: 80
   servlet:
     context-path: /
-
+    encoding:
+      charset: UTF-8
 spring:
   application:
     name: newsGateway
@@ -39,7 +40,9 @@ spring:
 #        max-wait: 60
 #        max-idle: 10
 #  profiles: dev
-
+  jackson:
+    date-format: yyyy-MM-dd HH:MM:ss
+    time-zone: GMT+8
 eureka:
   client:
     service-url:
@@ -60,6 +63,7 @@ zuul:
     backgroundSystemConsumer:
       path: /background/**
       service-id: backgroundSystemConsumer
+  ignored-patterns: /login, /logout
 
 info:
   app.name: Sojacnn_路由网关_01

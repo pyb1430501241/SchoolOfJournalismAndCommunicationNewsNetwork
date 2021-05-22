@@ -11,10 +11,14 @@ import org.apache.shiro.web.session.mgt.WebSessionKey;
 import org.jetbrains.annotations.Contract;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
+import org.springframework.util.StringUtils;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Objects;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  *  shiro 框架工具类
@@ -48,11 +52,28 @@ public abstract class ShiroUtils {
     /**
      * 获取用户是否已登录
      */
-    public static boolean isAuthorization() {
-        Subject subject = SecurityUtils.getSubject();
-        return subject.isAuthenticated() || subject.isRemembered();
+    public static boolean isAuthorization(@NonNull HttpServletRequest request) {
+        return isAuthenticated(request) || isRemembered(request);
     }
 
+    /**
+     * 用户是否通过登录认证
+     */
+    public static boolean isAuthenticated(@NonNull HttpServletRequest request) {
+        return StringUtils.hasText(getSessionId()) || StringUtils.hasText(HttpUtils.getSessionId(request));
+    }
+
+    /**
+     * 用户是否通过记住我认证
+     */
+    public static boolean isRemembered(@NonNull HttpServletRequest request) {
+        Cookie[] cookies = request.getCookies();
+        if(cookies == null) {
+            return false;
+        }
+        return Stream.of(cookies).map(Cookie :: getName)
+                .collect(Collectors.toList()).contains(HttpUtils.getRememberCookieName());
+    }
 	
 	 /**
 	  * 根据 sessionid 获取用户信息
