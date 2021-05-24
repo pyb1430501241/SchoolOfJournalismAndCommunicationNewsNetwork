@@ -5,8 +5,10 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -19,6 +21,8 @@ import java.io.Serializable;
  * @since 2021-05-11
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value="NewsAccountRole对象", description="")
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -35,6 +39,5 @@ public class NewsAccountRole implements Serializable {
 
     @ApiModelProperty(value = "角色ID")
     private Integer roleId;
-
 
 }

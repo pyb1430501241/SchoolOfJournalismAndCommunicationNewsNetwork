@@ -11,6 +11,8 @@ import com.pdsu.sojacnn.utils.JsonUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
+import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -40,11 +42,16 @@ public class BackgroundSystemController implements AbstractController {
     @Autowired
     private BackgroundService backgroundService;
 
+    // 拦截器已预先判空, 故不可能返回 null
+    @Nullable
+    private NewsAccountRole accountAuthorization(@NonNull HttpServletRequest request) {
+        return JsonUtils.ObjectOfString(request.getHeader(ACCOUNT_SESSION_FLAG), NewsAccountRole.class);
+    }
+
     @GetMapping("/findRoles")
     @ApiOperation(value = "查询所有的角色", response = Result.class)
     public Result findNewsRoles(@RequestParam(value = "p", defaultValue = "1")Integer p, HttpServletRequest request) throws Exception {
-        System.out.println(request.getHeader(ACCOUNT_SESSION_FLAG));
-        return backgroundService.findNewsRoles(p);
+        return backgroundService.findNewsRoles(p, accountAuthorization(request));
     }
 
     @PostMapping("/saveNewsTheme")

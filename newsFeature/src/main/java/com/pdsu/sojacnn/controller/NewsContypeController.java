@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/contype")
-public class NewsContypeController implements AbstractController {
+public class NewsContypeController extends AuthenticationController {
 
     @Autowired
     private NewsContypeService newsContypeService;

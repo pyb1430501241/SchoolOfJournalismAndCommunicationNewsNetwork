@@ -1,6 +1,5 @@
 package com.pdsu.sojacnn.controller;
 
-import com.baomidou.mybatisplus.extension.api.R;
 import com.pdsu.sojacnn.bean.NewsCategory;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.service.NewsCategoryService;
@@ -18,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/category")
-public class NewsCategoryController implements AbstractController {
+public class NewsCategoryController extends AuthenticationController {
 
     @Autowired
     private NewsCategoryService newsCategoryService;

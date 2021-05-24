@@ -2,11 +2,14 @@ package com.pdsu.sojacnn.shiro;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.pdsu.sojacnn.bean.NewsAccount;
+import com.pdsu.sojacnn.bean.NewsAccountRole;
 import com.pdsu.sojacnn.exception.account.AccountAbnormalException;
+import com.pdsu.sojacnn.service.NewsAccountRoleService;
 import com.pdsu.sojacnn.service.NewsAccountService;
 import lombok.extern.log4j.Log4j2;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
@@ -14,6 +17,8 @@ import org.jetbrains.annotations.Contract;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
+
+import java.util.Set;
 
 /**
  * @author 半梦
@@ -24,6 +29,9 @@ public class LoginRealm extends AuthorizingRealm {
 
     @Autowired
     private NewsAccountService newsAccountService;
+
+    @Autowired
+    private NewsAccountRoleService newsAccountRoleService;
 
     /**
      * 登录认证
@@ -79,8 +87,15 @@ public class LoginRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-        Object primaryPrincipal = principals.getPrimaryPrincipal();
-        System.out.println(primaryPrincipal);
+        NewsAccount account = (NewsAccount) principals.getPrimaryPrincipal();
+
+        QueryWrapper<NewsAccountRole> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq(NewsAccountRoleService.ACCOUNT_ID, account.getId());
+        NewsAccountRole role = newsAccountRoleService.getOne(queryWrapper);
+
+        // 设置权限
+        account.setRole(role);
+
         return null;
     }
 

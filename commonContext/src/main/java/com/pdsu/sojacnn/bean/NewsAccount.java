@@ -57,7 +57,7 @@ public class NewsAccount implements Serializable, Cloneable {
     private Date createTime;
 
     @TableField(exist = false)
-    private Integer roleId;
+    private NewsAccountRole role;
 
     public NewsAccount copy() {
         try {

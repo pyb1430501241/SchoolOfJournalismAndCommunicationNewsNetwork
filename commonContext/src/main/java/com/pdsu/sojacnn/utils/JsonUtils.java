@@ -41,7 +41,7 @@ public abstract class JsonUtils {
      */
     @Nullable
     @Contract("null, _ -> null")
-    public static <T> Object ObjectOfString(@Nullable String json, Class<T> clazz) {
+    public static <T> T ObjectOfString(@Nullable String json, Class<T> clazz) {
         if(Objects.isNull(json)) {
             return null;
         }

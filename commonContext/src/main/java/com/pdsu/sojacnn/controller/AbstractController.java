@@ -6,11 +6,22 @@ package com.pdsu.sojacnn.controller;
  */
 public interface AbstractController {
 
+    /**
+     * 一般用于未被定义的错误
+     */
     String DEFAULT_ERROR_PROMPT = "未定义类型错误";
 
     String NOT_LOGIN = "未登录";
 
+    /**
+     * 用户认证信息
+     */
     String ACCOUNT_SESSION_FLAG = "Authorization";
+
+    /**
+     * 默认一页多少条数据
+     */
+    Integer DEFAULT_PAGE_SIZE = 8;
 
     /**
      * 用在返回单个对象

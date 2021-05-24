@@ -1,6 +1,7 @@
 package com.pdsu.sojacnn.controller;
 
 import com.pdsu.sojacnn.bean.Result;
+import com.pdsu.sojacnn.exception.account.PermissionsException;
 import com.pdsu.sojacnn.utils.DateUtils;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;
@@ -72,6 +73,7 @@ public class ExceptionController implements AbstractController {
         log.warn("请求API时发生未知错误, 原因: " + e.getMessage(), e);
         return Result.fail().data(MESSAGE, "参数不对照");
     }
+
     /**
      * 处理 MissingServletRequestParameterException 异常
      */
@@ -79,6 +81,15 @@ public class ExceptionController implements AbstractController {
     public Result processHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException e) {
         log.warn("请求API时发生未知错误, 原因: " + e.getMessage(), e);
         return Result.fail().data(MESSAGE, "请求方法不对应");
+    }
+
+    /**
+     * 处理 PermissionsException 异常
+     */
+    @ExceptionHandler(PermissionsException.class)
+    public Result processPermissionsException(PermissionsException e) {
+        log.warn("请求API时发生未知错误, 原因: " + e.getMessage(), e);
+        return Result.insufficientPermissions().data(MESSAGE, "权限不足");
     }
 
 

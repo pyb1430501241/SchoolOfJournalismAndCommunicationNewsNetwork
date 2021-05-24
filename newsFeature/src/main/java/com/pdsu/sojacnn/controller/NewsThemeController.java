@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/newsTheme")
 @Log4j2
-public class NewsThemeController implements AbstractController {
+public class NewsThemeController extends AuthenticationController {
 
     @Autowired
     private NewsThemeService newsThemeService;
