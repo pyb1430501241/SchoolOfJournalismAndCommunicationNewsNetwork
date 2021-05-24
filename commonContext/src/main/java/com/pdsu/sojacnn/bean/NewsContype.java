@@ -41,7 +41,7 @@ public class NewsContype implements Serializable {
 
     @ApiModelProperty(value = "逻辑删除")
     @TableLogic
-    private Integer isDelete;
+    private transient Integer isDelete;
 
 
 }

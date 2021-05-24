@@ -40,7 +40,7 @@ public class NewsTeacher implements Serializable {
 
     @ApiModelProperty(value = "逻辑删除")
     @TableLogic
-    private Boolean isDelete;
+    private transient Integer isDelete;
 
 
 }

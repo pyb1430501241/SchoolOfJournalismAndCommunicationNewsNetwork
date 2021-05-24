@@ -1,7 +1,5 @@
 package com.pdsu.sojacnn.filter;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
@@ -35,7 +33,6 @@ public class AuthenticationFilter extends ZuulFilter {
 
     private static final String ACCOUNT_SESSION_FLAG = AbstractController.ACCOUNT_SESSION_FLAG;
 
-
     @Override
     public String filterType() {
         return BEFORE_REQUEST;
@@ -57,7 +54,6 @@ public class AuthenticationFilter extends ZuulFilter {
         context.setSendZuulResponse(true);
         HttpServletRequest request = context.getRequest();
         HttpServletResponse response = context.getResponse();
-
         String servletPath = request.getServletPath();
 
         String referer = request.getHeader("Referer");
@@ -69,6 +65,8 @@ public class AuthenticationFilter extends ZuulFilter {
 
         // 放行 swagger 请求
         if(servletPath.contains("v2/api-docs") || referer.contains("swagger-ui")) {
+            // 添加 swagger 测试用户凭证
+            context.addZuulRequestHeader(ACCOUNT_SESSION_FLAG, "1");
             log.debug("放行 swagger 请求");
             return null;
         }
@@ -87,6 +85,7 @@ public class AuthenticationFilter extends ZuulFilter {
                 log.debug("拦截未登录请求");
                 return filterAuthorization(context);
             }
+            // 把用户凭证分发到下游服务
             context.addZuulRequestHeader(ACCOUNT_SESSION_FLAG, account.getId().toString());
         }
 
