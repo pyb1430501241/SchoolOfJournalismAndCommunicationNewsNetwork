@@ -91,9 +91,7 @@ public class BackgroundSystemController implements AbstractController {
     @ApiOperation(value = "插入新闻类别", response = Result.class)
     public Result insertNewsCategory(@RequestParam("contypeId") Integer contypeId
             , @RequestParam("categoryName") String categoryName) throws Exception {
-        NewsCategory newsCategory = newsCategoryFactory.create();
-        newsCategory.setCategoryName(categoryName);
-        newsCategory.setContypeId(contypeId);
+        NewsCategory newsCategory = newsCategoryFactory.create(categoryName,contypeId);
         return newsFeatureService.insertNewsCategory(newsCategory);
     }
 
@@ -110,5 +108,4 @@ public class BackgroundSystemController implements AbstractController {
         NewsCategory newsCategory = newsCategoryFactory.create(id,categoryName,ContypeId);
         return newsFeatureService.updateNewsCategory(newsCategory);
     }
-
 }
