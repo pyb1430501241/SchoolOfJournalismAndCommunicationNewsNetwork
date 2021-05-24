@@ -30,6 +30,10 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:MM:ss
     time-zone: GMT+8
+  cache:
+    ehcache:
+      config: classpath:ehcache/ehcache.xml
+
 eureka:
   client:
     service-url:
@@ -53,4 +57,5 @@ logging:
 
 mybatis-plus:
   configuration:
+    cache-enabled: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
