@@ -4,6 +4,7 @@ import com.pdsu.sojacnn.bean.NewsAccount;
 import com.pdsu.sojacnn.bean.NewsAccountRole;
 import com.pdsu.sojacnn.exception.account.AccountNotLoginException;
 import com.pdsu.sojacnn.exception.account.PermissionsException;
+import lombok.extern.log4j.Log4j2;
 import org.jetbrains.annotations.Contract;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
@@ -13,6 +14,7 @@ import org.springframework.lang.Nullable;
  * @create 2021-05-21 18:57
  */
 @SuppressWarnings("all")
+@Log4j2
 public abstract class AuthenticationController implements AbstractController {
 
     static final int TOURIST = 1;
@@ -90,6 +92,7 @@ public abstract class AuthenticationController implements AbstractController {
             default:
                 throw new PermissionsException();
         }
+        log.debug("用户: " + newsAccountRole + "通过权限校验.");
     }
 
 }

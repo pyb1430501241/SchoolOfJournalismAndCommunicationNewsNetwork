@@ -1,5 +1,9 @@
 package com.pdsu.sojacnn.controller;
 
+import com.pdsu.sojacnn.utils.JsonUtils;
+import org.springframework.lang.NonNull;
+import org.springframework.lang.Nullable;
+
 /**
  * @author 半梦
  * @create 2021-05-19 18:21
@@ -62,5 +66,15 @@ public interface AbstractController {
      * 默认编码
      */
     String DEFAULT_CODING = "UTF-8";
+
+    @Nullable
+    default String parseJson(@Nullable Object obj) {
+        return JsonUtils.valueOfString(obj);
+    }
+
+    @Nullable
+    default <T> T parseObject(@NonNull String json, @NonNull Class<T> clazz) {
+        return JsonUtils.ObjectOfString(json, clazz);
+    }
 
 }

@@ -1,9 +1,6 @@
 package com.pdsu.sojacnn.service;
 
-import com.pdsu.sojacnn.bean.NewsCategory;
-import com.pdsu.sojacnn.bean.NewsContype;
-import com.pdsu.sojacnn.bean.NewsTheme;
-import com.pdsu.sojacnn.bean.Result;
+import com.pdsu.sojacnn.bean.*;
 import com.pdsu.sojacnn.service.impl.NewsFeatureFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
@@ -11,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Map;
 
 /**
  * @author 半梦
@@ -27,7 +26,8 @@ public interface NewsFeatureService {
     public Result findContypeById(@RequestParam("id") Integer id);
 
     @PostMapping("/newsTheme/insert")
-    public Result insertNewsTheme(@RequestBody NewsTheme newsTheme);
+    public Result insertNewsTheme(@RequestParam("newsTheme") String newsTheme
+            , @RequestParam("newsAccountRole") String newsAccountRole);
 
     @GetMapping("/newsTheme/findNewsThemeById")
     public Result findNewsThemeById(@RequestParam("id") Long id);

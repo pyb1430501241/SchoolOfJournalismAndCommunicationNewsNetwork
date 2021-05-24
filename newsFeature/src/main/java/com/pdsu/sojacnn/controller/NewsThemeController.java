@@ -3,9 +3,11 @@ package com.pdsu.sojacnn.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.pdsu.sojacnn.bean.NewsAccountRole;
 import com.pdsu.sojacnn.bean.NewsTheme;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.service.NewsThemeService;
+import com.pdsu.sojacnn.utils.JsonUtils;
 import com.pdsu.sojacnn.utils.PageUtils;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.UnsupportedEncodingException;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -33,8 +36,12 @@ public class NewsThemeController extends AuthenticationController {
     private NewsThemeService newsThemeService;
 
     @PostMapping("/insert")
-    public Result insertNewsTheme(@RequestBody NewsTheme newsTheme) throws Exception {
-        newsThemeService.save(newsTheme);
+    public Result insertNewsTheme(@RequestParam("newsTheme") String newsTheme
+            , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+
+        newsThemeService.save(parseObject(newsTheme, NewsTheme.class));
+
         return Result.ok();
     }
 

@@ -6,7 +6,6 @@ import com.pdsu.sojacnn.factory.NewsContypeFactory;
 import com.pdsu.sojacnn.factory.NewsThemeFactory;
 import com.pdsu.sojacnn.service.BackgroundService;
 import com.pdsu.sojacnn.service.NewsFeatureService;
-import com.pdsu.sojacnn.utils.DateUtils;
 import com.pdsu.sojacnn.utils.JsonUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -58,7 +57,9 @@ public class BackgroundSystemController implements AbstractController {
     @ApiOperation(value = "插入新闻主体", response = Result.class)
     public Result insertNewsTheme(String title, String data, Integer contypeId, Integer categoryId, HttpServletRequest request) throws Exception {
         NewsTheme newsTheme = newsThemeFactory.create(title, data, contypeId, categoryId, true, true);
-        return newsFeatureService.insertNewsTheme(newsTheme);
+
+        return newsFeatureService.insertNewsTheme(parseJson(newsTheme)
+                , parseJson(accountAuthorization(request)));
     }
 
     @PostMapping("/updateNewsTheme/{id}")

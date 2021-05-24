@@ -88,7 +88,7 @@ public class ExceptionController implements AbstractController {
      */
     @ExceptionHandler(PermissionsException.class)
     public Result processPermissionsException(PermissionsException e) {
-        log.warn("请求API时发生未知错误, 原因: " + e.getMessage(), e);
+        log.warn("请求API时发生未知错误, 原因: 权限不足", e);
         return Result.insufficientPermissions().data(MESSAGE, "权限不足");
     }
 

@@ -1,13 +1,13 @@
 package com.pdsu.sojacnn.service.impl;
 
-import com.pdsu.sojacnn.bean.NewsCategory;
-import com.pdsu.sojacnn.bean.NewsContype;
-import com.pdsu.sojacnn.bean.NewsTheme;
-import com.pdsu.sojacnn.bean.Result;
+import com.pdsu.sojacnn.bean.*;
 import com.pdsu.sojacnn.service.NewsFeatureService;
 import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Map;
 
 /**
  * @author 半梦
@@ -33,7 +33,7 @@ public class NewsFeatureFallbackFactory implements FallbackFactory<NewsFeatureSe
         }
 
         @Override
-        public Result insertNewsTheme(NewsTheme newsTheme) {
+        public Result insertNewsTheme(String newsTheme, String newsAccountRole) {
             return RESULT;
         }
 
