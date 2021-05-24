@@ -1,5 +1,6 @@
 package com.pdsu.sojacnn.utils;
 
+import com.pdsu.sojacnn.controller.AbstractController;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.web.mgt.CookieRememberMeManager;
 import org.springframework.lang.NonNull;
@@ -23,7 +24,7 @@ public abstract class HttpUtils {
     /**
      * 保持用户认证状态的请求头以及 Cookie 的名字
      */
-    private static final String AUTHORIZATION = "Authorization";
+    private static final String AUTHORIZATION = AbstractController.ACCOUNT_SESSION_FLAG;
     private static final String REMEMBER_COOKIE_NAME = CookieRememberMeManager.DEFAULT_REMEMBER_ME_COOKIE_NAME;
     private static final String SET_COOKIE_NAME = "Set-Cookie";
 

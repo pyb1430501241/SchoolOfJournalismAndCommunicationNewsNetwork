@@ -14,6 +14,7 @@ import org.apache.shiro.authc.pam.AllSuccessfulStrategy;
 import org.apache.shiro.authc.pam.ModularRealmAuthenticator;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.mgt.SecurityManager;
+import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.realm.Realm;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
@@ -122,7 +123,7 @@ public class GatewayConfig {
     }
 
     @Bean
-    public Realm loginRealm(EncryptConfig encrypt) {
+    public AuthorizingRealm loginRealm(EncryptConfig encrypt) {
         LoginRealm realm = new LoginRealm();
         HashedCredentialsMatcher credentialsMatcher = new HashedCredentialsMatcher();
         credentialsMatcher.setHashAlgorithmName(encrypt.getMode());

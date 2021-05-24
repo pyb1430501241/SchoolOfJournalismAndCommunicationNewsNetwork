@@ -6,6 +6,7 @@ import com.pdsu.sojacnn.service.impl.BackgroundServiceFallbackFactory;
 import com.pdsu.sojacnn.service.impl.NewsFeatureFallbackFactory;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.ComponentScan;

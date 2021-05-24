@@ -76,11 +76,11 @@ public class LoginRealm extends AuthorizingRealm {
 
     /**
      * 负责权限分配
-     * 舍弃
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-
+        Object primaryPrincipal = principals.getPrimaryPrincipal();
+        System.out.println(primaryPrincipal);
         return null;
     }
 

@@ -43,12 +43,13 @@ public class BackgroundSystemController implements AbstractController {
     @GetMapping("/findRoles")
     @ApiOperation(value = "查询所有的角色", response = Result.class)
     public Result findNewsRoles(@RequestParam(value = "p", defaultValue = "1")Integer p, HttpServletRequest request) throws Exception {
+        System.out.println(request.getHeader(ACCOUNT_SESSION_FLAG));
         return backgroundService.findNewsRoles(p);
     }
 
     @PostMapping("/saveNewsTheme")
     @ApiOperation(value = "插入新闻主体", response = Result.class)
-    public Result insertNewsTheme(String title, String data, Integer contypeId, Integer categoryId) throws Exception {
+    public Result insertNewsTheme(String title, String data, Integer contypeId, Integer categoryId, HttpServletRequest request) throws Exception {
         NewsTheme newsTheme = newsThemeFactory.create(title, data, contypeId, categoryId, true, true);
         return newsFeatureService.insertNewsTheme(newsTheme);
     }
@@ -56,33 +57,33 @@ public class BackgroundSystemController implements AbstractController {
     @PostMapping("/updateNewsTheme/{id}")
     @ApiOperation(value = "根据ID, 更新新闻主体", response = Result.class)
     public Result updateNewsThemeById(@PathVariable Long id, String title, String data
-            , Integer contypeId, Integer categoryId) throws Exception {
+            , Integer contypeId, Integer categoryId, HttpServletRequest request) throws Exception {
         NewsTheme newsTheme = newsThemeFactory.create(id, title, data, contypeId, categoryId, false, true);
         return newsFeatureService.updateNewsThemeById(newsTheme);
     }
 
     @PostMapping("/deleteNewsTheme/{id}")
     @ApiOperation(value = "根据ID, 删除新闻主体", response = Result.class)
-    public Result deleteNewsThemeById(@PathVariable Long id) throws Exception {
+    public Result deleteNewsThemeById(@PathVariable Long id, HttpServletRequest request) throws Exception {
         return newsFeatureService.deleteNewsThemeById(id);
     }
 
     @PostMapping("/saveNewsContype")
     @ApiOperation(value = "插入新闻类型", response = Result.class)
-    public Result insertNewsContype(@RequestParam("contypeName") String contypeName) throws Exception {
+    public Result insertNewsContype(@RequestParam("contypeName") String contypeName, HttpServletRequest request) throws Exception {
         NewsContype newsContype = newsContypeFactory.create(contypeName);
         return newsFeatureService.insertContype(newsContype);
     }
 
     @PostMapping("/deleteContype/{id}")
     @ApiOperation(value = "删除新闻类型", response = Result.class)
-    public Result deleteContypeById(@PathVariable("id") Integer id) throws Exception {
+    public Result deleteContypeById(@PathVariable("id") Integer id, HttpServletRequest request) throws Exception {
         return newsFeatureService.deleteContypeById(id);
     }
 
     @PostMapping("/updateContype/{id}")
     @ApiOperation(value = "更新新闻类型", response = Result.class)
-    public Result updateContypeById(@PathVariable("id") Integer id, @RequestParam("contypeName") String contypeName) throws Exception {
+    public Result updateContypeById(@PathVariable("id") Integer id, @RequestParam("contypeName") String contypeName, HttpServletRequest request) throws Exception {
         NewsContype newsContype = newsContypeFactory.create(id, contypeName);
         return newsFeatureService.updateContypeById(newsContype);
     }
@@ -90,7 +91,7 @@ public class BackgroundSystemController implements AbstractController {
     @PostMapping("/saveNewsCategory")
     @ApiOperation(value = "插入新闻类别", response = Result.class)
     public Result insertNewsCategory(@RequestParam("contypeId") Integer contypeId
-            , @RequestParam("categoryName") String categoryName) throws Exception {
+            , @RequestParam("categoryName") String categoryName, HttpServletRequest request) throws Exception {
         NewsCategory newsCategory = newsCategoryFactory.create();
         newsCategory.setCategoryName(categoryName);
         newsCategory.setContypeId(contypeId);
@@ -99,15 +100,15 @@ public class BackgroundSystemController implements AbstractController {
 
     @PostMapping("/deleteNewsCategory")
     @ApiOperation(value = "删除新闻类别", response = Result.class)
-    public Result deleteNewsCategory(@RequestParam("id") Integer id) throws Exception {
+    public Result deleteNewsCategory(@RequestParam("id") Integer id, HttpServletRequest request) throws Exception {
         return newsFeatureService.deleteNewsCategoryById(id);
     }
 
     @PostMapping("/updateNewsCategory")
     @ApiOperation(value = "更新新闻类别", response = Result.class)
-    public Result updateNewsCategory(@RequestParam("id") Integer id, @RequestParam("ContypeId") Integer ContypeId
-            , @RequestParam("categoryName") String categoryName) throws Exception {
-        NewsCategory newsCategory = newsCategoryFactory.create(id,categoryName,ContypeId);
+    public Result updateNewsCategory(@RequestParam("id") Integer id, @RequestParam("contypeId") Integer contypeId
+            , @RequestParam("categoryName") String categoryName, HttpServletRequest request) throws Exception {
+        NewsCategory newsCategory = newsCategoryFactory.create(id,categoryName,contypeId);
         return newsFeatureService.updateNewsCategory(newsCategory);
     }
 

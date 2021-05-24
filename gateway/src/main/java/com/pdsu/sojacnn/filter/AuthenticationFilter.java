@@ -31,7 +31,7 @@ public class AuthenticationFilter extends ZuulFilter {
 
     private static final String BEFORE_REQUEST = ZuulStatus.PRE.getStatus();
 
-    private static final String ACCOUNT_SESSION_FLAG = AbstractController.ACCOUNT_SESSION_FLAG;
+    private static final String ACCOUNT_SESSION_FLAG = HttpUtils.getSessionHeader();
 
     @Override
     public String filterType() {
@@ -54,6 +54,7 @@ public class AuthenticationFilter extends ZuulFilter {
         context.setSendZuulResponse(true);
         HttpServletRequest request = context.getRequest();
         HttpServletResponse response = context.getResponse();
+
         String servletPath = request.getServletPath();
 
         String referer = request.getHeader("Referer");

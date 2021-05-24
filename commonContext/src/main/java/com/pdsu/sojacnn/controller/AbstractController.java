@@ -10,7 +10,7 @@ public interface AbstractController {
 
     String NOT_LOGIN = "未登录";
 
-    String ACCOUNT_SESSION_FLAG = "account";
+    String ACCOUNT_SESSION_FLAG = "Authorization";
 
     /**
      * 用在返回单个对象
