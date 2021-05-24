@@ -25,9 +25,10 @@ public abstract class AuthenticationController implements AbstractController {
 
     /**
      * 判断用户是否登录, 如未登录抛出异常
+     * <p>空方法, 供子类实现
      */
     @Contract("null -> fail")
-    void loginOrNotLogin(@Nullable NewsAccount user) throws AccountNotLoginException{
+    void loginOrNotLogin(@Nullable NewsAccount user) throws AccountNotLoginException {
     }
 
     /**
