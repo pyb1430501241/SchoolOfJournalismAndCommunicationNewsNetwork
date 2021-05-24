@@ -1,5 +1,6 @@
 package com.pdsu.sojacnn.service.impl;
 
+import com.pdsu.sojacnn.bean.NewsAccountRole;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.service.BackgroundService;
 import feign.hystrix.FallbackFactory;
@@ -22,7 +23,7 @@ public class BackgroundServiceFallbackFactory implements FallbackFactory<Backgro
         private static final Result RESULT = Result.fail();
 
         @Override
-        public Result findNewsRoles(Integer p) {
+        public Result findNewsRoles(Integer p, NewsAccountRole newsAccountRole) {
             return RESULT;
         }
     }

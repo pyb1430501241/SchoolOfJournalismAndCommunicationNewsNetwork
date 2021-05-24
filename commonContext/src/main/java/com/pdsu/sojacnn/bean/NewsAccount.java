@@ -1,6 +1,7 @@
 package com.pdsu.sojacnn.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -54,6 +55,9 @@ public class NewsAccount implements Serializable, Cloneable {
 
     @ApiModelProperty(value = "创建时间")
     private Date createTime;
+
+    @TableField(exist = false)
+    private NewsAccountRole role;
 
     public NewsAccount copy() {
         try {

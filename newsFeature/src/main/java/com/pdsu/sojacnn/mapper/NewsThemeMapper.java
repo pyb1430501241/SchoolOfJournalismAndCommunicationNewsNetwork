@@ -2,6 +2,8 @@ package com.pdsu.sojacnn.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.pdsu.sojacnn.bean.NewsTheme;
+import org.apache.ibatis.annotations.CacheNamespace;
+import org.mybatis.caches.ehcache.EhcacheCache;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Repository;
  * @since 2021-05-07
  */
 @Repository
+@CacheNamespace(implementation = EhcacheCache.class, eviction = EhcacheCache.class)
 public interface NewsThemeMapper extends BaseMapper<NewsTheme> {
 
 }

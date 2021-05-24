@@ -1,6 +1,7 @@
 package com.pdsu.sojacnn.controller;
 
 
+import com.pdsu.sojacnn.bean.NewsAccountRole;
 import com.pdsu.sojacnn.bean.NewsContype;
 import com.pdsu.sojacnn.bean.NewsTheme;
 import com.pdsu.sojacnn.bean.Result;
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/contype")
-public class NewsContypeController implements AbstractController {
+public class NewsContypeController extends AuthenticationController {
 
     @Autowired
     private NewsContypeService newsContypeService;
@@ -31,20 +32,29 @@ public class NewsContypeController implements AbstractController {
     }
 
     @PostMapping("/insertContypeById")
-    public Result insertContype(@RequestBody NewsContype newsContype) throws Exception {
-        newsContypeService.save(newsContype);
+    public Result insertContype(@RequestParam("newsContype") String newsContype
+            , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+
+        newsContypeService.save(parseObject(newsContype,NewsContype.class));
         return Result.ok();
     }
 
     @PostMapping("/deleteContypeById")
-    public Result deleteContypeById(@RequestParam("id") Integer id) throws Exception {
+    public Result deleteContypeById(@RequestParam("id") Integer id
+            , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+
         newsContypeService.removeById(id);
         return Result.ok();
     }
 
     @PostMapping("/updateContypeById")
-    public Result updateContype(@RequestBody NewsContype newsContype) throws Exception {
-        newsContypeService.updateById(newsContype);
+    public Result updateContype(@RequestParam("newsContype") String newsContype
+            , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+
+        newsContypeService.updateById(parseObject(newsContype, NewsContype.class));
         return Result.ok();
     }
 

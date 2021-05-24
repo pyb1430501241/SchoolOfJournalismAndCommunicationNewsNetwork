@@ -1,16 +1,31 @@
 package com.pdsu.sojacnn.controller;
 
+import com.pdsu.sojacnn.utils.JsonUtils;
+import org.springframework.lang.NonNull;
+import org.springframework.lang.Nullable;
+
 /**
  * @author 半梦
  * @create 2021-05-19 18:21
  */
 public interface AbstractController {
 
+    /**
+     * 一般用于未被定义的错误
+     */
     String DEFAULT_ERROR_PROMPT = "未定义类型错误";
 
     String NOT_LOGIN = "未登录";
 
-    String ACCOUNT_SESSION_FLAG = "account";
+    /**
+     * 用户认证信息
+     */
+    String ACCOUNT_SESSION_FLAG = "Authorization";
+
+    /**
+     * 默认一页多少条数据
+     */
+    Integer DEFAULT_PAGE_SIZE = 8;
 
     /**
      * 用在返回单个对象
@@ -51,5 +66,15 @@ public interface AbstractController {
      * 默认编码
      */
     String DEFAULT_CODING = "UTF-8";
+
+    @Nullable
+    default String parseJson(@Nullable Object obj) {
+        return JsonUtils.valueOfString(obj);
+    }
+
+    @Nullable
+    default <T> T parseObject(@NonNull String json, @NonNull Class<T> clazz) {
+        return JsonUtils.ObjectOfString(json, clazz);
+    }
 
 }

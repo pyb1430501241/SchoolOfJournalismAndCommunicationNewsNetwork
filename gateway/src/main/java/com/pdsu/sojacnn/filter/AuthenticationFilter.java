@@ -4,6 +4,7 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import com.pdsu.sojacnn.bean.NewsAccount;
+import com.pdsu.sojacnn.bean.NewsAccountRole;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.bean.ZuulStatus;
 import com.pdsu.sojacnn.controller.AbstractController;
@@ -31,7 +32,9 @@ public class AuthenticationFilter extends ZuulFilter {
 
     private static final String BEFORE_REQUEST = ZuulStatus.PRE.getStatus();
 
-    private static final String ACCOUNT_SESSION_FLAG = AbstractController.ACCOUNT_SESSION_FLAG;
+    private static final String ACCOUNT_SESSION_FLAG = HttpUtils.getSessionHeader();
+
+    private static final NewsAccountRole SWAGGER_ROLE = new NewsAccountRole(1, 1L, 4);
 
     @Override
     public String filterType() {
@@ -54,6 +57,7 @@ public class AuthenticationFilter extends ZuulFilter {
         context.setSendZuulResponse(true);
         HttpServletRequest request = context.getRequest();
         HttpServletResponse response = context.getResponse();
+
         String servletPath = request.getServletPath();
 
         String referer = request.getHeader("Referer");
@@ -66,7 +70,7 @@ public class AuthenticationFilter extends ZuulFilter {
         // 放行 swagger 请求
         if(servletPath.contains("v2/api-docs") || referer.contains("swagger-ui")) {
             // 添加 swagger 测试用户凭证
-            context.addZuulRequestHeader(ACCOUNT_SESSION_FLAG, "1");
+            context.addZuulRequestHeader(ACCOUNT_SESSION_FLAG, JsonUtils.valueOfString(SWAGGER_ROLE));
             log.debug("放行 swagger 请求");
             return null;
         }
@@ -86,7 +90,7 @@ public class AuthenticationFilter extends ZuulFilter {
                 return filterAuthorization(context);
             }
             // 把用户凭证分发到下游服务
-            context.addZuulRequestHeader(ACCOUNT_SESSION_FLAG, account.getId().toString());
+            context.addZuulRequestHeader(ACCOUNT_SESSION_FLAG, JsonUtils.valueOfString(account.getRole()));
         }
 
         log.info("用户IP:" + HttpUtils.getIpAddr(request) + ", 访问URL: " + servletPath);

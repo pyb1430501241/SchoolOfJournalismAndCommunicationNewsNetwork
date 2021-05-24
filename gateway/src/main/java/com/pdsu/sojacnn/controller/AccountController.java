@@ -27,7 +27,8 @@ import java.util.Objects;
 @RestController
 @Log4j2
 @Api(description = "登录认证")
-public class AccountController implements LoginController, AbstractController {
+public class AccountController extends AuthenticationController
+        implements LoginController, AbstractController {
 
     @ApiOperation(value = "登录认证",response = Result.class)
     @PostMapping("/login")
@@ -58,6 +59,9 @@ public class AccountController implements LoginController, AbstractController {
 
         // 从 json 中排除 password 字段
         newsAccount.setPassword(null);
+
+        // 使其执行权限方法
+        subject.hasRole("");
 
         log.debug("用户 " + newsAccount.getId() + "登录成功");
 

@@ -6,10 +6,12 @@ import com.pdsu.sojacnn.service.impl.BackgroundServiceFallbackFactory;
 import com.pdsu.sojacnn.service.impl.NewsFeatureFallbackFactory;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScan.Filter;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.FilterType;
 
 /**
@@ -27,6 +29,7 @@ import org.springframework.context.annotation.FilterType;
 @SpringCloudApplication
 @EnableZuulProxy
 @MapperScan("com.pdsu.sojacnn.mapper")
+@EnableAspectJAutoProxy
 public class GateWayRun {
 
     public static void main(String[] args) {

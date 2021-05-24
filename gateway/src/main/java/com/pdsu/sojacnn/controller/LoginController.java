@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author 半梦
  * @create 2021-05-21 18:57
  */
-public interface LoginController extends AuthenticationController {
+public interface LoginController {
 
     Integer REMEMBER_ME = 1;
 

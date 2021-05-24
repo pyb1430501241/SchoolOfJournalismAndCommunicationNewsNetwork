@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/newsAccount")
-public class NewsAccountController implements AbstractController{
+public class NewsAccountController extends AuthenticationController {
 
 
 }
