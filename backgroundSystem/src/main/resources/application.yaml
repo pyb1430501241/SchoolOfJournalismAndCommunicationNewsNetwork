@@ -7,6 +7,11 @@ server:
       charset: UTF-8
   max-http-header-size: 128KB
 spring:
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+  freemarker:
+    cache: false
   application:
     # 同一微服务里所有的同类提供者必须同名, 所对应的微服务名称为此值全大写
     name: backgroundSystem
@@ -23,7 +28,7 @@ spring:
       connection-timeout: 30000
       connection-test-query: SELECT 1
       username: root
-      password: pyb***20000112
+      password: 123456
       jdbc-url: jdbc:mysql://localhost:3306/sojacnn?useSSL=false&serverTimezone=UTC
       driver-class-name: com.mysql.cj.jdbc.Driver
   jackson:

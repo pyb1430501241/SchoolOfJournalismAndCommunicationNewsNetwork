@@ -6,6 +6,11 @@ server:
       charset: UTF-8
   max-http-header-size: 128KB
 spring:
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+  freemarker:
+    cache: false
   #  profiles: dev
   application:
     # 自己在 eureka 里的唯一标识
