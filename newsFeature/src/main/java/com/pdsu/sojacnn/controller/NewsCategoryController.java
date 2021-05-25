@@ -1,5 +1,6 @@
 package com.pdsu.sojacnn.controller;
 
+import com.pdsu.sojacnn.bean.NewsAccountRole;
 import com.pdsu.sojacnn.bean.NewsCategory;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.service.NewsCategoryService;
@@ -29,7 +30,10 @@ public class NewsCategoryController extends AuthenticationController {
     }
 
     @PostMapping("/deleteCategoryById")
-    public Result deleteCategoryById(@RequestParam("id") Integer id) throws Exception {
+    public Result deleteCategoryById(@RequestParam("id") Integer id
+            , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+
         boolean b = newsCategoryService.removeById(id);
         if(b) {
             return Result.ok();
@@ -38,14 +42,20 @@ public class NewsCategoryController extends AuthenticationController {
     }
 
     @PostMapping("/insertNewsCategory")
-    public Result insertCategory(@RequestBody NewsCategory newsCategory) throws Exception {
-        newsCategoryService.save(newsCategory);
+    public Result insertCategory(@RequestParam("newsCategory") String newsCategory
+            , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+
+        newsCategoryService.save(parseObject(newsCategory, NewsCategory.class));
         return Result.ok();
     }
 
     @PostMapping("/updateCategoryById")
-    public Result updateCategoryById(@RequestBody NewsCategory newsCategory) throws Exception {
-        newsCategoryService.updateById(newsCategory);
+    public Result updateCategoryById(@RequestParam("newsCategory") String newsCategory
+            , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+
+        newsCategoryService.updateById(parseObject(newsCategory,NewsCategory.class));
         return Result.ok();
     }
 

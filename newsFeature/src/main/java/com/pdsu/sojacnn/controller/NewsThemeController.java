@@ -52,32 +52,40 @@ public class NewsThemeController extends AuthenticationController {
     }
 
     @PostMapping("/updateNewsThemeById")
-    public Result updateNewsThemeById(@RequestBody NewsTheme newsTheme) throws Exception {
-        newsThemeService.updateById(newsTheme);
+    public Result updateNewsThemeById(@RequestParam("newsTheme") String newsTheme
+            , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+
+        newsThemeService.updateById(parseObject(newsTheme, NewsTheme.class));
+
         return Result.ok();
     }
 
     @PostMapping("/deleteNewsThemeById")
-    public Result deleteNewsThemeById(@RequestParam("id") Long id) throws Exception {
+    public Result deleteNewsThemeById(@RequestParam("id") Long id
+            , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+
         newsThemeService.removeById(id);
+
         return Result.ok();
     }
 
     @GetMapping("/findByTypeIdAndCategoryId")
     public Result findNewsThemesByTypeIdAndCategoryId(@RequestParam("contypeId") Integer typeId
             , @RequestParam Integer categoryId, @RequestParam Integer p) throws Exception {
-        Page<NewsTheme> page = new Page<>(p, 5);
+        Page<NewsTheme> page = new Page<>(p, DEFAULT_PAGE_SIZE);
         newsThemeService.findNewsThemesByTypeIdAndCategoryId(page, typeId, categoryId);
         List<NewsTheme> news = page.getRecords().stream().peek(e -> {
             if (e.getData() != null) {
-                try {
-                    e.setDataString(new String(e.getData(), DEFAULT_CODING));
-                    e.setData(null);
-                } catch (UnsupportedEncodingException ex) {
-                    if(log.isDebugEnabled()) {
-                        log.debug(ex.getMessage());
-                    }
-                }
+                //try {
+                //    e.setDataString(new String(e.getData(), DEFAULT_CODING));
+                e.setData(null);
+                //} catch (UnsupportedEncodingException ex) {
+                //    if(log.isDebugEnabled()) {
+                //        log.debug(ex.getMessage());
+                //    }
+                //}
             }
         }).collect(Collectors.toList());
         page.setRecords(news);

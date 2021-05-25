@@ -9,6 +9,7 @@ import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -30,10 +31,14 @@ public class NewsCategoryFactory extends AbstractFactory<NewsCategory>{
     }
 
     public NewsCategory create(@Nullable Integer id, @NonNull String categoryName, @NonNull Integer contypeId) throws NoSuchMethodException {
-        Map<String, Object> map = new HashMap<>();
+        Map<String, Object> map = new LinkedHashMap<>();
         map.put(FIELD_NAME_ID, id);
         map.put(FIELD_NAME_CATEGORYNAME, categoryName);
         map.put(FIELD_NAME_CONTYPEID, contypeId);
         return create(map);
+    }
+
+    public NewsCategory create(@NonNull String categoryName, @NonNull Integer categoryId) throws NoSuchMethodException {
+        return create(null, categoryName, categoryId);
     }
 }

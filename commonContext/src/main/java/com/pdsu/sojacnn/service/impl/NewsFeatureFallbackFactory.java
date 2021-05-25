@@ -43,27 +43,27 @@ public class NewsFeatureFallbackFactory implements FallbackFactory<NewsFeatureSe
         }
 
         @Override
-        public Result updateNewsThemeById(NewsTheme newsTheme) {
+        public Result updateNewsThemeById(String newsTheme, String newsAccountRole) {
             return RESULT;
         }
 
         @Override
-        public Result deleteNewsThemeById(Long id) {
+        public Result deleteNewsThemeById(Long id, String newsAccountRole) {
             return RESULT;
         }
 
         @Override
-        public Result insertContype(NewsContype newsContype) {
+        public Result insertContype(String newsContype, String newsAccountRole) {
             return RESULT;
         }
 
         @Override
-        public Result deleteContypeById(Integer id) {
+        public Result deleteContypeById(Integer id, String newsAccountRole) {
             return RESULT;
         }
 
         @Override
-        public Result updateContypeById(NewsContype newsContype) {
+        public Result updateContypeById(String newsContype, String newsAccountRole) {
             return RESULT;
         }
 
@@ -73,17 +73,17 @@ public class NewsFeatureFallbackFactory implements FallbackFactory<NewsFeatureSe
         }
 
         @Override
-        public Result insertNewsCategory(NewsCategory newsCategory) {
+        public Result insertNewsCategory(String newsCategory, String newsAccountRole) {
             return RESULT;
         }
 
         @Override
-        public Result deleteNewsCategoryById(Integer id) {
+        public Result deleteNewsCategoryById(Integer id, String newsAccountRole) {
             return RESULT;
         }
 
         @Override
-        public Result updateNewsCategory(NewsCategory newsCategory) {
+        public Result updateNewsCategory(String newsCategory, String newsAccountRole) {
             return RESULT;
         }
 
