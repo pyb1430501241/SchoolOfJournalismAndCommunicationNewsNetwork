@@ -17,6 +17,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import java.io.IOException;
 
 /**
+ * 异常处理类
  * @author 半梦
  * @create 2021-05-19 16:45
  */

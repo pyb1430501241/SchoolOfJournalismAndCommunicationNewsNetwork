@@ -10,6 +10,7 @@ import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 
 /**
+ * 继承此类即代表需要权限校验
  * @author 半梦
  * @create 2021-05-21 18:57
  */
@@ -27,10 +28,10 @@ public abstract class AuthenticationController implements AbstractController {
 
     /**
      * 判断用户是否登录, 如未登录抛出异常
-     * <p>空方法, 供子类实现
      */
     @Contract("null -> fail")
     void loginOrNotLogin(@Nullable NewsAccount user) throws AccountNotLoginException {
+        throw new AccountNotLoginException();
     }
 
     /**

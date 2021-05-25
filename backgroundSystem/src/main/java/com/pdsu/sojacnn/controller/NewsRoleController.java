@@ -35,6 +35,7 @@ public class NewsRoleController extends AuthenticationController {
 
         Page<NewsRole> page = new Page<>(p, DEFAULT_PAGE_SIZE);
         newsRoleService.page(page);
+
         return PageUtils.defaultPage(Result.ok(), page);
     }
 

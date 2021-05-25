@@ -5,6 +5,7 @@ import com.pdsu.sojacnn.bean.Result;
 import javax.servlet.http.HttpServletRequest;
 
 /**
+ * 登录接口
  * @author 半梦
  * @create 2021-05-21 18:57
  */

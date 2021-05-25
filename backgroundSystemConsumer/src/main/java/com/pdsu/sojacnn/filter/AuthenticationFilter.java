@@ -2,7 +2,7 @@ package com.pdsu.sojacnn.filter;
 
 import com.pdsu.sojacnn.controller.AbstractController;
 import lombok.extern.log4j.Log4j2;
-import org.jetbrains.annotations.NotNull;
+import org.springframework.lang.NonNull;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -20,8 +20,8 @@ import java.io.IOException;
 public class AuthenticationFilter extends OncePerRequestFilter {
 
     @Override
-    protected void doFilterInternal(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response
-            , @NotNull FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response
+            , @NonNull FilterChain filterChain) throws ServletException, IOException {
         // 如果请求头有用户凭证, 则进行请求转发
         String authorization = request.getHeader(AbstractController.ACCOUNT_SESSION_FLAG);
         if(StringUtils.hasText(authorization)) {

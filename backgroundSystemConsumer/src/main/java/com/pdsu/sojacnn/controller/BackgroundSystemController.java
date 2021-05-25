@@ -44,7 +44,7 @@ public class BackgroundSystemController implements AbstractController {
     // 拦截器已预先判空, 故不可能返回 null
     @Nullable
     private NewsAccountRole accountAuthorization(@NonNull HttpServletRequest request) {
-        return JsonUtils.ObjectOfString(request.getHeader(ACCOUNT_SESSION_FLAG), NewsAccountRole.class);
+        return parseObject(request.getHeader(ACCOUNT_SESSION_FLAG), NewsAccountRole.class);
     }
 
     @GetMapping("/findRoles")

@@ -25,7 +25,7 @@ public class CrossConfig {
 
     private static final String STRING_ALLOW_METHOD = "POST, GET, OPTIONS";
 
-    private static final String STRING_EXPOSED_HEADER = "Set-Cookie, Authorization, Cookie, rememberMe";
+    private static final String STRING_EXPOSED_HEADER = "Authorization, Cookie, rememberMe";
 
     /**
      * 默认允许访问的请求方式
@@ -36,7 +36,7 @@ public class CrossConfig {
      * 默认允许对外暴露的请求头
      */
     @SuppressWarnings("all")
-    public static final String [] EXPOSED_HEADER = new String [] {"Set-Cookie", "Authorization",
+    public static final String [] EXPOSED_HEADER = new String [] {"Authorization",
             "Cookie", "rememberMe"};
 
     /**
