@@ -5,6 +5,11 @@ server:
     encoding:
       charset: UTF-8
 spring:
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+  freemarker:
+    cache: false
   application:
     name: newsGateway
   cloud:
@@ -67,7 +72,10 @@ zuul:
     backgroundSystemConsumer:
       path: /background/**
       service-id: backgroundSystemConsumer
-  ignored-patterns: /login, /logout
+  ignored-patterns: /login, /logout, /nav
+  SendErrorFilter:
+    error:
+      disable: true
 
 info:
   app.name: Sojacnn_路由网关_01
@@ -82,3 +90,14 @@ mybatis-plus:
   configuration:
     cache-enabled: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+hystrix:
+  command:
+    default:
+      executio:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  ReadTimeout: 5000
+  SocketTimeout: 5000

@@ -6,7 +6,6 @@ import com.pdsu.sojacnn.factory.NewsContypeFactory;
 import com.pdsu.sojacnn.factory.NewsThemeFactory;
 import com.pdsu.sojacnn.service.BackgroundService;
 import com.pdsu.sojacnn.service.NewsFeatureService;
-import com.pdsu.sojacnn.utils.JsonUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

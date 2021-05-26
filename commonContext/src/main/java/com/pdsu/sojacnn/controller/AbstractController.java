@@ -5,6 +5,7 @@ import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 
 /**
+ * Controller 均要实现此接口, 为其提供便捷的 JSON 化, 以及默认的一些关键字
  * @author 半梦
  * @create 2021-05-19 18:21
  */
@@ -67,11 +68,17 @@ public interface AbstractController {
      */
     String DEFAULT_CODING = "UTF-8";
 
+    /**
+     * 对象转 json
+     */
     @Nullable
     default String parseJson(@Nullable Object obj) {
         return JsonUtils.valueOfString(obj);
     }
 
+    /**
+     * json 转对象
+     */
     @Nullable
     default <T> T parseObject(@NonNull String json, @NonNull Class<T> clazz) {
         return JsonUtils.ObjectOfString(json, clazz);

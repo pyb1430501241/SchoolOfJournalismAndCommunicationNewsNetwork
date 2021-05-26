@@ -6,6 +6,11 @@ server:
       charset: UTF-8
   max-http-header-size: 128KB
 spring:
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+  freemarker:
+    cache: false
   #  profiles: dev
   application:
     # 自己在 eureka 里的唯一标识
@@ -48,13 +53,14 @@ feign:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 40000 #熔断响应时间
+            timeoutInMilliseconds: 60000 #熔断响应时间
 #ribbon超时配置 读取和等待时间都设置2秒
 ribbon:
   #熔断读取时间
-  readTimeout: 2000
+  ReadTimeout: 5000
   #连接等待时间
-  connectTimeout: 2000
+  ConnectTimeout: 5000
+  SocketTimeout: 5000
 
 logging:
   config: classpath:log4j2/log4j2.xml

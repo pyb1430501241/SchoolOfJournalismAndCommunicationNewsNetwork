@@ -57,7 +57,6 @@ public class AuthenticationFilter extends ZuulFilter {
         context.setSendZuulResponse(true);
         HttpServletRequest request = context.getRequest();
         HttpServletResponse response = context.getResponse();
-
         String servletPath = request.getServletPath();
 
         String referer = request.getHeader("Referer");

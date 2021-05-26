@@ -13,7 +13,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @author:wl
+ * @author 半梦
+ * @author wl
  * @Date:2021/5/12 21:22
  * @projectName:sojacnn
  */
@@ -21,8 +22,8 @@ import java.util.Map;
 public class NewsCategoryFactory extends AbstractFactory<NewsCategory>{
 
     private static final String FIELD_NAME_ID = "id";
-    private static final String FIELD_NAME_CATEGORYNAME = "categoryName";
-    private static final String FIELD_NAME_CONTYPEID = "contypeId";
+    private static final String FIELD_NAME_CATEGORY_NAME = "categoryName";
+    private static final String FIELD_NAME_CONTYPE_ID = "contypeId";
 
     private static final Logger log = LoggerFactory.getLogger(NewsThemeFactory.class);
 
@@ -30,14 +31,16 @@ public class NewsCategoryFactory extends AbstractFactory<NewsCategory>{
         super(NewsCategory.class);
     }
 
+    @NonNull
     public NewsCategory create(@Nullable Integer id, @NonNull String categoryName, @NonNull Integer contypeId) throws NoSuchMethodException {
         Map<String, Object> map = new LinkedHashMap<>();
         map.put(FIELD_NAME_ID, id);
-        map.put(FIELD_NAME_CATEGORYNAME, categoryName);
-        map.put(FIELD_NAME_CONTYPEID, contypeId);
+        map.put(FIELD_NAME_CATEGORY_NAME, categoryName);
+        map.put(FIELD_NAME_CONTYPE_ID, contypeId);
         return create(map);
     }
 
+    @NonNull
     public NewsCategory create(@NonNull String categoryName, @NonNull Integer categoryId) throws NoSuchMethodException {
         return create(null, categoryName, categoryId);
     }

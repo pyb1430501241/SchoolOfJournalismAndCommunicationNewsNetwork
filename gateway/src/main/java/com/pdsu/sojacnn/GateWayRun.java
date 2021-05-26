@@ -29,7 +29,6 @@ import org.springframework.context.annotation.FilterType;
 @SpringCloudApplication
 @EnableZuulProxy
 @MapperScan("com.pdsu.sojacnn.mapper")
-@EnableAspectJAutoProxy
 public class GateWayRun {
 
     public static void main(String[] args) {
