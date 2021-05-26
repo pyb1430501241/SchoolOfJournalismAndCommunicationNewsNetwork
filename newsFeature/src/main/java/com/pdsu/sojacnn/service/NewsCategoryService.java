@@ -1,5 +1,6 @@
 package com.pdsu.sojacnn.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.pdsu.sojacnn.bean.NewsCategory;
 
@@ -9,6 +10,7 @@ import com.pdsu.sojacnn.bean.NewsCategory;
  * </p>
  *
  * @author 半梦
+ * @author wl
  * @since 2021-05-07
  */
 public interface NewsCategoryService extends IService<NewsCategory> {
@@ -20,4 +22,5 @@ public interface NewsCategoryService extends IService<NewsCategory> {
     String TYPE_ID = "contype_id";
 
 
+    void findNewsThemesByTypeIdAndCategoryId(Page<NewsCategory> page, Integer contypeId);
 }

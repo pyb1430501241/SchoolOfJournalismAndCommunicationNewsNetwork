@@ -11,6 +11,7 @@ import java.util.Map;
 
 /**
  * @author 半梦
+ * @author wl
  * @create 2021-05-08 15:34
  * 服务降级
  */
@@ -89,6 +90,17 @@ public class NewsFeatureFallbackFactory implements FallbackFactory<NewsFeatureSe
 
         @Override
         public Result findNewsThemesByTypeIdAndCategoryId(Integer typeId, Integer categoryId, Integer p) {
+            return RESULT;
+        }
+
+        @Override
+        public Result findContypeList() {
+            return RESULT;
+        }
+
+
+        @Override
+        public Result findCategoryIdByContypeId(Integer id, Integer p) {
             return RESULT;
         }
     }

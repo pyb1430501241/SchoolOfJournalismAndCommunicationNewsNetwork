@@ -3,6 +3,7 @@ package com.pdsu.sojacnn.service;
 import com.pdsu.sojacnn.bean.*;
 import com.pdsu.sojacnn.service.impl.NewsFeatureFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.cloud.openfeign.SpringQueryMap;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -71,4 +72,10 @@ public interface NewsFeatureService {
     public Result findNewsThemesByTypeIdAndCategoryId(@RequestParam("contypeId") Integer typeId
             , @RequestParam("categoryId") Integer categoryId, @RequestParam("p") Integer p);
 
+    @GetMapping("/contype/findContypeList")
+    Result findContypeList();
+
+    @GetMapping("/category/findCategoryIdByContypeId")
+    Result findCategoryIdByContypeId(@RequestParam("contypeId") Integer contypeId
+            , @RequestParam("p") Integer p);
 }
