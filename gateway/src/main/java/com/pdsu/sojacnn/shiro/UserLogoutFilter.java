@@ -1,12 +1,9 @@
 package com.pdsu.sojacnn.shiro;
 
-import com.pdsu.sojacnn.bean.NewsAccount;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.utils.JsonUtils;
-import com.pdsu.sojacnn.utils.ShiroUtils;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.authc.LogoutFilter;
-import org.apache.shiro.web.util.WebUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
