@@ -1,11 +1,17 @@
 package com.pdsu.sojacnn.controller;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.pdsu.sojacnn.bean.NewsAccountRole;
 import com.pdsu.sojacnn.bean.NewsCategory;
+import com.pdsu.sojacnn.bean.NewsTheme;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.service.NewsCategoryService;
+import com.pdsu.sojacnn.utils.PageUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * <p>
@@ -59,5 +65,17 @@ public class NewsCategoryController extends AuthenticationController {
         return Result.ok();
     }
 
+    @GetMapping("/findCategoryIdByContypeId")
+    public Result findCategoryIdByContypeId(@RequestParam("contypeId") Integer contypeId
+            , @RequestParam("p") Integer p) throws Exception {
+        Page<NewsCategory> page = new Page<>(p, DEFAULT_PAGE_SIZE);
+        newsCategoryService.findNewsThemesByTypeIdAndCategoryId(page, contypeId);
+
+        List<NewsCategory> newsCategories = page.getRecords().stream().peek(e -> {
+
+        }).collect(Collectors.toList());
+        page.setRecords(newsCategories);
+        return PageUtils.defaultPage(Result.ok(), page);
+    }
 }
 

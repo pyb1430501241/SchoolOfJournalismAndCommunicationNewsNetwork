@@ -57,4 +57,17 @@ public class NewsFeatureController implements AbstractController {
         return newsFeatureService.findCategoryById(id);
     }
 
+    @GetMapping("/findContype")
+    @ApiOperation(value = "查询所有新闻类型", response = Result.class)
+    public Result findContypeList() throws Exception {
+        return newsFeatureService.findContypeList();
+    }
+
+    @GetMapping("/findCategoryIdByContypeId")
+    @ApiOperation(value = "根据新闻类型查询新闻类别", response = Result.class)
+    public Result findCategoryIdByContypeId(@RequestParam("contypeId") Integer contypeId
+            , @RequestParam(value = "p", defaultValue = "1") Integer p) throws Exception {
+        return newsFeatureService.findCategoryIdByContypeId(contypeId, p);
+    }
+
 }
