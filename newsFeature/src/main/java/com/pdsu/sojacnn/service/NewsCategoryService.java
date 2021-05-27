@@ -22,5 +22,5 @@ public interface NewsCategoryService extends IService<NewsCategory> {
     String TYPE_ID = "contype_id";
 
 
-    void findNewsThemesByTypeIdAndCategoryId(Page<NewsCategory> page, Integer contypeId);
+    void findCategoryIdByContypeId(Page<NewsCategory> page, Integer contypeId);
 }
