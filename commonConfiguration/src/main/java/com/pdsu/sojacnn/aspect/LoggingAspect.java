@@ -1,12 +1,16 @@
 package com.pdsu.sojacnn.aspect;
 
+import com.mysql.cj.jdbc.Driver;
 import com.pdsu.sojacnn.utils.JsonUtils;
 import lombok.extern.log4j.Log4j2;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
+import springfox.documentation.spring.web.plugins.Docket;
 
 /**
  * @author:wl
@@ -14,9 +18,10 @@ import org.springframework.stereotype.Component;
  * @projectName:sojacnn
  * @description:
  */
-@Component
 @Aspect
 @Log4j2
+@Configuration()
+@ConditionalOnClass(Driver.class)
 public class LoggingAspect {
 
     @Pointcut("execution(* com.pdsu.sojacnn.service.*.*(..))")
