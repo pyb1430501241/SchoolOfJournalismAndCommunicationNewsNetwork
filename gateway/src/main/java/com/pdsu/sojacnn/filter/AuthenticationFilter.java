@@ -11,8 +11,10 @@ import com.pdsu.sojacnn.controller.AbstractController;
 import com.pdsu.sojacnn.utils.HttpUtils;
 import com.pdsu.sojacnn.utils.JsonUtils;
 import com.pdsu.sojacnn.utils.ShiroUtils;
+import feign.Request;
 import lombok.NonNull;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.http.HttpStatus;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -58,6 +60,14 @@ public class AuthenticationFilter extends ZuulFilter {
         HttpServletRequest request = context.getRequest();
         HttpServletResponse response = context.getResponse();
         String servletPath = request.getServletPath();
+
+        if("OPTIONS".equalsIgnoreCase(request.getMethod())) {
+            log.debug("拦截并确认 OPTIONS 请求");
+            context.setSendZuulResponse(false);
+            context.setResponseStatusCode(HttpStatus.OK.value());
+            context.set("success", true);
+            return null;
+        }
 
         String referer = request.getHeader("Referer");
 

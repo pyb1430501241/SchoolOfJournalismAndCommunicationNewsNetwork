@@ -25,7 +25,7 @@ public class CrossConfig {
 
     private static final String STRING_ALLOW_METHOD = "POST, GET, OPTIONS";
 
-    private static final String STRING_EXPOSED_HEADER = "Authorization, Cookie, rememberMe";
+    private static final String STRING_EXPOSED_HEADER = "*";
 
     /**
      * 默认允许访问的请求方式
@@ -36,8 +36,7 @@ public class CrossConfig {
      * 默认允许对外暴露的请求头
      */
     @SuppressWarnings("all")
-    public static final String [] EXPOSED_HEADER = new String [] {"Authorization",
-            "Cookie", "rememberMe"};
+    public static final String [] EXPOSED_HEADER = new String [] {ALL};
 
     /**
      * 默认允许的 IP
@@ -107,7 +106,7 @@ public class CrossConfig {
     }
 
     public void setExposedHeader(@Nullable String exposedHeader) {
-        if(exposedHeader == null || exposedHeader.trim().length() == 0) {
+        if(exposedHeader == null || exposedHeader.trim().length() == 0 || exposedHeader.trim().toLowerCase().equals(ALL_IP)) {
             exposedHeaderOrigin = EXPOSED_HEADER;
             this.exposedHeader = STRING_EXPOSED_HEADER;
         } else {
