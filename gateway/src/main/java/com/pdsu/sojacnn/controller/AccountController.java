@@ -28,7 +28,7 @@ import java.util.Objects;
 @Log4j2
 @Api(description = "登录认证")
 public class AccountController extends AuthenticationController
-        implements LoginController, AbstractController {
+        implements LoginController {
 
     @ApiOperation(value = "登录认证",response = Result.class)
     @PostMapping("/login")
@@ -85,4 +85,5 @@ public class AccountController extends AuthenticationController
             throw new AccountNotLoginException();
         }
     }
+
 }

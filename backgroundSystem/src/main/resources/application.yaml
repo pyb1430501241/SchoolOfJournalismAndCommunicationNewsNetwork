@@ -9,7 +9,7 @@ server:
 spring:
   devtools:
     restart:
-      enabled: true  #设置开启热部署
+      enabled: false  #设置开启热部署
   freemarker:
     cache: false
   application:

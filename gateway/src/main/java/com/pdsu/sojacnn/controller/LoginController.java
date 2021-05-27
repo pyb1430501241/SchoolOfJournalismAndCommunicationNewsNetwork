@@ -9,8 +9,11 @@ import javax.servlet.http.HttpServletRequest;
  * @author 半梦
  * @create 2021-05-21 18:57
  */
-public interface LoginController {
+public interface LoginController extends AbstractController {
 
+    /**
+     * 1 记住我
+     */
     Integer REMEMBER_ME = 1;
 
     /**

@@ -8,6 +8,7 @@ import com.pdsu.sojacnn.service.BackgroundService;
 import com.pdsu.sojacnn.service.NewsFeatureService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
@@ -40,7 +41,9 @@ public class BackgroundSystemController implements AbstractController {
     @Autowired
     private BackgroundService backgroundService;
 
-    // 拦截器已预先判空, 故不可能返回 null
+    /**
+     * 拦截器已预先判空, 故<code>request.getHeader</code>不可能返回 null
+     */
     @Nullable
     private NewsAccountRole accountAuthorization(@NonNull HttpServletRequest request) {
         return parseObject(request.getHeader(ACCOUNT_SESSION_FLAG), NewsAccountRole.class);
