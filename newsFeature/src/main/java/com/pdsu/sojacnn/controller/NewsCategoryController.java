@@ -69,7 +69,7 @@ public class NewsCategoryController extends AuthenticationController {
     public Result findCategoryIdByContypeId(@RequestParam("contypeId") Integer contypeId
             , @RequestParam("p") Integer p) throws Exception {
         Page<NewsCategory> page = new Page<>(p, DEFAULT_PAGE_SIZE);
-        newsCategoryService.findNewsThemesByTypeIdAndCategoryId(page, contypeId);
+        newsCategoryService.findCategoryIdByContypeId(page, contypeId);
 
         List<NewsCategory> newsCategories = page.getRecords().stream().peek(e -> {
 
