@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -35,6 +36,8 @@ public class AccountController extends AuthenticationController
     @Override
     public Result login(String account, String password, @RequestParam(defaultValue = "0") Integer remember) throws Exception{
         Subject subject = SecurityUtils.getSubject();
+
+        log.info("请求参数为:" + Arrays.asList(account, password, remember).toString());
 
         // 如已登录，则退出当前登录用户
         if(Objects.nonNull(ShiroUtils.getNewsAccount())) {

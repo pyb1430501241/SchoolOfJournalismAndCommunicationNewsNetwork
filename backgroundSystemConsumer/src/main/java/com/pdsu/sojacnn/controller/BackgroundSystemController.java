@@ -8,7 +8,7 @@ import com.pdsu.sojacnn.service.BackgroundService;
 import com.pdsu.sojacnn.service.NewsFeatureService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.Authorization;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
@@ -24,6 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 @SuppressWarnings("deprecation")
 @RestController
 @Api(description = "后台管理")
+@Log4j2
 public class BackgroundSystemController implements AbstractController {
 
     @Autowired
@@ -111,6 +112,11 @@ public class BackgroundSystemController implements AbstractController {
     public Result deleteNewsCategory(@RequestParam("id") Integer id, HttpServletRequest request) throws Exception {
         return newsFeatureService.deleteNewsCategoryById(id, parseJson(accountAuthorization(request)));
     }
+
+    // before after throw
+    // before 写出其调用的方法全名(包+类+方法名), 参数  info
+    // after 写出那个方法调用(包+类+方法名)成功 info
+    // throw 出现了什么异常, 异常信息为, 那个方法出现的异常 warn
 
     @PostMapping("/updateNewsCategory")
     @ApiOperation(value = "更新新闻类别", response = Result.class)

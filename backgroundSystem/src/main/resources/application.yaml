@@ -29,7 +29,7 @@ spring:
       connection-test-query: SELECT 1
       username: root
       password: 123456
-      jdbc-url: jdbc:mysql://localhost:3306/sojacnn?useSSL=false&serverTimezone=UTC
+      jdbc-url: jdbc:mysql://49.234.25.108:3306/sojacnn?useSSL=false&serverTimezone=UTC
       driver-class-name: com.mysql.cj.jdbc.Driver
   jackson:
     date-format: yyyy-MM-dd HH:MM:ss

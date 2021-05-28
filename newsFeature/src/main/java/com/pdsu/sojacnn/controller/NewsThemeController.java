@@ -54,7 +54,17 @@ public class NewsThemeController extends AuthenticationController {
     @PostMapping("/updateNewsThemeById")
     public Result updateNewsThemeById(@RequestParam("newsTheme") String newsTheme
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
+        // debug info warn error
+        // debug 开发时需要定位代码执行位置使用（信息没用，只是为了调试方便）
+        // info 系统信息, 即保留 debug 功能的同时, 进行日志的记录（信息是有用的）
+        // warn 系统有不致命异常（可能发生一些不影响运行的异常）
+        // error 系统已发生异常, 记录异常日志
+
         authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+
+        log.info("用户已通过权限校验, 可以更改新闻, 其权限至少为: " + BASIC_PERSONNEL);
+
+        // before after afterException
 
         newsThemeService.updateById(parseObject(newsTheme, NewsTheme.class));
 

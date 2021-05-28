@@ -65,8 +65,8 @@ ribbon:
 logging:
   config: classpath:log4j2/log4j2.xml
 
-springfox:
-  documentation:
-    swagger:
-      v2:
-        host: localhost/api/background
+#springfox:
+#  documentation:
+#    swagger:
+#      v2:
+#        host: localhost/api/background

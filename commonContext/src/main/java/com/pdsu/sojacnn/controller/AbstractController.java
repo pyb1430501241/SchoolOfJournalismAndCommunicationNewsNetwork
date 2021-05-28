@@ -46,7 +46,7 @@ public interface AbstractController {
     /**
      * 有没有上一页
      */
-    String HAS_PREVIOUS_PAGE = "isFirstPage";
+    String HAS_PREVIOUS_PAGE = "hasPreviousPage";
 
     /**
      * 第几页
