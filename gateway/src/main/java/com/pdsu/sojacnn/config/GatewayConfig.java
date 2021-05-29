@@ -120,7 +120,7 @@ public class GatewayConfig {
     }
 
     @Bean
-    public AuthorizingRealm loginRealm(EncryptConfig encrypt) {
+    public Realm loginRealm(EncryptConfig encrypt) {
         LoginRealm realm = new LoginRealm();
         HashedCredentialsMatcher credentialsMatcher = new HashedCredentialsMatcher();
         credentialsMatcher.setHashAlgorithmName(encrypt.getMode());
