@@ -68,7 +68,8 @@ public class LoginRealm extends AuthorizingRealm {
         try {
             return newsAccountService.getOne(queryWrapper, true);
         } catch (Exception e) {
-            throw new AccountAbnormalException();
+            log.warn("登录查询出现异常, " + e);
+            throw new AccountAbnormalException(e.getMessage());
         }
     }
 
@@ -78,7 +79,7 @@ public class LoginRealm extends AuthorizingRealm {
     @Contract("null -> fail")
     private void determineAccountStatus(NewsAccount account) {
         if(account == null) {
-            throw new AccountAbnormalException();
+            throw new AccountAbnormalException("没有找到对应的用户");
         }
     }
 

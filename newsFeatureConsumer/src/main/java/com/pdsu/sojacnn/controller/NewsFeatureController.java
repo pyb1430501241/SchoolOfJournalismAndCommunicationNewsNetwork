@@ -5,6 +5,7 @@ import com.pdsu.sojacnn.service.NewsFeatureService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,10 +17,12 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Api(description = "游客新闻管理服务")
 @SuppressWarnings("deprecation")
+@Log4j2
 public class NewsFeatureController implements AbstractController {
 
     @Autowired
     private NewsFeatureService newsFeatureService;
+
     /**
      * 默认的类别ID，即其他
      */
@@ -42,6 +45,7 @@ public class NewsFeatureController implements AbstractController {
     public Result findNewsThemesByTypeIdAndCategoryId(@RequestParam("contypeId") Integer typeId, @RequestParam(required = false) Integer categoryId
             , @RequestParam(value = "p", defaultValue = "1") Integer p) throws Exception {
         if(categoryId == null) {
+            log.info("类别为 null, 使用默认的 categoryId");
             categoryId = DEFAULT_CATEGORY_ID;
         }
         return newsFeatureService.findNewsThemesByTypeIdAndCategoryId(typeId, categoryId, p);

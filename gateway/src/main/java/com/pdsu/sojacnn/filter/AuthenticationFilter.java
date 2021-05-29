@@ -11,8 +11,11 @@ import com.pdsu.sojacnn.controller.AbstractController;
 import com.pdsu.sojacnn.utils.HttpUtils;
 import com.pdsu.sojacnn.utils.JsonUtils;
 import com.pdsu.sojacnn.utils.ShiroUtils;
+import feign.Request;
 import lombok.NonNull;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -56,8 +59,15 @@ public class AuthenticationFilter extends ZuulFilter {
         RequestContext context = RequestContext.getCurrentContext();
         context.setSendZuulResponse(true);
         HttpServletRequest request = context.getRequest();
-        HttpServletResponse response = context.getResponse();
         String servletPath = request.getServletPath();
+
+        if(HttpMethod.OPTIONS.matches(request.getMethod())) {
+            log.info("拦截并确认 OPTIONS 请求");
+            context.setSendZuulResponse(false);
+            context.setResponseStatusCode(HttpStatus.OK.value());
+            context.set("success", true);
+            return null;
+        }
 
         String referer = request.getHeader("Referer");
 
@@ -70,7 +80,7 @@ public class AuthenticationFilter extends ZuulFilter {
         if(servletPath.contains("v2/api-docs") || referer.contains("swagger-ui")) {
             // 添加 swagger 测试用户凭证
             context.addZuulRequestHeader(ACCOUNT_SESSION_FLAG, JsonUtils.valueOfString(SWAGGER_ROLE));
-            log.debug("放行 swagger 请求");
+            log.info("放行 swagger 请求");
             return null;
         }
 
@@ -78,14 +88,14 @@ public class AuthenticationFilter extends ZuulFilter {
         if(servletPath.contains("background")) {
             // 如果用户没有认证
             if(!ShiroUtils.isAuthorization(request)) {
-                log.debug("未携带相应用户认证信息");
+                log.info("未携带相应用户认证信息");
                 return filterAuthorization(context);
             }
 
             // 是否可以获取到用户信息
             NewsAccount account = ShiroUtils.getNewsAccount();
             if(Objects.isNull(account)) {
-                log.debug("拦截未登录请求");
+                log.info("拦截未登录请求");
                 return filterAuthorization(context);
             }
             // 把用户凭证分发到下游服务

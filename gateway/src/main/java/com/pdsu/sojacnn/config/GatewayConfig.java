@@ -31,8 +31,6 @@ import org.springframework.web.filter.CorsFilter;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
-import springfox.documentation.spi.DocumentationType;
-import springfox.documentation.spring.web.plugins.Docket;
 
 import javax.servlet.Filter;
 import javax.sql.DataSource;
@@ -47,7 +45,6 @@ import java.util.Map;
  */
 @Log4j2
 //如果有多个配置文件，以这个为准
-@Primary
 @Configuration
 public class GatewayConfig {
 

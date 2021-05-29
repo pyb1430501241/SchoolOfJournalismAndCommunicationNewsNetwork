@@ -26,6 +26,8 @@ public abstract class AuthenticationController implements AbstractController {
 
     static final int SUPER_ADMIN = 4;
 
+    private static final PermissionsException PERMISSIONS_EXCEPTION = new PermissionsException();
+
     /**
      * 判断用户是否登录, 如未登录抛出异常
      */
@@ -72,26 +74,26 @@ public abstract class AuthenticationController implements AbstractController {
         switch (level) {
             case TOURIST:
                 if (!isTourist(newsAccountRole)) {
-                    throw new PermissionsException();
+                    throw PERMISSIONS_EXCEPTION;
                 }
                 break;
             case BASIC_PERSONNEL:
                 if (!isBasicPersonnel(newsAccountRole)) {
-                    throw new PermissionsException();
+                    throw PERMISSIONS_EXCEPTION;
                 }
                 break;
             case ADMINISTRATOR:
                 if (!isAdministrator(newsAccountRole)) {
-                    throw new PermissionsException();
+                    throw PERMISSIONS_EXCEPTION;
                 }
                 break;
             case SUPER_ADMIN:
                 if(!isSuperAdmin(newsAccountRole)) {
-                    throw new PermissionsException();
+                    throw PERMISSIONS_EXCEPTION;
                 }
                 break;
             default:
-                throw new PermissionsException();
+                throw PERMISSIONS_EXCEPTION;
         }
         log.debug("用户: " + newsAccountRole + "通过权限校验.");
     }

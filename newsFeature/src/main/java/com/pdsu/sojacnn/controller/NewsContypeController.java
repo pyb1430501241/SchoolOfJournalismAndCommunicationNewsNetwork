@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * <p>
@@ -64,7 +65,8 @@ public class NewsContypeController extends AuthenticationController {
         //Page<NewsContype> page = new Page<>(p, DEFAULT_PAGE_SIZE);
         //newsContypeService.page(page);
         List<NewsContype> list = newsContypeService.list();
-        return list == null ? Result.notFound() :Result.ok().data(DEFAULT_MESSAGE_NAME, list);
+        return Objects.isNull(list) ? Result.notFound() : Result.ok().data(DEFAULT_MESSAGE_NAME, list);
     }
+
 }
 

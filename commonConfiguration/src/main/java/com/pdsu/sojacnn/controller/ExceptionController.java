@@ -29,7 +29,7 @@ public class ExceptionController implements AbstractController {
     private String localhostName;
 
     @ExceptionHandler(Exception.class)
-    public Result handingException(Exception e) {
+    public Result processException(Exception e) {
         log.error("系统发生未知异常, 异常发生地址为: " + localhostName + ", 当前时间: " + DateUtils.nowDate(), e);
         return Result.fail().data(MESSAGE, DEFAULT_ERROR_PROMPT);
     }
