@@ -9,6 +9,9 @@ import org.jetbrains.annotations.Contract;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 
+import java.util.function.Function;
+import java.util.function.Predicate;
+
 /**
  * 继承此类即代表需要权限校验
  * @author 半梦
@@ -64,38 +67,45 @@ public abstract class AuthenticationController implements AbstractController {
         return newsAccountRole.getRoleId() == SUPER_ADMIN;
     }
 
+    void authorityJudgment(Predicate<NewsAccountRole> predicate, NewsAccountRole accountRole) throws PermissionsException{
+        if(!predicate.test(accountRole)) {
+            throw PERMISSIONS_EXCEPTION;
+        }
+    }
+
     /**
      * 权限不足时，抛出异常
      * @param newsAccountRole 用户权限
      * @param level 所需权限等级
-     * @throws PermissionsException 权限不足
+     * @throws PermissionsException 权限不足r
      */
     void authorityJudgment(NewsAccountRole newsAccountRole, Integer level) throws PermissionsException {
-        switch (level) {
-            case TOURIST:
-                if (!isTourist(newsAccountRole)) {
-                    throw PERMISSIONS_EXCEPTION;
-                }
-                break;
-            case BASIC_PERSONNEL:
-                if (!isBasicPersonnel(newsAccountRole)) {
-                    throw PERMISSIONS_EXCEPTION;
-                }
-                break;
-            case ADMINISTRATOR:
-                if (!isAdministrator(newsAccountRole)) {
-                    throw PERMISSIONS_EXCEPTION;
-                }
-                break;
-            case SUPER_ADMIN:
-                if(!isSuperAdmin(newsAccountRole)) {
-                    throw PERMISSIONS_EXCEPTION;
-                }
-                break;
-            default:
-                throw PERMISSIONS_EXCEPTION;
-        }
-        log.debug("用户: " + newsAccountRole + "通过权限校验.");
+        authorityJudgment(e -> e.getRoleId() >= level, newsAccountRole);
+//        switch (level) {
+//            case TOURIST:
+//                if (!isTourist(newsAccountRole)) {
+//                    throw PERMISSIONS_EXCEPTION;
+//                }
+//                break;
+//            case BASIC_PERSONNEL:
+//                if (!isBasicPersonnel(newsAccountRole)) {
+//                    throw PERMISSIONS_EXCEPTION;
+//                }
+//                break;
+//            case ADMINISTRATOR:
+//                if (!isAdministrator(newsAccountRole)) {
+//                    throw PERMISSIONS_EXCEPTION;
+//                }
+//                break;
+//            case SUPER_ADMIN:
+//                if(!isSuperAdmin(newsAccountRole)) {
+//                    throw PERMISSIONS_EXCEPTION;
+//                }
+//                break;
+//            default:
+//                throw PERMISSIONS_EXCEPTION;
+//        }
+        log.info("用户: " + newsAccountRole + "通过权限校验.");
     }
 
 }

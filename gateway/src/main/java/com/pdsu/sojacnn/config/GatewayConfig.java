@@ -69,7 +69,7 @@ public class GatewayConfig {
         log.info("系统初始化...允许以下 IP 进行访问: " + corsConfiguration.getAllowedOrigins());
         corsConfiguration.setAllowedHeaders(format(crossConfig.getAllowHeaderOrigin()));
         log.info("系统初始化...允许添加以下请求头: " + corsConfiguration.getAllowedHeaders());
-        corsConfiguration.setAllowedMethods(format(crossConfig.getAllowMethodOrigin()));
+        Arrays.stream(crossConfig.getAllowMethodOrigin()).forEach(e -> corsConfiguration.addAllowedMethod(e.trim()));
         log.info("系统初始化...允许以下请求方式访问: " + corsConfiguration.getAllowedMethods());
         corsConfiguration.setExposedHeaders(format(crossConfig.getExposedHeaderOrigin()));
         log.info("系统初始化...允许以下请求头暴露: " + corsConfiguration.getExposedHeaders());

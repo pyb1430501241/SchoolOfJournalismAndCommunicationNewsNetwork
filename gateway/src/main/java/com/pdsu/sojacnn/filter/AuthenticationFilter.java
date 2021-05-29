@@ -61,13 +61,7 @@ public class AuthenticationFilter extends ZuulFilter {
         HttpServletRequest request = context.getRequest();
         String servletPath = request.getServletPath();
 
-        if(HttpMethod.OPTIONS.matches(request.getMethod())) {
-            log.info("拦截并确认 OPTIONS 请求");
-            context.setSendZuulResponse(false);
-            context.setResponseStatusCode(HttpStatus.OK.value());
-            context.set("success", true);
-            return null;
-        }
+        log.info("用户IP:" + HttpUtils.getIpAddr(request) + ", 访问URL: " + servletPath);
 
         String referer = request.getHeader("Referer");
 
@@ -102,7 +96,6 @@ public class AuthenticationFilter extends ZuulFilter {
             context.addZuulRequestHeader(ACCOUNT_SESSION_FLAG, JsonUtils.valueOfString(account.getRole()));
         }
 
-        log.info("用户IP:" + HttpUtils.getIpAddr(request) + ", 访问URL: " + servletPath);
         // 放行剩余请求
         return null;
     }
