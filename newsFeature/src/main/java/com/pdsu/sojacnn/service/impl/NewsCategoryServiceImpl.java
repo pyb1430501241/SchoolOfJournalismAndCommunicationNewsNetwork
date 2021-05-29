@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 public class NewsCategoryServiceImpl extends ServiceImpl<NewsCategoryMapper, NewsCategory> implements NewsCategoryService {
 
     @Override
-    public void findNewsThemesByTypeIdAndCategoryId(Page<NewsCategory> page, Integer contypeId) {
+    public void findCategoryIdByContypeId(Page<NewsCategory> page, Integer contypeId) {
         QueryWrapper<NewsCategory> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("contype_id", contypeId);
         baseMapper.selectPage(page, queryWrapper);
