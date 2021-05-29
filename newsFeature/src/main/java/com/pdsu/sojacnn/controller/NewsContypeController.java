@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.pdsu.sojacnn.bean.*;
 import com.pdsu.sojacnn.service.NewsContypeService;
 import com.pdsu.sojacnn.utils.PageUtils;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,6 +23,7 @@ import java.util.Objects;
  */
 @RestController
 @RequestMapping("/contype")
+@Log4j2
 public class NewsContypeController extends AuthenticationController {
 
     @Autowired
@@ -36,7 +38,9 @@ public class NewsContypeController extends AuthenticationController {
     @PostMapping("/insertContypeById")
     public Result insertContype(@RequestParam("newsContype") String newsContype
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
-        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), SUPER_ADMIN);
+
+        log.info("用户{}已通过权限校验, 可以更改类型, 其权限至少为: {}", newsAccountRole, SUPER_ADMIN);
 
         newsContypeService.save(parseObject(newsContype,NewsContype.class));
         return Result.ok();
@@ -45,7 +49,9 @@ public class NewsContypeController extends AuthenticationController {
     @PostMapping("/deleteContypeById")
     public Result deleteContypeById(@RequestParam("id") Integer id
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
-        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), SUPER_ADMIN);
+
+        log.info("用户{}已通过权限校验, 可以更改类型, 其权限至少为: {}", newsAccountRole, SUPER_ADMIN);
 
         newsContypeService.removeById(id);
         return Result.ok();
@@ -54,7 +60,9 @@ public class NewsContypeController extends AuthenticationController {
     @PostMapping("/updateContypeById")
     public Result updateContype(@RequestParam("newsContype") String newsContype
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
-        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), SUPER_ADMIN);
+
+        log.info("用户{}已通过权限校验, 可以更改类型, 其权限至少为: {}", newsAccountRole, SUPER_ADMIN);
 
         newsContypeService.updateById(parseObject(newsContype, NewsContype.class));
         return Result.ok();

@@ -32,4 +32,8 @@ public interface NewsThemeService extends IService<NewsTheme> {
 
     public void findNewsThemesByTypeIdAndCategoryId(Page<NewsTheme> page, Integer typeId, Integer categoryId);
 
+    public boolean isOnlyOneNewsTheme(Integer typeId, Integer categoryId);
+
+    public NewsTheme findNewsThemeByTypeIdAndCategoryId(Integer typeId, Integer categoryId);
+
 }

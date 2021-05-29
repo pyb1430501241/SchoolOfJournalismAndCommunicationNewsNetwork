@@ -27,4 +27,19 @@ public class NewsThemeServiceImpl extends ServiceImpl<NewsThemeMapper, NewsTheme
         baseMapper.selectPage(page, queryWrapper);
     }
 
+    @Override
+    public boolean isOnlyOneNewsTheme(Integer typeId, Integer categoryId) {
+        QueryWrapper<NewsTheme> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("contype_id", typeId);
+        queryWrapper.eq("category_id", categoryId);
+        return baseMapper.selectCount(queryWrapper) == 1;
+    }
+
+    public NewsTheme findNewsThemeByTypeIdAndCategoryId(Integer typeId, Integer categoryId){
+        QueryWrapper<NewsTheme> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("contype_id", typeId);
+        queryWrapper.eq("category_id", categoryId);
+        return baseMapper.selectOne(queryWrapper);
+    }
+
 }

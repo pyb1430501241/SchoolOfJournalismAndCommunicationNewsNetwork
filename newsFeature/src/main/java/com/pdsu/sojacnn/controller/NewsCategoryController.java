@@ -7,6 +7,7 @@ import com.pdsu.sojacnn.bean.NewsTheme;
 import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.service.NewsCategoryService;
 import com.pdsu.sojacnn.utils.PageUtils;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +25,7 @@ import java.util.stream.Collectors;
  */
 @RestController
 @RequestMapping("/category")
+@Log4j2
 public class NewsCategoryController extends AuthenticationController {
 
     @Autowired
@@ -38,7 +40,10 @@ public class NewsCategoryController extends AuthenticationController {
     @PostMapping("/deleteCategoryById")
     public Result deleteCategoryById(@RequestParam("id") Integer id
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
-        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), SUPER_ADMIN);
+
+        log.info("用户{}已通过权限校验, 可以更改类别, 其权限至少为: {}", newsAccountRole, SUPER_ADMIN);
 
         boolean b = newsCategoryService.removeById(id);
         if(b) {
@@ -50,7 +55,9 @@ public class NewsCategoryController extends AuthenticationController {
     @PostMapping("/insertNewsCategory")
     public Result insertCategory(@RequestParam("newsCategory") String newsCategory
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
-        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), SUPER_ADMIN);
+
+        log.info("用户{}已通过权限校验, 可以更改类型, 其权限至少为: {}", newsAccountRole, SUPER_ADMIN);
 
         newsCategoryService.save(parseObject(newsCategory, NewsCategory.class));
         return Result.ok();
@@ -59,7 +66,9 @@ public class NewsCategoryController extends AuthenticationController {
     @PostMapping("/updateCategoryById")
     public Result updateCategoryById(@RequestParam("newsCategory") String newsCategory
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
-        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
+        authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), SUPER_ADMIN);
+
+        log.info("用户{}已通过权限校验, 可以更改类型, 其权限至少为: {}", newsAccountRole, SUPER_ADMIN);
 
         newsCategoryService.updateById(parseObject(newsCategory,NewsCategory.class));
         return Result.ok();
@@ -69,12 +78,9 @@ public class NewsCategoryController extends AuthenticationController {
     public Result findCategoryIdByContypeId(@RequestParam("contypeId") Integer contypeId
             , @RequestParam("p") Integer p) throws Exception {
         Page<NewsCategory> page = new Page<>(p, DEFAULT_PAGE_SIZE);
+
         newsCategoryService.findCategoryIdByContypeId(page, contypeId);
 
-        List<NewsCategory> newsCategories = page.getRecords().stream().peek(e -> {
-
-        }).collect(Collectors.toList());
-        page.setRecords(newsCategories);
         return PageUtils.defaultPage(Result.ok(), page);
     }
 }

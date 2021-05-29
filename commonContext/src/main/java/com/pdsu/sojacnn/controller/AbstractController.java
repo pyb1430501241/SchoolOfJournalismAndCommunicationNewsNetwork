@@ -11,6 +11,12 @@ import org.springframework.lang.Nullable;
  */
 public interface AbstractController {
 
+
+    /**
+     * 默认的类别ID，即其他
+     */
+     Integer DEFAULT_CATEGORY_ID = 1;
+
     /**
      * 一般用于未被定义的错误
      */

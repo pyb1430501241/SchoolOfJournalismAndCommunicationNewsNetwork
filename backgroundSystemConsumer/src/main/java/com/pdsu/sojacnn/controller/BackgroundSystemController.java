@@ -113,11 +113,6 @@ public class BackgroundSystemController implements AbstractController {
         return newsFeatureService.deleteNewsCategoryById(id, parseJson(accountAuthorization(request)));
     }
 
-    // before after throw
-    // before 写出其调用的方法全名(包+类+方法名), 参数  info
-    // after 写出那个方法调用(包+类+方法名)成功 info
-    // throw 出现了什么异常, 异常信息为, 那个方法出现的异常 warn
-
     @PostMapping("/updateNewsCategory")
     @ApiOperation(value = "更新新闻类别", response = Result.class)
     public Result updateNewsCategory(@RequestParam("id") Integer id, @RequestParam("contypeId") Integer contypeId

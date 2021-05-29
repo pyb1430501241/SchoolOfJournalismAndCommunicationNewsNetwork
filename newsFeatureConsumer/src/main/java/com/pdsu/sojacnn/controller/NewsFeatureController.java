@@ -23,11 +23,6 @@ public class NewsFeatureController implements AbstractController {
     @Autowired
     private NewsFeatureService newsFeatureService;
 
-    /**
-     * 默认的类别ID，即其他
-     */
-    private static final Integer DEFAULT_CATEGORY_ID = 1;
-
     @ApiOperation(value = "根据ID, 查询新闻类型", response = Result.class)
     @GetMapping("/findContype/{id}")
     public Result findContypeById(@ApiParam(name = "id", value = "类型ID", required = true) @PathVariable Integer id) throws Exception {
@@ -42,12 +37,8 @@ public class NewsFeatureController implements AbstractController {
 
     @GetMapping("/newsByTypeAndCategory")
     @ApiOperation(value = "根据类型类别查询一类新闻", response = Result.class)
-    public Result findNewsThemesByTypeIdAndCategoryId(@RequestParam("contypeId") Integer typeId, @RequestParam(required = false) Integer categoryId
+    public Result findNewsThemesByTypeIdAndCategoryId(@RequestParam("contypeId") Integer typeId, @RequestParam Integer categoryId
             , @RequestParam(value = "p", defaultValue = "1") Integer p) throws Exception {
-        if(categoryId == null) {
-            log.info("类别为 null, 使用默认的 categoryId");
-            categoryId = DEFAULT_CATEGORY_ID;
-        }
         return newsFeatureService.findNewsThemesByTypeIdAndCategoryId(typeId, categoryId, p);
     }
 

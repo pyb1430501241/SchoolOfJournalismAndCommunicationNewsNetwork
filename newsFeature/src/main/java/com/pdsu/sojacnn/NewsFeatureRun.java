@@ -1,15 +1,9 @@
 package com.pdsu.sojacnn;
 
-import com.pdsu.sojacnn.service.NewsFeatureService;
-import com.pdsu.sojacnn.service.impl.NewsFeatureFallbackFactory;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.FilterType;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @author 半梦
@@ -17,6 +11,7 @@ import org.springframework.context.annotation.FilterType;
  */
 @SpringCloudApplication
 @MapperScan("com.pdsu.sojacnn.mapper")
+@EnableTransactionManagement
 public class NewsFeatureRun {
 
     public static void main(String[] args) {
