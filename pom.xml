@@ -99,22 +99,6 @@
                 <artifactId>mybatis-ehcache</artifactId>
                 <version>1.0.0</version>
             </dependency>
-            <!-- 导入 PageHelper MyBatis 分页插件 -->
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper</artifactId>
-                <version>5.2.0</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper-spring-boot-autoconfigure</artifactId>
-                <version>1.3.0</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>1.3.0</version>
-            </dependency>
             <!-- HikariCP 连接池-->
             <dependency>
                 <groupId>com.zaxxer</groupId>

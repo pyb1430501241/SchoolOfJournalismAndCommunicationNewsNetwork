@@ -26,8 +26,12 @@ import java.util.Objects;
 @Log4j2
 public class NewsContypeController extends AuthenticationController {
 
+    private final NewsContypeService newsContypeService;
+
     @Autowired
-    private NewsContypeService newsContypeService;
+    public NewsContypeController(NewsContypeService newsContypeService) {
+        this.newsContypeService = newsContypeService;
+    }
 
     @GetMapping("/findContypeById")
     public Result findContypeById(@RequestParam("id") Integer id) throws Exception {
@@ -40,9 +44,7 @@ public class NewsContypeController extends AuthenticationController {
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
         authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), SUPER_ADMIN);
 
-        log.info("用户{}已通过权限校验, 可以更改类型, 其权限至少为: {}", newsAccountRole, SUPER_ADMIN);
-
-        newsContypeService.save(parseObject(newsContype,NewsContype.class));
+        newsContypeService.save(parseObject(newsContype, NewsContype.class));
         return Result.ok();
     }
 
@@ -51,10 +53,7 @@ public class NewsContypeController extends AuthenticationController {
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
         authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), SUPER_ADMIN);
 
-        log.info("用户{}已通过权限校验, 可以更改类型, 其权限至少为: {}", newsAccountRole, SUPER_ADMIN);
-
-        newsContypeService.removeById(id);
-        return Result.ok();
+        return newsContypeService.removeById(id) ? Result.ok() : Result.fail();
     }
 
     @PostMapping("/updateContypeById")
@@ -62,16 +61,12 @@ public class NewsContypeController extends AuthenticationController {
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
         authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), SUPER_ADMIN);
 
-        log.info("用户{}已通过权限校验, 可以更改类型, 其权限至少为: {}", newsAccountRole, SUPER_ADMIN);
-
         newsContypeService.updateById(parseObject(newsContype, NewsContype.class));
         return Result.ok();
     }
 
     @GetMapping("/findContypeList")
     public Result findContypeList() throws Exception {
-        //Page<NewsContype> page = new Page<>(p, DEFAULT_PAGE_SIZE);
-        //newsContypeService.page(page);
         List<NewsContype> list = newsContypeService.list();
         return Objects.isNull(list) ? Result.notFound() : Result.ok().data(DEFAULT_MESSAGE_NAME, list);
     }

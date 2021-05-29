@@ -31,15 +31,17 @@ import java.util.stream.Collectors;
 @Log4j2
 public class NewsThemeController extends AuthenticationController {
 
+    private final NewsThemeService newsThemeService;
+
     @Autowired
-    private NewsThemeService newsThemeService;
+    public NewsThemeController(NewsThemeService newsThemeService) {
+        this.newsThemeService = newsThemeService;
+    }
 
     @PostMapping("/insert")
     public Result insertNewsTheme(@RequestParam("newsTheme") String newsTheme
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
         authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
-
-        log.info("用户已通过权限校验, 可以更改新闻, 其权限至少为: " + BASIC_PERSONNEL);
 
         newsThemeService.save(parseObject(newsTheme, NewsTheme.class));
 
@@ -58,8 +60,6 @@ public class NewsThemeController extends AuthenticationController {
 
         authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
 
-        log.info("用户已通过权限校验, 可以更改新闻, 其权限至少为: " + BASIC_PERSONNEL);
-
         newsThemeService.updateById(parseObject(newsTheme, NewsTheme.class));
 
         return Result.ok();
@@ -69,8 +69,6 @@ public class NewsThemeController extends AuthenticationController {
     public Result deleteNewsThemeById(@RequestParam("id") Long id
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
         authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), BASIC_PERSONNEL);
-
-        log.info("用户已通过权限校验, 可以更改新闻, 其权限至少为: " + BASIC_PERSONNEL);
 
         newsThemeService.removeById(id);
 

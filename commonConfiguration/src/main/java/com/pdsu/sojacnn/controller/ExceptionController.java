@@ -1,6 +1,7 @@
 package com.pdsu.sojacnn.controller;
 
 import com.pdsu.sojacnn.bean.Result;
+import com.pdsu.sojacnn.exception.NewsException;
 import com.pdsu.sojacnn.exception.account.PermissionsException;
 import com.pdsu.sojacnn.utils.DateUtils;
 import lombok.extern.log4j.Log4j2;
@@ -91,6 +92,15 @@ public class ExceptionController implements AbstractController {
     public Result processPermissionsException(PermissionsException e) {
         log.warn("请求API时发生未知错误, 原因: 权限不足", e);
         return Result.insufficientPermissions().data(MESSAGE, "权限不足");
+    }
+
+    /**
+     * 处理 PermissionsException 异常
+     */
+    @ExceptionHandler(NewsException.class)
+    public Result processNewsException(NewsException e) {
+        log.error("系统发生未知异常, 异常信息为: {}", e.getMessage(), e);
+        return Result.insufficientPermissions().data(MESSAGE, DEFAULT_ERROR_PROMPT);
     }
 
 

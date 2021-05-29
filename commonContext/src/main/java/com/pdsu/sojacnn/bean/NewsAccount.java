@@ -51,6 +51,7 @@ public class NewsAccount implements Serializable, Cloneable {
 
     @ApiModelProperty(value = "逻辑删除")
     @TableLogic
+    @TableField(select = false)
     private transient Integer isDelete;
 
     @ApiModelProperty(value = "创建时间")

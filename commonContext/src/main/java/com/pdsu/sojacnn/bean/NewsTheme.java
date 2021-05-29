@@ -60,6 +60,7 @@ public class NewsTheme implements Serializable, Cloneable {
 
     @ApiModelProperty(value = "逻辑删除，0是未删除，1已删除")
     @TableLogic
+    @TableField(select = false)
     private transient Integer isDelete;
 
     @ApiModelProperty(value = "类型，比category高，是主类型")

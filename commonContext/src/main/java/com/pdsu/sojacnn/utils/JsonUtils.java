@@ -27,7 +27,11 @@ public abstract class JsonUtils {
      * 将对象转为 json
      */
     @Nullable
-    public static String valueOfString(@NonNull Object obj) {
+    @Contract("null -> null")
+    public static String valueOfString(@Nullable Object obj) {
+        if(Objects.isNull(obj)) {
+            return null;
+        }
         try {
             return JSON_PARSE.writeValueAsString(obj);
         } catch (JsonProcessingException e) {

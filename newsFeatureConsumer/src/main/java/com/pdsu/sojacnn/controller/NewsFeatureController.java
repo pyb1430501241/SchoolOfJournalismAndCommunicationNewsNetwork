@@ -20,24 +20,31 @@ import org.springframework.web.bind.annotation.*;
 @Log4j2
 public class NewsFeatureController implements AbstractController {
 
+    private final NewsFeatureService newsFeatureService;
+
     @Autowired
-    private NewsFeatureService newsFeatureService;
+    public NewsFeatureController(NewsFeatureService newsFeatureService) {
+        this.newsFeatureService = newsFeatureService;
+    }
 
     @ApiOperation(value = "根据ID, 查询新闻类型", response = Result.class)
     @GetMapping("/findContype/{id}")
-    public Result findContypeById(@ApiParam(name = "id", value = "类型ID", required = true) @PathVariable Integer id) throws Exception {
+    public Result findContypeById(@ApiParam(name = "id", value = "类型ID", required = true)
+                                      @PathVariable Integer id) throws Exception {
         return newsFeatureService.findContypeById(id);
     }
 
     @GetMapping("/findNewsTheme/{id}")
     @ApiOperation(value = "根据ID, 查询新闻主体", response = Result.class)
-    public Result findNewsThemeById(@ApiParam(name = "id", value = "新闻ID", required = true) @PathVariable Long id) throws Exception {
+    public Result findNewsThemeById(@ApiParam(name = "id", value = "新闻ID", required = true)
+                                        @PathVariable Long id) throws Exception {
         return newsFeatureService.findNewsThemeById(id);
     }
 
-    @GetMapping("/newsByTypeAndCategory")
+    @GetMapping("/findNewsByTypeAndCategory")
     @ApiOperation(value = "根据类型类别查询一类新闻", response = Result.class)
-    public Result findNewsThemesByTypeIdAndCategoryId(@RequestParam("contypeId") Integer typeId, @RequestParam Integer categoryId
+    public Result findNewsThemesByTypeIdAndCategoryId(@RequestParam("contypeId") Integer typeId
+            , @RequestParam Integer categoryId
             , @RequestParam(value = "p", defaultValue = "1") Integer p) throws Exception {
         return newsFeatureService.findNewsThemesByTypeIdAndCategoryId(typeId, categoryId, p);
     }
@@ -54,7 +61,7 @@ public class NewsFeatureController implements AbstractController {
         return newsFeatureService.findContypeList();
     }
 
-    @GetMapping("/findCategoryIdByContypeId")
+    @GetMapping("/findCategoryByContypeId")
     @ApiOperation(value = "根据新闻类型查询新闻类别", response = Result.class)
     public Result findCategoryIdByContypeId(@RequestParam("contypeId") Integer contypeId
             , @RequestParam(value = "p", defaultValue = "1") Integer p) throws Exception {

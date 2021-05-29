@@ -8,6 +8,7 @@ import com.pdsu.sojacnn.bean.Result;
 import com.pdsu.sojacnn.service.NewsCategoryService;
 import com.pdsu.sojacnn.utils.PageUtils;
 import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,8 +29,12 @@ import java.util.stream.Collectors;
 @Log4j2
 public class NewsCategoryController extends AuthenticationController {
 
+    private final NewsCategoryService newsCategoryService;
+
     @Autowired
-    private NewsCategoryService newsCategoryService;
+    public NewsCategoryController(NewsCategoryService newsCategoryService) {
+        this.newsCategoryService = newsCategoryService;
+    }
 
     @GetMapping("/findCategoryById")
     public Result findCategoryById(@RequestParam("id") Integer id) throws Exception {
@@ -43,8 +48,6 @@ public class NewsCategoryController extends AuthenticationController {
 
         authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), SUPER_ADMIN);
 
-        log.info("用户{}已通过权限校验, 可以更改类别, 其权限至少为: {}", newsAccountRole, SUPER_ADMIN);
-
         boolean b = newsCategoryService.removeById(id);
         if(b) {
             return Result.ok();
@@ -57,8 +60,6 @@ public class NewsCategoryController extends AuthenticationController {
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
         authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), SUPER_ADMIN);
 
-        log.info("用户{}已通过权限校验, 可以更改类型, 其权限至少为: {}", newsAccountRole, SUPER_ADMIN);
-
         newsCategoryService.save(parseObject(newsCategory, NewsCategory.class));
         return Result.ok();
     }
@@ -67,8 +68,6 @@ public class NewsCategoryController extends AuthenticationController {
     public Result updateCategoryById(@RequestParam("newsCategory") String newsCategory
             , @RequestParam("newsAccountRole") String newsAccountRole) throws Exception {
         authorityJudgment(parseObject(newsAccountRole, NewsAccountRole.class), SUPER_ADMIN);
-
-        log.info("用户{}已通过权限校验, 可以更改类型, 其权限至少为: {}", newsAccountRole, SUPER_ADMIN);
 
         newsCategoryService.updateById(parseObject(newsCategory,NewsCategory.class));
         return Result.ok();

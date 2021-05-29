@@ -1,6 +1,7 @@
 package com.pdsu.sojacnn.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -41,6 +42,7 @@ public class NewsContype implements Serializable {
 
     @ApiModelProperty(value = "逻辑删除")
     @TableLogic
+    @TableField(select = false)
     private transient Integer isDelete;
 
 

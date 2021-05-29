@@ -1,6 +1,7 @@
 package com.pdsu.sojacnn.controller;
 
 import com.pdsu.sojacnn.bean.*;
+import com.pdsu.sojacnn.exception.NewsException;
 import com.pdsu.sojacnn.factory.NewsCategoryFactory;
 import com.pdsu.sojacnn.factory.NewsContypeFactory;
 import com.pdsu.sojacnn.factory.NewsThemeFactory;
@@ -27,26 +28,30 @@ import javax.servlet.http.HttpServletRequest;
 @Log4j2
 public class BackgroundSystemController implements AbstractController {
 
-    @Autowired
-    private NewsFeatureService newsFeatureService;
+    private final NewsFeatureService newsFeatureService;
+
+    private final NewsThemeFactory newsThemeFactory;
+
+    private final NewsContypeFactory newsContypeFactory;
+
+    private final NewsCategoryFactory newsCategoryFactory;
+
+    private final BackgroundService backgroundService;
 
     @Autowired
-    private NewsThemeFactory newsThemeFactory;
-
-    @Autowired
-    private NewsContypeFactory newsContypeFactory;
-
-    @Autowired
-    private NewsCategoryFactory newsCategoryFactory;
-
-    @Autowired
-    private BackgroundService backgroundService;
+    public BackgroundSystemController(NewsFeatureService newsFeatureService, NewsThemeFactory newsThemeFactory, NewsContypeFactory newsContypeFactory, NewsCategoryFactory newsCategoryFactory, BackgroundService backgroundService) {
+        this.newsFeatureService = newsFeatureService;
+        this.newsThemeFactory = newsThemeFactory;
+        this.newsContypeFactory = newsContypeFactory;
+        this.newsCategoryFactory = newsCategoryFactory;
+        this.backgroundService = backgroundService;
+    }
 
     /**
      * 拦截器已预先判空, 故<code>request.getHeader</code>不可能返回 null
      */
-    @Nullable
-    private NewsAccountRole accountAuthorization(@NonNull HttpServletRequest request) {
+    @NonNull
+    private NewsAccountRole accountAuthorization(@NonNull HttpServletRequest request) throws NewsException {
         return parseObject(request.getHeader(ACCOUNT_SESSION_FLAG), NewsAccountRole.class);
     }
 
