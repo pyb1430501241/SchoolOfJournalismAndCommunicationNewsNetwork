@@ -8,6 +8,8 @@ server:
     # 如当前配置下, 此服务的访问地址即为：localhost:7001/
     context-path: /
 # Eureka 如需搭联机, 只需要修改部分本文件, 然后启动在想要联机的服务器上启动本 jar 包, 无需重新打包
+  compression:
+    enabled: true
 eureka:
   instance:
     # localhost 即代表本机, 如需再一个服务器上使用多端口模拟联机, 则需要修改本名为端口对应的映射名称

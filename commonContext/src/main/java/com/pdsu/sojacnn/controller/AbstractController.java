@@ -29,7 +29,7 @@ public interface AbstractController {
     /**
      * 用户认证信息
      */
-    String ACCOUNT_SESSION_FLAG = "Authorization";
+    String ACCOUNT_SESSION_FLAG = "authorization";
 
     /**
      * 默认一页多少条数据

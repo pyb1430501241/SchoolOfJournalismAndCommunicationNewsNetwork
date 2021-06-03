@@ -42,29 +42,29 @@ public abstract class AuthenticationController implements AbstractController {
     /**
      * 最低权限者, 只允许查看
      */
-    boolean isTourist(@NonNull NewsAccountRole newsAccountRole) {
-        return newsAccountRole.getRoleId() >= TOURIST;
+    void isTourist(@NonNull NewsAccountRole newsAccountRole) throws PermissionsException {
+        authorityJudgment(newsAccountRole, TOURIST);
     }
 
     /**
      * 普通权限者, 允许发布、修改、删除文章
      */
-    boolean isBasicPersonnel(@NonNull NewsAccountRole newsAccountRole) {
-        return newsAccountRole.getRoleId() >= BASIC_PERSONNEL;
+    void isBasicPersonnel(@NonNull NewsAccountRole newsAccountRole) throws PermissionsException {
+        authorityJudgment(newsAccountRole, BASIC_PERSONNEL);
     }
 
     /**
      * 管理员, 允许置顶文章、更换轮询文章、查看更新日志、添加老师
      */
-    boolean isAdministrator(@NonNull NewsAccountRole newsAccountRole) {
-        return newsAccountRole.getRoleId() >= ADMINISTRATOR;
+    void isAdministrator(@NonNull NewsAccountRole newsAccountRole) throws PermissionsException {
+        authorityJudgment(newsAccountRole, ADMINISTRATOR);
     }
 
     /**
      * 超级管理员, 允许更新管理权限、分配管理员权限
      */
-    boolean isSuperAdmin(@NonNull NewsAccountRole newsAccountRole) {
-        return newsAccountRole.getRoleId() == SUPER_ADMIN;
+    void isSuperAdmin(@NonNull NewsAccountRole newsAccountRole) throws PermissionsException {
+        authorityJudgment(newsAccountRole, SUPER_ADMIN);
     }
 
     void authorityJudgment(Predicate<NewsAccountRole> predicate, NewsAccountRole accountRole) throws PermissionsException{

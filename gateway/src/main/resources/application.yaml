@@ -4,6 +4,8 @@ server:
     context-path: /
     encoding:
       charset: UTF-8
+  compression:
+    enabled: true
 spring:
   devtools:
     restart:

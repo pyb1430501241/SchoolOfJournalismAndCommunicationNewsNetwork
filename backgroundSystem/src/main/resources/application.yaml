@@ -6,6 +6,8 @@ server:
     encoding:
       charset: UTF-8
   max-http-header-size: 128KB
+  compression:
+    enabled: true
 spring:
   devtools:
     restart:

@@ -34,7 +34,7 @@ public class SwaggerConfig {
     /**
      * swagger 配置
      */
-    @Bean
+      @Bean
     public Docket webApiConfig(ApiInfo apiInfo) {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo)

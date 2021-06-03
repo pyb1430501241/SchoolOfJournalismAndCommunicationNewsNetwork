@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.UnsupportedEncodingException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -100,12 +99,14 @@ public class NewsThemeController extends AuthenticationController {
      */
     private NewsTheme updateNewsTheme(NewsTheme newsTheme) {
         return FunctionUtils.function(e -> {
-            try {
-                e.setDataString(new String(e.getData(), DEFAULT_CODING));
-            } catch (UnsupportedEncodingException ex) {
-                log.warn("类型转换异常, 异常信息", ex);
+            if(e.getData() != null) {
+                try {
+                    e.setDataString(new String(e.getData(), DEFAULT_CODING));
+                } catch (UnsupportedEncodingException ex) {
+                    log.warn("类型转换异常, 异常信息", ex);
+                }
+                e.setData(null);
             }
-            e.setData(null);
             if (e.getCategoryId() == null) {
                 e.setCategoryId(DEFAULT_CATEGORY_ID);
             }
